@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\CAR RENTAL MANAGEMENT SYSTEM1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF30A83-4D1D-4247-986B-334372C14063}|CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1.vbproj|d:\\project\\car-rental-system\\car rental management system1\\car rental management system1\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{5BF30A83-4D1D-4247-986B-334372C14063}|CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1.vbproj|solutionrelative:car rental management system1\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF30A83-4D1D-4247-986B-334372C14063}|CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1.vbproj|d:\\project\\car-rental-system\\car rental management system1\\car rental management system1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{5BF30A83-4D1D-4247-986B-334372C14063}|CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1.vbproj|solutionrelative:car rental management system1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BF30A83-4D1D-4247-986B-334372C14063}|CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1.vbproj|d:\\project\\car-rental-system\\car rental management system1\\car rental management system1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{5BF30A83-4D1D-4247-986B-334372C14063}|CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1.vbproj|solutionrelative:car rental management system1\\form1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LOGIN.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1\\LOGIN.vb",
+              "RelativeDocumentMoniker": "CAR RENTAL MANAGEMENT SYSTEM1\\LOGIN.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1\\LOGIN.vb [Design]",
+              "RelativeToolTip": "CAR RENTAL MANAGEMENT SYSTEM1\\LOGIN.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-13T17:44:26.84Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb",
+              "RelativeDocumentMoniker": "CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb",
+              "RelativeToolTip": "CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwAIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-13T17:42:35.359Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb",
+              "RelativeDocumentMoniker": "CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\CAR RENTAL MANAGEMENT SYSTEM1\\CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb [Design]",
+              "RelativeToolTip": "CAR RENTAL MANAGEMENT SYSTEM1\\Form1.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-05-13T17:39:01.328Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
