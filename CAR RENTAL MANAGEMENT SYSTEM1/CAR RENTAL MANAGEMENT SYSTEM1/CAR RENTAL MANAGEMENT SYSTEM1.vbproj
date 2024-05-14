@@ -137,5 +137,20 @@
   <ItemGroup>
     <None Include="Resources\BROWN.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN USER PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN-WALLPAPER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN-WALLPAPER-1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

@@ -27,12 +27,37 @@ CAR RENTAL MANAGEMENT SYSTEM1
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.button1black">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.button1green">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.CAR_RENTAL_LANDING">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
 <member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.GET_STARTED_BUTTON">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.LOGIN_USER_PNG">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.LOGIN_WALLPAPER">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.LOGIN_WALLPAPER_1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
