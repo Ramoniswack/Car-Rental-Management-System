@@ -28,9 +28,9 @@ Partial Class LOGIN
         Me.Label3 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.lblusername = New System.Windows.Forms.Label()
-        Me.lblpassword = New System.Windows.Forms.Label()
-        Me.txtUsername = New System.Windows.Forms.TextBox()
-        Me.txtpassword = New System.Windows.Forms.TextBox()
+        Me.Lblpassword = New System.Windows.Forms.Label()
+        Me.TxtUsername = New System.Windows.Forms.TextBox()
+        Me.Txtpassword = New System.Windows.Forms.TextBox()
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -53,7 +53,7 @@ Partial Class LOGIN
         Me.Label1.ForeColor = System.Drawing.Color.Black
         Me.Label1.Location = New System.Drawing.Point(477, 30)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(134, 60)
+        Me.Label1.Size = New System.Drawing.Size(169, 75)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "LOGIN"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -63,7 +63,7 @@ Partial Class LOGIN
         Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(368, 182)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(39, 13)
+        Me.Label2.Size = New System.Drawing.Size(45, 15)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Label2"
         '
@@ -74,7 +74,7 @@ Partial Class LOGIN
         Me.Label3.ForeColor = System.Drawing.Color.Black
         Me.Label3.Location = New System.Drawing.Point(107, 354)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(215, 22)
+        Me.Label3.Size = New System.Drawing.Size(271, 28)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "*Upload your photo here*"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -88,47 +88,48 @@ Partial Class LOGIN
         Me.lblusername.AutoSize = True
         Me.lblusername.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblusername.ForeColor = System.Drawing.Color.Black
-        Me.lblusername.Location = New System.Drawing.Point(367, 160)
+        Me.lblusername.Location = New System.Drawing.Point(342, 160)
         Me.lblusername.Name = "lblusername"
-        Me.lblusername.Size = New System.Drawing.Size(95, 22)
+        Me.lblusername.Size = New System.Drawing.Size(120, 28)
         Me.lblusername.TabIndex = 9
         Me.lblusername.Text = "Username:"
         Me.lblusername.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'lblpassword
+        'Lblpassword
         '
-        Me.lblpassword.AutoSize = True
-        Me.lblpassword.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblpassword.ForeColor = System.Drawing.Color.Black
-        Me.lblpassword.Location = New System.Drawing.Point(370, 207)
-        Me.lblpassword.Name = "lblpassword"
-        Me.lblpassword.Size = New System.Drawing.Size(92, 22)
-        Me.lblpassword.TabIndex = 10
-        Me.lblpassword.Text = "Password:"
-        Me.lblpassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.Lblpassword.AutoSize = True
+        Me.Lblpassword.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Lblpassword.ForeColor = System.Drawing.Color.Black
+        Me.Lblpassword.Location = New System.Drawing.Point(348, 207)
+        Me.Lblpassword.Name = "Lblpassword"
+        Me.Lblpassword.Size = New System.Drawing.Size(114, 28)
+        Me.Lblpassword.TabIndex = 10
+        Me.Lblpassword.Text = "Password:"
+        Me.Lblpassword.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'txtUsername
+        'TxtUsername
         '
-        Me.txtUsername.Location = New System.Drawing.Point(468, 160)
-        Me.txtUsername.Name = "txtUsername"
-        Me.txtUsername.Size = New System.Drawing.Size(259, 20)
-        Me.txtUsername.TabIndex = 11
+        Me.TxtUsername.Location = New System.Drawing.Point(468, 160)
+        Me.TxtUsername.Name = "TxtUsername"
+        Me.TxtUsername.Size = New System.Drawing.Size(259, 20)
+        Me.TxtUsername.TabIndex = 11
         '
-        'txtpassword
+        'Txtpassword
         '
-        Me.txtpassword.Location = New System.Drawing.Point(468, 207)
-        Me.txtpassword.Name = "txtpassword"
-        Me.txtpassword.Size = New System.Drawing.Size(259, 20)
-        Me.txtpassword.TabIndex = 12
+        Me.Txtpassword.Location = New System.Drawing.Point(468, 207)
+        Me.Txtpassword.Name = "Txtpassword"
+        Me.Txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.Txtpassword.Size = New System.Drawing.Size(259, 20)
+        Me.Txtpassword.TabIndex = 12
         '
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.ForeColor = System.Drawing.Color.Black
-        Me.CheckBox1.Location = New System.Drawing.Point(468, 233)
+        Me.CheckBox1.Location = New System.Drawing.Point(468, 245)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(102, 17)
+        Me.CheckBox1.Size = New System.Drawing.Size(117, 19)
         Me.CheckBox1.TabIndex = 13
         Me.CheckBox1.Text = "Show Password"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -136,11 +137,11 @@ Partial Class LOGIN
         'LinkLabel1
         '
         Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 12.0!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LinkLabel1.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
-        Me.LinkLabel1.Location = New System.Drawing.Point(457, 379)
+        Me.LinkLabel1.Location = New System.Drawing.Point(463, 354)
         Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(255, 22)
+        Me.LinkLabel1.Size = New System.Drawing.Size(285, 25)
         Me.LinkLabel1.TabIndex = 14
         Me.LinkLabel1.TabStop = True
         Me.LinkLabel1.Text = "NO ID REGISTERED? CLICK HERE"
@@ -234,9 +235,9 @@ Partial Class LOGIN
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.txtpassword)
-        Me.Controls.Add(Me.txtUsername)
-        Me.Controls.Add(Me.lblpassword)
+        Me.Controls.Add(Me.Txtpassword)
+        Me.Controls.Add(Me.TxtUsername)
+        Me.Controls.Add(Me.Lblpassword)
         Me.Controls.Add(Me.lblusername)
         Me.Controls.Add(Me.btncancel)
         Me.Controls.Add(Me.Label3)
@@ -267,9 +268,9 @@ Partial Class LOGIN
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents btncancel As Button
     Friend WithEvents lblusername As Label
-    Friend WithEvents lblpassword As Label
-    Friend WithEvents txtUsername As TextBox
-    Friend WithEvents txtpassword As TextBox
+    Friend WithEvents Lblpassword As Label
+    Friend WithEvents TxtUsername As TextBox
+    Friend WithEvents Txtpassword As TextBox
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents LinkLabel1 As LinkLabel
     Friend WithEvents PictureBox1 As PictureBox
