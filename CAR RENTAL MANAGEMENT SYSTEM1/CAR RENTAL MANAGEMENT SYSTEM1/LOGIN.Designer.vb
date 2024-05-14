@@ -51,7 +51,8 @@ Partial Class LOGIN
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Impact", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(477, 30)
+        Me.Label1.Location = New System.Drawing.Point(636, 37)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(169, 75)
         Me.Label1.TabIndex = 0
@@ -61,9 +62,10 @@ Partial Class LOGIN
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(368, 182)
+        Me.Label2.Location = New System.Drawing.Point(491, 224)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(45, 15)
+        Me.Label2.Size = New System.Drawing.Size(48, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Label2"
         '
@@ -72,7 +74,8 @@ Partial Class LOGIN
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(107, 354)
+        Me.Label3.Location = New System.Drawing.Point(143, 436)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(271, 28)
         Me.Label3.TabIndex = 4
@@ -88,7 +91,8 @@ Partial Class LOGIN
         Me.lblusername.AutoSize = True
         Me.lblusername.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblusername.ForeColor = System.Drawing.Color.Black
-        Me.lblusername.Location = New System.Drawing.Point(342, 160)
+        Me.lblusername.Location = New System.Drawing.Point(456, 197)
+        Me.lblusername.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblusername.Name = "lblusername"
         Me.lblusername.Size = New System.Drawing.Size(120, 28)
         Me.lblusername.TabIndex = 9
@@ -100,7 +104,8 @@ Partial Class LOGIN
         Me.Lblpassword.AutoSize = True
         Me.Lblpassword.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Lblpassword.ForeColor = System.Drawing.Color.Black
-        Me.Lblpassword.Location = New System.Drawing.Point(348, 207)
+        Me.Lblpassword.Location = New System.Drawing.Point(464, 255)
+        Me.Lblpassword.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Lblpassword.Name = "Lblpassword"
         Me.Lblpassword.Size = New System.Drawing.Size(114, 28)
         Me.Lblpassword.TabIndex = 10
@@ -109,17 +114,19 @@ Partial Class LOGIN
         '
         'TxtUsername
         '
-        Me.TxtUsername.Location = New System.Drawing.Point(468, 160)
+        Me.TxtUsername.Location = New System.Drawing.Point(624, 197)
+        Me.TxtUsername.Margin = New System.Windows.Forms.Padding(4)
         Me.TxtUsername.Name = "TxtUsername"
-        Me.TxtUsername.Size = New System.Drawing.Size(259, 20)
+        Me.TxtUsername.Size = New System.Drawing.Size(344, 22)
         Me.TxtUsername.TabIndex = 11
         '
         'Txtpassword
         '
-        Me.Txtpassword.Location = New System.Drawing.Point(468, 207)
+        Me.Txtpassword.Location = New System.Drawing.Point(624, 255)
+        Me.Txtpassword.Margin = New System.Windows.Forms.Padding(4)
         Me.Txtpassword.Name = "Txtpassword"
         Me.Txtpassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.Txtpassword.Size = New System.Drawing.Size(259, 20)
+        Me.Txtpassword.Size = New System.Drawing.Size(344, 22)
         Me.Txtpassword.TabIndex = 12
         '
         'CheckBox1
@@ -127,9 +134,10 @@ Partial Class LOGIN
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.BackColor = System.Drawing.Color.Transparent
         Me.CheckBox1.ForeColor = System.Drawing.Color.Black
-        Me.CheckBox1.Location = New System.Drawing.Point(468, 245)
+        Me.CheckBox1.Location = New System.Drawing.Point(624, 302)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(117, 19)
+        Me.CheckBox1.Size = New System.Drawing.Size(125, 20)
         Me.CheckBox1.TabIndex = 13
         Me.CheckBox1.Text = "Show Password"
         Me.CheckBox1.UseVisualStyleBackColor = False
@@ -139,7 +147,8 @@ Partial Class LOGIN
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.Font = New System.Drawing.Font("Mont ExtraLight DEMO", 10.8!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.LinkLabel1.LinkColor = System.Drawing.Color.Black
-        Me.LinkLabel1.Location = New System.Drawing.Point(463, 354)
+        Me.LinkLabel1.Location = New System.Drawing.Point(617, 436)
+        Me.LinkLabel1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(285, 25)
         Me.LinkLabel1.TabIndex = 14
@@ -149,9 +158,10 @@ Partial Class LOGIN
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.LOGIN_WALLPAPER_1
-        Me.PictureBox1.Location = New System.Drawing.Point(775, -3)
+        Me.PictureBox1.Location = New System.Drawing.Point(1033, -4)
+        Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(311, 596)
+        Me.PictureBox1.Size = New System.Drawing.Size(415, 734)
         Me.PictureBox1.TabIndex = 15
         Me.PictureBox1.TabStop = False
         '
@@ -161,15 +171,17 @@ Partial Class LOGIN
         Me.btncancel.BackColor = System.Drawing.Color.Transparent
         Me.btncancel.BackgroundImage = Global.CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.GET_STARTED_BUTTON
         Me.btncancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btncancel.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btncancel.FlatAppearance.BorderSize = 0
         Me.btncancel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btncancel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btncancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btncancel.Font = New System.Drawing.Font("Impact", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btncancel.ForeColor = System.Drawing.Color.Transparent
-        Me.btncancel.Location = New System.Drawing.Point(595, 246)
+        Me.btncancel.Location = New System.Drawing.Point(793, 303)
+        Me.btncancel.Margin = New System.Windows.Forms.Padding(4)
         Me.btncancel.Name = "btncancel"
-        Me.btncancel.Size = New System.Drawing.Size(132, 118)
+        Me.btncancel.Size = New System.Drawing.Size(176, 145)
         Me.btncancel.TabIndex = 8
         Me.btncancel.Text = "Cancel"
         Me.btncancel.UseVisualStyleBackColor = False
@@ -177,9 +189,10 @@ Partial Class LOGIN
         'Loginpicture
         '
         Me.Loginpicture.Image = Global.CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.LOGIN_USER_PNG
-        Me.Loginpicture.Location = New System.Drawing.Point(75, 86)
+        Me.Loginpicture.Location = New System.Drawing.Point(100, 106)
+        Me.Loginpicture.Margin = New System.Windows.Forms.Padding(4)
         Me.Loginpicture.Name = "Loginpicture"
-        Me.Loginpicture.Size = New System.Drawing.Size(260, 256)
+        Me.Loginpicture.Size = New System.Drawing.Size(347, 315)
         Me.Loginpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Loginpicture.TabIndex = 3
         Me.Loginpicture.TabStop = False
@@ -190,15 +203,17 @@ Partial Class LOGIN
         Me.btnlogin.BackColor = System.Drawing.Color.Transparent
         Me.btnlogin.BackgroundImage = Global.CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.button1green
         Me.btnlogin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btnlogin.FlatAppearance.BorderSize = 0
         Me.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnlogin.Font = New System.Drawing.Font("Impact", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnlogin.ForeColor = System.Drawing.Color.Transparent
-        Me.btnlogin.Location = New System.Drawing.Point(461, 245)
+        Me.btnlogin.Location = New System.Drawing.Point(615, 302)
+        Me.btnlogin.Margin = New System.Windows.Forms.Padding(4)
         Me.btnlogin.Name = "btnlogin"
-        Me.btnlogin.Size = New System.Drawing.Size(150, 119)
+        Me.btnlogin.Size = New System.Drawing.Size(200, 146)
         Me.btnlogin.TabIndex = 0
         Me.btnlogin.Text = "LOGIN"
         Me.btnlogin.UseVisualStyleBackColor = False
@@ -207,13 +222,15 @@ Partial Class LOGIN
         '
         Me.Button1.BackgroundImage = Global.CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.button1black
         Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatAppearance.BorderSize = 0
         Me.Button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Location = New System.Drawing.Point(75, 379)
+        Me.Button1.Location = New System.Drawing.Point(100, 457)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(288, 69)
+        Me.Button1.Size = New System.Drawing.Size(384, 85)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "BROWSE"
         Me.Button1.UseVisualStyleBackColor = True
@@ -228,10 +245,10 @@ Partial Class LOGIN
         '
         'LOGIN
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1024, 576)
+        Me.ClientSize = New System.Drawing.Size(1308, 658)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.CheckBox1)
@@ -248,7 +265,7 @@ Partial Class LOGIN
         Me.Controls.Add(Me.Button1)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LOGIN"
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Loginpicture, System.ComponentModel.ISupportInitialize).EndInit()
