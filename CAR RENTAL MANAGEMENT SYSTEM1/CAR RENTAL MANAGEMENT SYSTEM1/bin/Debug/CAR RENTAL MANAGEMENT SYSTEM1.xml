@@ -22,6 +22,11 @@ CAR RENTAL MANAGEMENT SYSTEM1
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.BROWN">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.CAR_RENTAL_LANDING">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
