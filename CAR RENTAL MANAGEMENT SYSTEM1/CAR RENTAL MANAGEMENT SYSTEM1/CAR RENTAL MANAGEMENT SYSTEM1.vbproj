@@ -91,6 +91,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="admin_interface.Designer.vb">
+      <DependentUpon>admin_interface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="admin_interface.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connection.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -123,6 +130,12 @@
       <DependentUpon>Registration.vb</DependentUpon>
     </Compile>
     <Compile Include="Registration.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User_interface.Designer.vb">
+      <DependentUpon>User_interface.vb</DependentUpon>
+    </Compile>
+    <Compile Include="User_interface.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

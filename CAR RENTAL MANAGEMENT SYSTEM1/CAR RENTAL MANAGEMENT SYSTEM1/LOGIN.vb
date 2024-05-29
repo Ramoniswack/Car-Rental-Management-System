@@ -1,26 +1,77 @@
 ﻿Imports Microsoft.VisualBasic.ApplicationServices
 Imports System.Data.SqlClient
+Imports System.Diagnostics.Eventing
 
 Public Class LOGIN
+    Dim connectionstring As String = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PROJECT\CAR-RENTAL-SYSTEM\CAR RENTAL MANAGEMENT SYSTEM1\CAR RENTAL MANAGEMENT SYSTEM1\CRMS.mdf;Integrated Security=True"
+
+
 
     Private Sub Btnlogin_Click(sender As Object, e As EventArgs) Handles Btnlogin.Click
-        Dim Con As String
-        Con = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=D:\PROJECT\CAR-RENTAL-SYSTEM\CAR RENTAL MANAGEMENT SYSTEM1\CAR RENTAL MANAGEMENT SYSTEM1\CRMS.mdf;Integrated Security=True"
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Btnbrowse.Click
-        OpenFileDialog1.ShowDialog()
-        Loginpicture.Load(OpenFileDialog1.FileName)
-    End Sub
+        Dim email As String
+        Dim password As String
+        ' Dim usertype As String
 
 
+        email = Txtemail.Text
+        password = Txtpassword.Text
 
-    Private Sub TxtUsername_Leave(sender As Object, e As EventArgs) Handles TxtUsername.Leave
-        If String.IsNullOrEmpty(TxtUsername.Text) = True Then
-            TxtUsername.Focus()
-            ErrorProvider1.SetError(TxtUsername, "ENTER YOUR USERNAME TO LOGIN")
+
+        Dim con As New SqlConnection(connectionstring)
+        Dim query As String = " select usertype from USERS where email= @email And passwordd = @password"
+        Dim cmd As New SqlCommand(query, con)
+        cmd.Parameters.AddWithValue("@email", email)
+        cmd.Parameters.AddWithValue("@password", password)
+        '  cmd.Parameters.AddWithValue("@usertype", usertype)
+
+        Dim usertype As String = String.Empty
+
+
+
+        con.Open()
+        Dim reader As SqlDataReader = cmd.ExecuteReader()
+
+        If reader.HasRows Then
+            While reader.Read()
+                usertype = reader("usertype").ToString().ToLower()
+            End While
+
+            If usertype = "USER" Then
+                Me.Close()
+                Dim userinterface As New User_interface
+                userinterface.Show()
+            ElseIf usertype = "ADMIN" Then
+                Me.Close()
+                Dim admininterface As New admin_interface
+                admininterface.Show()
+            Else
+                MessageBox.Show("INVALID USER TYPE")
+            End If
         Else
-            ErrorProvider1.SetError(TxtUsername, String.Empty)
+            MessageBox.Show("INVALID EMAIL OR PASSWORD")
+
+        End If
+
+
+
+
+
+        reader.Close()
+        con.Close()
+
+
+
+
+
+    End Sub
+
+
+    Private Sub TxtUsername_Leave(sender As Object, e As EventArgs) Handles Txtemail.Leave
+        If String.IsNullOrEmpty(Txtemail.Text) = True Then
+            Txtemail.Focus()
+            ErrorProvider1.SetError(Txtemail, "ENTER YOUR USERNAME TO LOGIN")
+        Else
+            ErrorProvider1.SetError(Txtemail, String.Empty)
         End If
     End Sub
 
@@ -55,7 +106,7 @@ Public Class LOGIN
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
         Me.Hide()
         Dim obj As New Registration
-        obj.show()
+        obj.Show()
     End Sub
 
 
