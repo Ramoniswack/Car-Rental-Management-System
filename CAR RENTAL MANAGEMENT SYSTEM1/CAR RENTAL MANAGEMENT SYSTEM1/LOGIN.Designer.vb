@@ -149,7 +149,7 @@ Partial Class LOGIN
         'PictureBox1
         '
         Me.PictureBox1.Image = Global.CAR_RENTAL_MANAGEMENT_SYSTEM1.My.Resources.Resources.LOGIN_WALLPAPER_1
-        Me.PictureBox1.Location = New System.Drawing.Point(853, -1)
+        Me.PictureBox1.Location = New System.Drawing.Point(801, -6)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(415, 734)
@@ -202,8 +202,9 @@ Partial Class LOGIN
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSize = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1307, 663)
+        Me.ClientSize = New System.Drawing.Size(1122, 630)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.CheckBox1)
@@ -219,6 +220,8 @@ Partial Class LOGIN
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "LOGIN"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         CType(Me.ErrorProvider1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.ErrorProvider2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
