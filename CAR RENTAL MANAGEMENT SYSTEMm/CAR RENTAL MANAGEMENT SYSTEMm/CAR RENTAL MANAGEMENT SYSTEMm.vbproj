@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D1EE4A45-307A-4CF2-93E6-1983B9B4BE75}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CAR_RENTAL_MANAGEMENT_SYSTEMm.My.MyApplication</StartupObject>
+    <RootNamespace>CAR_RENTAL_MANAGEMENT_SYSTEMm</RootNamespace>
+    <AssemblyName>CAR RENTAL MANAGEMENT SYSTEMm</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CAR RENTAL MANAGEMENT SYSTEMm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CAR RENTAL MANAGEMENT SYSTEMm.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdminView.Designer.vb">
+      <DependentUpon>AdminView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Availability.Designer.vb">
+      <DependentUpon>Availability.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Availability.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cancel.Designer.vb">
+      <DependentUpon>Cancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerInfo.Designer.vb">
+      <DependentUpon>CustomerInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CustomerInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form1.Designer.vb">
+      <DependentUpon>form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Register.Designer.vb">
+      <DependentUpon>Register.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Register.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rent.Designer.vb">
+      <DependentUpon>Rent.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionsInfo.Designer.vb">
+      <DependentUpon>TransactionsInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionsInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserInfo.Designer.vb">
+      <DependentUpon>UserInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserView.Designer.vb">
+      <DependentUpon>UserView.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UserView.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleInfo.Designer.vb">
+      <DependentUpon>VehicleInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AdminView.resx">
+      <DependentUpon>AdminView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Availability.resx">
+      <DependentUpon>Availability.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Cancel.resx">
+      <DependentUpon>Cancel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CustomerInfo.resx">
+      <DependentUpon>CustomerInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form1.resx">
+      <DependentUpon>form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rent.resx">
+      <DependentUpon>Rent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionsInfo.resx">
+      <DependentUpon>TransactionsInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserInfo.resx">
+      <DependentUpon>UserInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserView.resx">
+      <DependentUpon>UserView.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleInfo.resx">
+      <DependentUpon>VehicleInfo.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CAR-RENTAL-LANDING.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GET STARTED BUTTON.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleet-Ease-black-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN-WALLPAPER-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\LOGIN USER PNG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\button1black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Fleet-EASE-removebg-preview.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
