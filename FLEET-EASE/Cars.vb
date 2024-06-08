@@ -8,17 +8,19 @@
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
-            Dgv.Rows.Add(i, dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"))
+            Dgv.Rows.Add(i, dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("Qty"))
         End While
         cn.Close()
     End Sub
+
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
         cn.Open()
-        cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color) VALUES (@Carname, @Model, @Color)", cn)
+        cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color,QTY) VALUES (@Carname, @Model, @Color, @QTY)", cn)
         With cm
             .Parameters.AddWithValue("@CarName", TxtCarname.Text)
             .Parameters.AddWithValue("@Model", Txtmodel.Text)
             .Parameters.AddWithValue("@Color", TxtColor.Text)
+            .Parameters.AddWithValue("@QTY", TxtQty.Text)
             .ExecuteNonQuery()
             cn.Close()
         End With
@@ -27,7 +29,7 @@
         TxtColor.Clear()
         Txtmodel.Clear()
         TxtCarname.Clear()
-
+        TxtQty.Clear()
         TxtCarname.Select()
 
         LoadRecord()

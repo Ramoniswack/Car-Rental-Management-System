@@ -8,7 +8,7 @@
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
-            Dgv.Rows.Add(i, dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"))
+            Dgv.Rows.Add(i, dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("Qty"))
         End While
         cn.Close()
     End Sub
@@ -17,14 +17,17 @@
         Dgv1.Rows.Clear()
         Dim i As Integer
 
-        cm = New SqlClient.SqlCommand("select *From tblcarrentals", cn)
+        cm = New SqlClient.SqlCommand("select *from tblcarrentals1", cn)
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
-            Dgv1.Rows.Add(i, dr.Item("CusId"), dr.Item("CarId"), dr.Item("PickupLocation"), dr.Item("RentDate"), dr.Item("ReturnDate"), dr.Item("Charges"))
+            Dgv1.Rows.Add(i, dr.Item("CusID"), dr.Item("CustomerName"), dr.Item("CarID"), dr.Item("Carname"), dr.Item("PickupLocation"), dr.Item("RentDate"), dr.Item("ReturnDate"), dr.Item("Charges"))
         End While
         cn.Close()
     End Sub
+
+
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
 
     End Sub
@@ -68,7 +71,9 @@
 
     End Sub
 
-    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
+    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
+
+
 End Class

@@ -31,6 +31,10 @@ Partial Class Rent
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.LblCarName = New System.Windows.Forms.Label()
+        Me.TxtCarName = New System.Windows.Forms.TextBox()
+        Me.LblCustomerName = New System.Windows.Forms.Label()
+        Me.TxtCustomerName = New System.Windows.Forms.TextBox()
         Me.TxtReturnDate = New System.Windows.Forms.DateTimePicker()
         Me.TxtRentDate = New System.Windows.Forms.DateTimePicker()
         Me.TxtCarID = New System.Windows.Forms.TextBox()
@@ -58,6 +62,8 @@ Partial Class Rent
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.TxtQty = New System.Windows.Forms.TextBox()
+        Me.LblQty = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -144,6 +150,12 @@ Partial Class Rent
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.LblQty)
+        Me.Panel8.Controls.Add(Me.TxtQty)
+        Me.Panel8.Controls.Add(Me.LblCarName)
+        Me.Panel8.Controls.Add(Me.TxtCarName)
+        Me.Panel8.Controls.Add(Me.LblCustomerName)
+        Me.Panel8.Controls.Add(Me.TxtCustomerName)
         Me.Panel8.Controls.Add(Me.TxtReturnDate)
         Me.Panel8.Controls.Add(Me.TxtRentDate)
         Me.Panel8.Controls.Add(Me.TxtCarID)
@@ -162,10 +174,50 @@ Partial Class Rent
         Me.Panel8.Size = New System.Drawing.Size(1091, 620)
         Me.Panel8.TabIndex = 0
         '
+        'LblCarName
+        '
+        Me.LblCarName.AutoSize = True
+        Me.LblCarName.BackColor = System.Drawing.Color.Transparent
+        Me.LblCarName.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCarName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.LblCarName.Location = New System.Drawing.Point(116, 218)
+        Me.LblCarName.Name = "LblCarName"
+        Me.LblCarName.Size = New System.Drawing.Size(121, 27)
+        Me.LblCarName.TabIndex = 79
+        Me.LblCarName.Text = "CarName"
+        '
+        'TxtCarName
+        '
+        Me.TxtCarName.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCarName.Location = New System.Drawing.Point(252, 209)
+        Me.TxtCarName.Name = "TxtCarName"
+        Me.TxtCarName.Size = New System.Drawing.Size(722, 36)
+        Me.TxtCarName.TabIndex = 78
+        '
+        'LblCustomerName
+        '
+        Me.LblCustomerName.AutoSize = True
+        Me.LblCustomerName.BackColor = System.Drawing.Color.Transparent
+        Me.LblCustomerName.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblCustomerName.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.LblCustomerName.Location = New System.Drawing.Point(56, 123)
+        Me.LblCustomerName.Name = "LblCustomerName"
+        Me.LblCustomerName.Size = New System.Drawing.Size(189, 27)
+        Me.LblCustomerName.TabIndex = 77
+        Me.LblCustomerName.Text = "CustomerName"
+        '
+        'TxtCustomerName
+        '
+        Me.TxtCustomerName.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtCustomerName.Location = New System.Drawing.Point(251, 114)
+        Me.TxtCustomerName.Name = "TxtCustomerName"
+        Me.TxtCustomerName.Size = New System.Drawing.Size(722, 36)
+        Me.TxtCustomerName.TabIndex = 76
+        '
         'TxtReturnDate
         '
         Me.TxtReturnDate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtReturnDate.Location = New System.Drawing.Point(251, 368)
+        Me.TxtReturnDate.Location = New System.Drawing.Point(252, 369)
         Me.TxtReturnDate.Name = "TxtReturnDate"
         Me.TxtReturnDate.Size = New System.Drawing.Size(310, 28)
         Me.TxtReturnDate.TabIndex = 75
@@ -173,7 +225,7 @@ Partial Class Rent
         'TxtRentDate
         '
         Me.TxtRentDate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRentDate.Location = New System.Drawing.Point(252, 304)
+        Me.TxtRentDate.Location = New System.Drawing.Point(251, 316)
         Me.TxtRentDate.Name = "TxtRentDate"
         Me.TxtRentDate.Size = New System.Drawing.Size(309, 28)
         Me.TxtRentDate.TabIndex = 74
@@ -182,7 +234,7 @@ Partial Class Rent
         'TxtCarID
         '
         Me.TxtCarID.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCarID.Location = New System.Drawing.Point(252, 132)
+        Me.TxtCarID.Location = New System.Drawing.Point(252, 163)
         Me.TxtCarID.Name = "TxtCarID"
         Me.TxtCarID.Size = New System.Drawing.Size(722, 36)
         Me.TxtCarID.TabIndex = 72
@@ -221,7 +273,7 @@ Partial Class Rent
         Me.Label9.BackColor = System.Drawing.Color.Transparent
         Me.Label9.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label9.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label9.Location = New System.Drawing.Point(102, 363)
+        Me.Label9.Location = New System.Drawing.Point(102, 369)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(135, 27)
         Me.Label9.TabIndex = 67
@@ -233,7 +285,7 @@ Partial Class Rent
         Me.Label8.BackColor = System.Drawing.Color.Transparent
         Me.Label8.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(123, 300)
+        Me.Label8.Location = New System.Drawing.Point(123, 316)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(114, 27)
         Me.Label8.TabIndex = 65
@@ -242,7 +294,7 @@ Partial Class Rent
         'TxtPickupFrom
         '
         Me.TxtPickupFrom.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPickupFrom.Location = New System.Drawing.Point(252, 208)
+        Me.TxtPickupFrom.Location = New System.Drawing.Point(251, 256)
         Me.TxtPickupFrom.Name = "TxtPickupFrom"
         Me.TxtPickupFrom.Size = New System.Drawing.Size(722, 36)
         Me.TxtPickupFrom.TabIndex = 64
@@ -253,7 +305,7 @@ Partial Class Rent
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(87, 217)
+        Me.Label7.Location = New System.Drawing.Point(87, 260)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(150, 27)
         Me.Label7.TabIndex = 63
@@ -278,7 +330,7 @@ Partial Class Rent
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(142, 141)
+        Me.Label5.Location = New System.Drawing.Point(155, 172)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(74, 27)
         Me.Label5.TabIndex = 55
@@ -478,6 +530,26 @@ Partial Class Rent
         Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button3.UseVisualStyleBackColor = False
         '
+        'TxtQty
+        '
+        Me.TxtQty.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtQty.Location = New System.Drawing.Point(252, 485)
+        Me.TxtQty.Name = "TxtQty"
+        Me.TxtQty.Size = New System.Drawing.Size(123, 36)
+        Me.TxtQty.TabIndex = 80
+        '
+        'LblQty
+        '
+        Me.LblQty.AutoSize = True
+        Me.LblQty.BackColor = System.Drawing.Color.Transparent
+        Me.LblQty.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblQty.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.LblQty.Location = New System.Drawing.Point(131, 494)
+        Me.LblQty.Name = "LblQty"
+        Me.LblQty.Size = New System.Drawing.Size(51, 27)
+        Me.LblQty.TabIndex = 81
+        Me.LblQty.Text = "Qty"
+        '
         'Rent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -560,4 +632,10 @@ Partial Class Rent
     Friend WithEvents TxtCharges As TextBox
     Friend WithEvents TxtRentDate As DateTimePicker
     Friend WithEvents TxtReturnDate As DateTimePicker
+    Friend WithEvents LblCustomerName As Label
+    Friend WithEvents TxtCustomerName As TextBox
+    Friend WithEvents LblCarName As Label
+    Friend WithEvents TxtCarName As TextBox
+    Friend WithEvents LblQty As Label
+    Friend WithEvents TxtQty As TextBox
 End Class

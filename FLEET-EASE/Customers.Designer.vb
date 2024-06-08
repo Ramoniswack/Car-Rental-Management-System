@@ -209,7 +209,7 @@ Partial Class Customers
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(109, 209)
+        Me.Label6.Location = New System.Drawing.Point(108, 209)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(101, 27)
         Me.Label6.TabIndex = 56
