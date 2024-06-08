@@ -63,6 +63,7 @@ Partial Class Customers
         Me.BtnCars = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Fleetease = New System.Windows.Forms.PictureBox()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -78,6 +79,7 @@ Partial Class Customers
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.BtnUpdate)
         Me.Panel9.Controls.Add(Me.TxtLicecnseCode)
         Me.Panel9.Controls.Add(Me.Label4)
         Me.Panel9.Controls.Add(Me.Dgv)
@@ -257,7 +259,7 @@ Partial Class Customers
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(19, 27)
+        Me.Label3.Location = New System.Drawing.Point(15, 32)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(195, 27)
         Me.Label3.TabIndex = 49
@@ -516,6 +518,19 @@ Partial Class Customers
         Me.Fleetease.TabIndex = 35
         Me.Fleetease.TabStop = False
         '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.BackColor = System.Drawing.Color.Transparent
+        Me.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnUpdate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.BtnUpdate.Location = New System.Drawing.Point(430, 286)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(160, 80)
+        Me.BtnUpdate.TabIndex = 63
+        Me.BtnUpdate.Text = "UPDATE"
+        Me.BtnUpdate.UseVisualStyleBackColor = False
+        '
         'Customers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -602,4 +617,5 @@ Partial Class Customers
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents BtnUpdate As Button
 End Class

@@ -132,6 +132,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UCustomers.Designer.vb">
+      <DependentUpon>UCustomers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="UCustomers.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="UHomee.Designer.vb">
       <DependentUpon>UHomee.vb</DependentUpon>
     </Compile>
@@ -169,6 +175,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCustomers.resx">
+      <DependentUpon>UCustomers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UHomee.resx">
       <DependentUpon>UHomee.vb</DependentUpon>

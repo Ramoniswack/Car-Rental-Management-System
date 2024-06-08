@@ -12,6 +12,7 @@
         End While
         cn.Close()
     End Sub
+
     Public Sub Loadrecord1()
         cn.Open()
         Dgv1.Rows.Clear()
@@ -48,8 +49,9 @@
         obj.Show()
     End Sub
 
-
-
-
-
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Me.Hide()
+        Dim obj As New UCustomers
+        obj.Show()
+    End Sub
 End Class
