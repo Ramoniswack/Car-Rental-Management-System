@@ -16,18 +16,24 @@
         cn.Close()
     End Sub
     Private Sub BtnAddUser_Click(sender As Object, e As EventArgs) Handles BtnAddUser.Click
+        If TxtUsername.Text <> "" And TxtPasswword.Text <> "" And TxtUsertype.Text <> "" And TxtContact.Text <> "" Then
 
-        cn.Open()
-        cm = New SqlClient.SqlCommand("INSERT INTO tbllogin (Username, Password, Usertype, Contact) VALUES (@Username, @Password, @Usertype, @Contact)", cn)
-        With cm
-            .Parameters.AddWithValue("@Username", TxtUsername.Text)
-            .Parameters.AddWithValue("@Password", TxtPasswword.Text)
-            .Parameters.AddWithValue("@Usertype", TxtUsertype.Text)
-            .Parameters.AddWithValue("@Contact", TxtContact.Text)
-            .ExecuteNonQuery()
-            cn.Close()
-        End With
-        MsgBox("Customer saved successfully")
+
+            cn.Open()
+            cm = New SqlClient.SqlCommand("INSERT INTO tbllogin (Username, Password, Usertype, Contact) VALUES (@Username, @Password, @Usertype, @Contact)", cn)
+            With cm
+                .Parameters.AddWithValue("@Username", TxtUsername.Text)
+                .Parameters.AddWithValue("@Password", TxtPasswword.Text)
+                .Parameters.AddWithValue("@Usertype", TxtUsertype.Text)
+                .Parameters.AddWithValue("@Contact", TxtContact.Text)
+                .ExecuteNonQuery()
+                cn.Close()
+            End With
+            MsgBox("User saved successfully")
+
+        Else
+            MsgBox("Fulfill all the requirements first")
+        End If
 
         TxtContact.Clear()
         TxtUsertype.Clear()
@@ -81,5 +87,52 @@
         Me.Hide()
         Dim obj As New Login
         obj.Show()
+    End Sub
+
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+
+        If TxtUsername.Text <> "" And TxtPasswword.Text <> "" And TxtUsertype.Text <> "" And TxtContact.Text <> "" Then
+            Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+            Dim UidValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+            cn.Open()
+            cm = New SqlClient.SqlCommand("Update tbllogin SET username = @username, password = @password, usertype = @usertype, contact = @contact where Uid = @Uid", cn)
+            With cm
+                .Parameters.AddWithValue("@Uid", UidValue)
+                .Parameters.AddWithValue("@username", TxtUsername.Text)
+                .Parameters.AddWithValue("@password", TxtPasswword.Text)
+                .Parameters.AddWithValue("@usertype", TxtUsertype.Text)
+                .Parameters.AddWithValue("@contact", TxtContact.Text)
+                .ExecuteNonQuery()
+                cn.Close()
+            End With
+            MsgBox("User updated successfully")
+            LoadRecord()
+        Else
+            MsgBox("Please FullFill the requirements to Update")
+
+        End If
+
+    End Sub
+
+    Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
+
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = Dgv.Rows(e.RowIndex)
+            ' TxtCusid .Text = row.Cells(0).Value.ToString()
+            TxtUsername.Text = row.Cells(1).Value.ToString()
+            TxtPasswword.Text = row.Cells(2).Value.ToString()
+            TxtUsertype.Text = row.Cells(3).Value.ToString()
+            TxtContact.Text = row.Cells(4).Value.ToString()
+        End If
+
+
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            TxtPasswword.UseSystemPasswordChar = False
+        Else
+            TxtPasswword.UseSystemPasswordChar = True
+        End If
     End Sub
 End Class

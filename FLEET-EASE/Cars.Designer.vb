@@ -33,6 +33,8 @@ Partial Class Cars
         Me.BtnHome = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.LblColor = New System.Windows.Forms.Label()
+        Me.TxtQty = New System.Windows.Forms.TextBox()
         Me.Dgv = New System.Windows.Forms.DataGridView()
         Me.BtnAddCustomer = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
@@ -54,13 +56,12 @@ Partial Class Cars
         Me.BtnUsers = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Fleetease = New System.Windows.Forms.PictureBox()
-        Me.TxtQty = New System.Windows.Forms.TextBox()
-        Me.LblColor = New System.Windows.Forms.Label()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.CarID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -149,6 +150,7 @@ Partial Class Cars
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.BtnUpdate)
         Me.Panel9.Controls.Add(Me.LblColor)
         Me.Panel9.Controls.Add(Me.TxtQty)
         Me.Panel9.Controls.Add(Me.Dgv)
@@ -165,6 +167,26 @@ Partial Class Cars
         Me.Panel9.Size = New System.Drawing.Size(1091, 633)
         Me.Panel9.TabIndex = 1
         '
+        'LblColor
+        '
+        Me.LblColor.AutoSize = True
+        Me.LblColor.BackColor = System.Drawing.Color.Transparent
+        Me.LblColor.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblColor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.LblColor.Location = New System.Drawing.Point(111, 242)
+        Me.LblColor.Name = "LblColor"
+        Me.LblColor.Size = New System.Drawing.Size(51, 27)
+        Me.LblColor.TabIndex = 62
+        Me.LblColor.Text = "Qty"
+        '
+        'TxtQty
+        '
+        Me.TxtQty.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtQty.Location = New System.Drawing.Point(220, 233)
+        Me.TxtQty.Name = "TxtQty"
+        Me.TxtQty.Size = New System.Drawing.Size(146, 36)
+        Me.TxtQty.TabIndex = 61
+        '
         'Dgv
         '
         Me.Dgv.BackgroundColor = System.Drawing.Color.White
@@ -177,7 +199,7 @@ Partial Class Cars
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.Dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.Dgv.ColumnHeadersHeight = 40
-        Me.Dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column5, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
+        Me.Dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CarID, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.Dgv.Location = New System.Drawing.Point(72, 380)
         Me.Dgv.Name = "Dgv"
         DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
@@ -200,7 +222,7 @@ Partial Class Cars
         Me.BtnAddCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAddCustomer.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAddCustomer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnAddCustomer.Location = New System.Drawing.Point(782, 233)
+        Me.BtnAddCustomer.Location = New System.Drawing.Point(640, 233)
         Me.BtnAddCustomer.Name = "BtnAddCustomer"
         Me.BtnAddCustomer.Size = New System.Drawing.Size(160, 127)
         Me.BtnAddCustomer.TabIndex = 58
@@ -435,32 +457,13 @@ Partial Class Cars
         Me.Fleetease.TabIndex = 56
         Me.Fleetease.TabStop = False
         '
-        'TxtQty
+        'CarID
         '
-        Me.TxtQty.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtQty.Location = New System.Drawing.Point(220, 233)
-        Me.TxtQty.Name = "TxtQty"
-        Me.TxtQty.Size = New System.Drawing.Size(146, 36)
-        Me.TxtQty.TabIndex = 61
-        '
-        'LblColor
-        '
-        Me.LblColor.AutoSize = True
-        Me.LblColor.BackColor = System.Drawing.Color.Transparent
-        Me.LblColor.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LblColor.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.LblColor.Location = New System.Drawing.Point(111, 242)
-        Me.LblColor.Name = "LblColor"
-        Me.LblColor.Size = New System.Drawing.Size(51, 27)
-        Me.LblColor.TabIndex = 62
-        Me.LblColor.Text = "Qty"
-        '
-        'Column5
-        '
-        Me.Column5.HeaderText = "#"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        Me.Column5.Width = 125
+        Me.CarID.DataPropertyName = "CarID"
+        Me.CarID.HeaderText = "CarID"
+        Me.CarID.MinimumWidth = 6
+        Me.CarID.Name = "CarID"
+        Me.CarID.Width = 125
         '
         'Column1
         '
@@ -489,6 +492,19 @@ Partial Class Cars
         Me.Column4.MinimumWidth = 6
         Me.Column4.Name = "Column4"
         Me.Column4.Width = 125
+        '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.BackColor = System.Drawing.Color.Transparent
+        Me.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnUpdate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.BtnUpdate.Location = New System.Drawing.Point(818, 233)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(160, 127)
+        Me.BtnUpdate.TabIndex = 63
+        Me.BtnUpdate.Text = "UPDATE"
+        Me.BtnUpdate.UseVisualStyleBackColor = False
         '
         'Cars
         '
@@ -568,9 +584,10 @@ Partial Class Cars
     Friend WithEvents Fleetease As PictureBox
     Friend WithEvents LblColor As Label
     Friend WithEvents TxtQty As TextBox
-    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents CarID As DataGridViewTextBoxColumn
     Friend WithEvents Column1 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents BtnUpdate As Button
 End Class

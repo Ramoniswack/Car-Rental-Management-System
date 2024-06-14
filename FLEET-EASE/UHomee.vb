@@ -54,4 +54,8 @@
         Dim obj As New UCustomers
         obj.Show()
     End Sub
+
+    Private Sub Dgv1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv1.CellContentClick
+
+    End Sub
 End Class

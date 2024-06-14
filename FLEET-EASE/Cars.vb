@@ -8,23 +8,27 @@
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
-            Dgv.Rows.Add(i, dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("Qty"))
+            Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("Qty"))
         End While
         cn.Close()
     End Sub
 
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
-        cn.Open()
-        cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color,QTY) VALUES (@Carname, @Model, @Color, @QTY)", cn)
-        With cm
-            .Parameters.AddWithValue("@CarName", TxtCarname.Text)
-            .Parameters.AddWithValue("@Model", Txtmodel.Text)
-            .Parameters.AddWithValue("@Color", TxtColor.Text)
-            .Parameters.AddWithValue("@QTY", TxtQty.Text)
-            .ExecuteNonQuery()
-            cn.Close()
-        End With
-        MsgBox("Customer saved successfully")
+        If TxtCarname.Text <> "" And Txtmodel.Text <> "" And TxtColor.Text <> "" And TxtQty.Text <> "" Then
+            cn.Open()
+            cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color,QTY) VALUES (@Carname, @Model, @Color, @QTY)", cn)
+            With cm
+                .Parameters.AddWithValue("@CarName", TxtCarname.Text)
+                .Parameters.AddWithValue("@Model", Txtmodel.Text)
+                .Parameters.AddWithValue("@Color", TxtColor.Text)
+                .Parameters.AddWithValue("@QTY", TxtQty.Text)
+                .ExecuteNonQuery()
+                cn.Close()
+            End With
+            MsgBox("Customer saved successfully")
+        Else
+            MsgBox("Please fullfill all requirements first")
+        End If
 
         TxtColor.Clear()
         Txtmodel.Clear()
@@ -68,4 +72,39 @@
     Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
 
     End Sub
+
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        If TxtCarname.Text <> "" And TxtColor.Text <> "" And Txtmodel.Text <> "" And TxtQty.Text <> "" Then
+            Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+            Dim carIdValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+            cn.Open()
+            cm = New SqlClient.SqlCommand("UPDATE tblcars SET Carname = @Carname, Model = @Model, Color = @Color, Qty = @Qty WHERE Carid = @Carid", cn)
+            With cm
+                .Parameters.AddWithValue("@CarId", carIdValue)
+                .Parameters.AddWithValue("@Carname", TxtCarname.Text)
+                .Parameters.AddWithValue("@Model", Txtmodel.Text)
+                .Parameters.AddWithValue("@Color", TxtColor.Text)
+                .Parameters.AddWithValue("@Qty", TxtQty.Text)
+                .ExecuteNonQuery()
+                cn.Close()
+            End With
+            MsgBox("Car information updated successfully")
+            LoadRecord()
+        Else
+            MsgBox("Please Fullfill the requirements to Update")
+        End If
+    End Sub
+
+    Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
+        If e.RowIndex >= 0 Then
+            Dim row As DataGridViewRow = Dgv.Rows(e.RowIndex)
+            ' TxtCarID.Text = row.Cells(0).Value.ToString()
+            TxtCarname.Text = row.Cells(1).Value.ToString()
+            Txtmodel.Text = row.Cells(2).Value.ToString()
+            TxtColor.Text = row.Cells(3).Value.ToString()
+            TxtQty.Text = row.Cells(4).Value.ToString()
+        End If
+
+    End Sub
+
 End Class

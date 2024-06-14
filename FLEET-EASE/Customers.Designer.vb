@@ -25,6 +25,7 @@ Partial Class Customers
         Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.TxtLicecnseCode = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Dgv = New System.Windows.Forms.DataGridView()
@@ -63,7 +64,6 @@ Partial Class Customers
         Me.BtnCars = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Fleetease = New System.Windows.Forms.PictureBox()
-        Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
@@ -96,6 +96,19 @@ Partial Class Customers
         Me.Panel9.Name = "Panel9"
         Me.Panel9.Size = New System.Drawing.Size(1091, 633)
         Me.Panel9.TabIndex = 1
+        '
+        'BtnUpdate
+        '
+        Me.BtnUpdate.BackColor = System.Drawing.Color.Transparent
+        Me.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnUpdate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.BtnUpdate.Location = New System.Drawing.Point(430, 286)
+        Me.BtnUpdate.Name = "BtnUpdate"
+        Me.BtnUpdate.Size = New System.Drawing.Size(160, 80)
+        Me.BtnUpdate.TabIndex = 63
+        Me.BtnUpdate.Text = "UPDATE"
+        Me.BtnUpdate.UseVisualStyleBackColor = False
         '
         'TxtLicecnseCode
         '
@@ -517,19 +530,6 @@ Partial Class Customers
         Me.Fleetease.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
         Me.Fleetease.TabIndex = 35
         Me.Fleetease.TabStop = False
-        '
-        'BtnUpdate
-        '
-        Me.BtnUpdate.BackColor = System.Drawing.Color.Transparent
-        Me.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnUpdate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnUpdate.Location = New System.Drawing.Point(430, 286)
-        Me.BtnUpdate.Name = "BtnUpdate"
-        Me.BtnUpdate.Size = New System.Drawing.Size(160, 80)
-        Me.BtnUpdate.TabIndex = 63
-        Me.BtnUpdate.Text = "UPDATE"
-        Me.BtnUpdate.UseVisualStyleBackColor = False
         '
         'Customers
         '
