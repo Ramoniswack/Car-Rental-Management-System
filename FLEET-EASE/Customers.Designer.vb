@@ -45,7 +45,7 @@ Partial Class Customers
         Me.BtnHome = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblUsername = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -315,16 +315,15 @@ Partial Class Customers
         Me.Label1.TabIndex = 34
         Me.Label1.Text = "CUSTOMERS"
         '
-        'Label2
+        'LblUsername
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(84, 50)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(86, 27)
-        Me.Label2.TabIndex = 36
-        Me.Label2.Text = "Admin"
+        Me.LblUsername.AutoSize = True
+        Me.LblUsername.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.LblUsername.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.LblUsername.Location = New System.Drawing.Point(84, 50)
+        Me.LblUsername.Name = "LblUsername"
+        Me.LblUsername.Size = New System.Drawing.Size(0, 27)
+        Me.LblUsername.TabIndex = 36
         '
         'Panel2
         '
@@ -556,7 +555,7 @@ Partial Class Customers
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.BtnHome)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.Fleetease)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow
         Me.Name = "Customers"
@@ -593,7 +592,7 @@ Partial Class Customers
     Friend WithEvents BtnHome As Button
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents LblUsername As Label
     Friend WithEvents Fleetease As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtCustomerName As TextBox

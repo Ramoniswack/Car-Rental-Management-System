@@ -1,5 +1,7 @@
 ﻿Public Class UCustomers
 
+
+
     Public Sub Loadrecord()
         cn.Open()
         Dgv.Rows.Clear()
@@ -19,7 +21,7 @@
     End Sub
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
         Me.Hide()
-        Dim oBJ As New UHomee
+        Dim oBJ As New UHomee()
         oBJ.Show()
     End Sub
 
@@ -40,6 +42,11 @@
     End Sub
 
     Private Sub UCustomers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.loggedinusername
+
+        End If
         Loadrecord()
     End Sub
 End Class

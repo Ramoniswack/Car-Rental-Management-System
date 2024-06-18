@@ -42,6 +42,11 @@
 
 
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.loggedinusername
+
+        End If
         LoadRecord()
     End Sub
 
@@ -72,11 +77,11 @@
     Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
 
     End Sub
-
+    Dim carIdValue As Integer = 0
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        If TxtCarname.Text <> "" And TxtColor.Text <> "" And Txtmodel.Text <> "" And TxtQty.Text <> "" Then
+        If Dgv.SelectedRows.Count > 0 AndAlso TxtCarname.Text <> "" And TxtColor.Text <> "" And Txtmodel.Text <> "" And TxtQty.Text <> "" Then
             Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
-            Dim carIdValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+            carIdValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
             cn.Open()
             cm = New SqlClient.SqlCommand("UPDATE tblcars SET Carname = @Carname, Model = @Model, Color = @Color, Qty = @Qty WHERE Carid = @Carid", cn)
             With cm
@@ -91,7 +96,7 @@
             MsgBox("Car information updated successfully")
             LoadRecord()
         Else
-            MsgBox("Please Fullfill the requirements to Update")
+            MsgBox("Please select a row and fill in all the fields to update.")
         End If
     End Sub
 

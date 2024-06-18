@@ -17,8 +17,6 @@
     End Sub
     Private Sub BtnAddUser_Click(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If TxtUsername.Text <> "" And TxtPasswword.Text <> "" And TxtUsertype.Text <> "" And TxtContact.Text <> "" Then
-
-
             cn.Open()
             cm = New SqlClient.SqlCommand("INSERT INTO tbllogin (Username, Password, Usertype, Contact) VALUES (@Username, @Password, @Usertype, @Contact)", cn)
             With cm
@@ -80,6 +78,12 @@
     End Sub
 
     Private Sub Users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.loggedinusername
+
+        End If
+
         LoadRecord()
     End Sub
 
@@ -88,12 +92,13 @@
         Dim obj As New Login
         obj.Show()
     End Sub
-
+    'UserId Value
+    Dim UidValue As Integer = 0
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
 
-        If TxtUsername.Text <> "" And TxtPasswword.Text <> "" And TxtUsertype.Text <> "" And TxtContact.Text <> "" Then
+        If Dgv.SelectedRows.Count > 0 AndAlso TxtUsername.Text <> "" And TxtPasswword.Text <> "" And TxtUsertype.Text <> "" And TxtContact.Text <> "" And UidValue > 0 Then
             Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
-            Dim UidValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+            UidValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
             cn.Open()
             cm = New SqlClient.SqlCommand("Update tbllogin SET username = @username, password = @password, usertype = @usertype, contact = @contact where Uid = @Uid", cn)
             With cm
@@ -108,7 +113,7 @@
             MsgBox("User updated successfully")
             LoadRecord()
         Else
-            MsgBox("Please FullFill the requirements to Update")
+            MsgBox("Please select a row and fill in all the fields to update.")
 
         End If
 

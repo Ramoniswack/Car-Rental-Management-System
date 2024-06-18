@@ -3,6 +3,7 @@
 Imports System.Data.SqlClient
 
 Public Class Rent
+
     Private Sub Rentvehicle()
         Dim cusID As String = TxtCusID.Text
         Dim customername As String = TxtCustomerName.Text
@@ -73,6 +74,11 @@ Public Class Rent
     End Sub
 
     Private Sub Rent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.loggedinusername
+
+        End If
     End Sub
 
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
@@ -89,7 +95,7 @@ Public Class Rent
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Me.Hide()
-        Dim obj As New UHomee
+        Dim obj As New UHomee()
         obj.Show()
     End Sub
 

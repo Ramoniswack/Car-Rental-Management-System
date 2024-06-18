@@ -139,7 +139,7 @@ Partial Class Login
         Me.BtnLogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent
         Me.BtnLogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent
         Me.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLogin.Font = New System.Drawing.Font("Ink Free", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogin.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLogin.ForeColor = System.Drawing.Color.White
         Me.BtnLogin.Location = New System.Drawing.Point(108, 308)
         Me.BtnLogin.Name = "BtnLogin"

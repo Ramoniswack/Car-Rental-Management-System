@@ -48,6 +48,11 @@
 
 
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.loggedinusername
+
+        End If
         LoadRecord()
     End Sub
 
@@ -78,10 +83,11 @@
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
 
 
+        Dim CusIdValue As Integer = 0
 
-        If txtCustomerName.Text <> "" Then
+        If Dgv.SelectedRows.Count > 0 AndAlso txtCustomerName.Text <> "" And TxtAddress.Text <> "" And TxtContact.Text <> "" And TxtLicecnseCode.Text <> "" Then
             Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
-            Dim CusIdValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+            CusIdValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
             cn.Open()
             cm = New SqlClient.SqlCommand("Update tblcustomers SET Customername= @CustomerName, Licenseid= @licenseid, contact= @contact, address= @address where Cusid = @Cusid ", cn)
             With cm
@@ -94,9 +100,9 @@
                 cn.Close()
             End With
             MsgBox("Customer information updated successfully")
-                LoadRecord()
-                Else
-                MsgBox("Please Fullfill the requirements to Update")
+            LoadRecord()
+        Else
+            MsgBox("Please Fullfill the requirements to Update")
                 End If
 
 

@@ -1,4 +1,5 @@
 ﻿Public Class UHomee
+
     Public Sub LoadRecord()
         cn.Open()
         'Dgv.Rows.Clear()
@@ -37,6 +38,19 @@
 
 
     Private Sub UHomee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.loggedinusername
+
+        End If
+
+
+
+
+
+
+
+
         Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
         LoadRecord()
         Loadrecord1()
@@ -56,6 +70,10 @@
     End Sub
 
     Private Sub Dgv1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv1.CellContentClick
+
+    End Sub
+
+    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
 
     End Sub
 End Class

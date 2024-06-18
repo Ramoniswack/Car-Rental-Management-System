@@ -1,4 +1,5 @@
 ﻿Public Class Homee
+
     Public Sub LoadRecord()
         cn.Open()
         Dgv.Rows.Clear()
@@ -49,6 +50,11 @@
     End Sub
 
     Private Sub Homee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.loggedinusername
+
+        End If
         'TODO: This line of code loads data into the 'FleeteaseDataSet.tblcars' table. You can move, or remove it, as needed.
         Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
         LoadRecord()
