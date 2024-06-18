@@ -19,11 +19,11 @@
         Dgv1.Rows.Clear()
         Dim i As Integer
 
-        cm = New SqlClient.SqlCommand("select *from tblcarrentals1", cn)
+        cm = New SqlClient.SqlCommand("select *from tblcarrentals3", cn)
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
-            Dgv1.Rows.Add(i, dr.Item("CusID"), dr.Item("CustomerName"), dr.Item("CarID"), dr.Item("Carname"), dr.Item("PickupLocation"), dr.Item("RentDate"), dr.Item("ReturnDate"), dr.Item("Charges"))
+            Dgv1.Rows.Add(i, dr.Item("RegNumber"), dr.Item("CusName"), dr.Item("PickupLocation"), dr.Item("RentDate"), dr.Item("ReturnDate"), dr.Item("Charges"))
         End While
         cn.Close()
     End Sub

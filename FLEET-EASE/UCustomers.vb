@@ -49,4 +49,32 @@
         End If
         Loadrecord()
     End Sub
+
+    Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
+        If txtCustomerName.Text <> "" And TxtAddress.Text <> "" And TxtContact.Text <> "" And TxtLicecnseCode.Text <> "" Then
+
+
+            cn.Open()
+            cm = New SqlClient.SqlCommand("INSERT INTO tblcustomers (CustomerName, Contact, Address,LicenseID) VALUES (@CustomerName, @Contact, @Address,@LicenseID)", cn)
+            With cm
+                .Parameters.AddWithValue("@CustomerName", txtCustomerName.Text)
+                .Parameters.AddWithValue("@Contact", TxtContact.Text)
+                .Parameters.AddWithValue("@Address", TxtAddress.Text)
+                .Parameters.AddWithValue("@LicenseID", TxtLicecnseCode.Text)
+                .ExecuteNonQuery()
+                cn.Close()
+            End With
+            MsgBox("Customer saved successfully")
+        Else
+            MsgBox("Please Fullfill all the requirements first")
+        End If
+        TxtLicecnseCode.Clear()
+        TxtAddress.Clear()
+        TxtContact.Clear()
+
+        txtCustomerName.Clear()
+        txtCustomerName.Select()
+
+        Loadrecord()
+    End Sub
 End Class
