@@ -8,20 +8,21 @@
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
-            Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("Qty"))
+            Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
         End While
         cn.Close()
     End Sub
 
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
-        If TxtCarname.Text <> "" And Txtmodel.Text <> "" And TxtColor.Text <> "" And TxtQty.Text <> "" Then
+        If TxtCarname.Text <> "" And Txtmodel.Text <> "" And TxtColor.Text <> "" And TxtAvailable.Text <> "" Then
             cn.Open()
-            cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color,QTY) VALUES (@Carname, @Model, @Color, @QTY)", cn)
+            cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color,RegNumber, Available) VALUES (@Carname, @Model, @Color,@RegNumber, @Available)", cn)
             With cm
                 .Parameters.AddWithValue("@CarName", TxtCarname.Text)
                 .Parameters.AddWithValue("@Model", Txtmodel.Text)
                 .Parameters.AddWithValue("@Color", TxtColor.Text)
-                .Parameters.AddWithValue("@QTY", TxtQty.Text)
+                .Parameters.AddWithValue("@RegNumber", TxtRegNum.Text)
+                .Parameters.AddWithValue("@Available", TxtAvailable.Text)
                 .ExecuteNonQuery()
                 cn.Close()
             End With
@@ -33,7 +34,9 @@
         TxtColor.Clear()
         Txtmodel.Clear()
         TxtCarname.Clear()
-        TxtQty.Clear()
+        TxtAvailable.Clear()
+        TxtRegNum.Clear()
+
         TxtCarname.Select()
 
         LoadRecord()
@@ -44,7 +47,7 @@
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
         If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.loggedinusername
+            LblUsername.Text = loginform.Loggedinusername
 
         End If
         LoadRecord()
@@ -79,7 +82,7 @@
     End Sub
     Dim carIdValue As Integer = 0
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        If Dgv.SelectedRows.Count > 0 AndAlso TxtCarname.Text <> "" And TxtColor.Text <> "" And Txtmodel.Text <> "" And TxtQty.Text <> "" Then
+        If Dgv.SelectedRows.Count > 0 AndAlso TxtCarname.Text <> "" And TxtColor.Text <> "" And Txtmodel.Text <> "" And TxtAvailable.Text <> "" Then
             Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
             carIdValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
             cn.Open()
@@ -89,7 +92,7 @@
                 .Parameters.AddWithValue("@Carname", TxtCarname.Text)
                 .Parameters.AddWithValue("@Model", Txtmodel.Text)
                 .Parameters.AddWithValue("@Color", TxtColor.Text)
-                .Parameters.AddWithValue("@Qty", TxtQty.Text)
+                .Parameters.AddWithValue("@Qty", TxtAvailable.Text)
                 .ExecuteNonQuery()
                 cn.Close()
             End With
@@ -107,7 +110,7 @@
             TxtCarname.Text = row.Cells(1).Value.ToString()
             Txtmodel.Text = row.Cells(2).Value.ToString()
             TxtColor.Text = row.Cells(3).Value.ToString()
-            TxtQty.Text = row.Cells(4).Value.ToString()
+            TxtAvailable.Text = row.Cells(4).Value.ToString()
         End If
 
     End Sub

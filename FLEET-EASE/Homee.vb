@@ -9,7 +9,7 @@
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
-            Dgv.Rows.Add(i, dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("Qty"))
+            Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
         End While
         cn.Close()
     End Sub
@@ -56,7 +56,7 @@
 
         End If
         'TODO: This line of code loads data into the 'FleeteaseDataSet.tblcars' table. You can move, or remove it, as needed.
-        Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
+        'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
         LoadRecord()
         Loadrecord1()
     End Sub
@@ -81,7 +81,7 @@
 
     End Sub
 
-    Private Sub Dgv_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
+    Private Sub Dgv_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs)
 
     End Sub
 End Class
