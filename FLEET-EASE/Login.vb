@@ -44,9 +44,12 @@ Public Class Login
                     h.Show()
                     Me.Hide()
                 Else
+                    cn.Close()
                     MessageBox.Show("Invalid user type.")
                 End If
             Else
+                cn.Close()
+
                 MsgBox("Invalid username or password")
             End If
         End If

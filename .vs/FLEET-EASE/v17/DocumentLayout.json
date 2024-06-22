@@ -3,24 +3,63 @@
   "WorkspaceRootPath": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|d:\\project\\car-rental-system\\fleet-ease\\fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|d:\\project\\car-rental-system\\fleet-ease\\fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|d:\\project\\car-rental-system\\fleet-ease\\fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|d:\\project\\car-rental-system\\fleet-ease\\fleet-ease\\settings.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\settings.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\settings.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\settings.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\R.A.MON\\AppData\\Local\\Temp\\1stmejqk..sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|d:\\project\\car-rental-system\\fleet-ease\\fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\checkout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\checkout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\checkout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\checkout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
@@ -31,32 +70,24 @@
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|d:\\project\\car-rental-system\\fleet-ease\\fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|d:\\project\\car-rental-system\\fleet-ease\\fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\fleet-ease\\splash.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
@@ -70,7 +101,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 312,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -82,70 +113,204 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Homee.vb",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Homee.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb",
-              "RelativeToolTip": "FLEET-EASE\\Homee.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAASAAAA",
+              "DocumentIndex": 1,
+              "Title": "Cars.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Cars.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Cars.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Cars.vb [Design]*",
+              "RelativeToolTip": "FLEET-EASE\\Cars.vb [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-18T16:49:12.38Z",
+              "WhenOpened": "2024-06-19T01:09:52.053Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UCustomers.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\UCustomers.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb",
+              "RelativeToolTip": "FLEET-EASE\\UCustomers.vb",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAcwFgAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-14T12:25:15.469Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Settings.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Settings.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Settings.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Settings.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\Settings.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-18T17:40:29.613Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Settings.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Settings.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Settings.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Settings.vb",
+              "RelativeToolTip": "FLEET-EASE\\Settings.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-18T17:43:14.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Homee.vb [Design]",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Homee.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb [Design]",
-              "RelativeToolTip": "FLEET-EASE\\Homee.vb [Design]",
+              "DocumentIndex": 8,
+              "Title": "Login.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Login.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Login.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Login.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\Login.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-18T16:48:56.582Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-18T17:51:11.53Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Rent.vb [Design]",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Rent.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb [Design]",
-              "RelativeToolTip": "FLEET-EASE\\Rent.vb [Design]",
+              "DocumentIndex": 5,
+              "Title": "Login.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Login.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Login.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Login.vb",
+              "RelativeToolTip": "FLEET-EASE\\Login.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-14T13:59:01.665Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-14T11:31:50.526Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 7,
+              "Title": "Users.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Users.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Users.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Users.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\Users.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-18T17:41:43.501Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Cars.vb",
               "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Cars.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Cars.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Cars.vb",
-              "RelativeToolTip": "FLEET-EASE\\Cars.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAACAAAA",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Cars.vb*",
+              "RelativeToolTip": "FLEET-EASE\\Cars.vb*",
+              "ViewState": "AQIAAE8AAAAAAAAAAAA9wGcAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2024-06-14T10:13:08.782Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Customers.vb",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Customers.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Customers.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Customers.vb",
-              "RelativeToolTip": "FLEET-EASE\\Customers.vb",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAcwBQAAAAAAAAA",
+              "DocumentIndex": 4,
+              "Title": "SQLQuery1.sql ",
+              "DocumentMoniker": "C:\\Users\\R.A.MON\\AppData\\Local\\Temp\\1stmejqk..sql",
+              "ToolTip": "SQLQuery1.sql *",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-06-18T17:56:15.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Users.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Users.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Users.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Users.vb",
+              "RelativeToolTip": "FLEET-EASE\\Users.vb",
+              "ViewState": "AQIAAGQAAAAAAAAAAAAswI4AAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-14T11:25:49.168Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T08:56:20.776Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "UCustomers.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\UCustomers.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\UCustomers.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-18T17:40:34.79Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UHomee.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb",
+              "RelativeToolTip": "FLEET-EASE\\UHomee.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-14T12:23:53.51Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "UHomee.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\UHomee.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-18T16:23:30.452Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CheckOut.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\CheckOut.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\CheckOut.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\CheckOut.vb",
+              "RelativeToolTip": "FLEET-EASE\\CheckOut.vb",
+              "ViewState": "AQIAAAQAAAAAAAAAAAAgwDkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-18T17:27:56.972Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "CheckOut.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\CheckOut.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\CheckOut.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\CheckOut.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\CheckOut.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-18T17:22:14.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Rent.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Rent.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb",
+              "RelativeToolTip": "FLEET-EASE\\Rent.vb",
+              "ViewState": "AQIAAHMAAAAAAAAAAAAywIcAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-08T17:27:19.926Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 12,
+              "Title": "Rent.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Rent.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\Rent.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-14T13:59:01.665Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "Module1.vb",
               "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Module1.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Module1.vb",
@@ -153,111 +318,57 @@
               "RelativeToolTip": "FLEET-EASE\\Module1.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-08T09:42:36.4Z"
+              "WhenOpened": "2024-06-18T17:51:55.647Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UCustomers.vb",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\UCustomers.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb",
-              "RelativeToolTip": "FLEET-EASE\\UCustomers.vb",
-              "ViewState": "AQIAAAQAAAAAAAAAAAA/wE0AAAAUAAAA",
+              "DocumentIndex": 18,
+              "Title": "Customers.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Customers.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Customers.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Customers.vb",
+              "RelativeToolTip": "FLEET-EASE\\Customers.vb",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAcwBQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-14T12:25:15.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-14T11:25:49.168Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UHomee.vb [Design]",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb [Design]",
-              "RelativeToolTip": "FLEET-EASE\\UHomee.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-18T16:23:30.452Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "UHomee.vb",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UHomee.vb",
-              "RelativeToolTip": "FLEET-EASE\\UHomee.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-14T12:23:53.51Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Rent.vb",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Rent.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Rent.vb",
-              "RelativeToolTip": "FLEET-EASE\\Rent.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAH4AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-08T17:27:19.926Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UCustomers.vb [Design]",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\UCustomers.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\UCustomers.vb [Design]",
-              "RelativeToolTip": "FLEET-EASE\\UCustomers.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-18T16:35:49.57Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 20,
               "Title": "Customers.vb [Design]",
               "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Customers.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Customers.vb",
               "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Customers.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\Customers.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-18T16:35:53.395Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-18T16:35:53.395Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Users.vb",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Users.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Users.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Users.vb",
-              "RelativeToolTip": "FLEET-EASE\\Users.vb",
-              "ViewState": "AQIAAFYAAAAAAAAAAAAowHQAAAAAAAAA",
+              "DocumentIndex": 19,
+              "Title": "Homee.vb [Design]",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Homee.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\Homee.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-14T08:56:20.776Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-18T16:48:56.582Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Login.vb",
-              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Login.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Login.vb",
-              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Login.vb",
-              "RelativeToolTip": "FLEET-EASE\\Login.vb",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAgwCQAAAAoAAAA",
+              "DocumentIndex": 21,
+              "Title": "Homee.vb",
+              "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Homee.vb",
+              "ToolTip": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Homee.vb",
+              "RelativeToolTip": "FLEET-EASE\\Homee.vb",
+              "ViewState": "AQIAACcAAAAAAAAAAAA7wBoAAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-14T11:31:50.526Z"
+              "WhenOpened": "2024-06-18T16:49:12.38Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 22,
               "Title": "Splash.vb [Design]",
               "DocumentMoniker": "D:\\PROJECT\\CAR-RENTAL-SYSTEM\\FLEET-EASE\\FLEET-EASE\\Splash.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Splash.vb",

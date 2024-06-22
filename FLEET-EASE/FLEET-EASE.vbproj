@@ -79,6 +79,12 @@
     <Compile Include="Cars.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="CheckOut.Designer.vb">
+      <DependentUpon>CheckOut.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CheckOut.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Customers.Designer.vb">
       <DependentUpon>Customers.vb</DependentUpon>
     </Compile>
@@ -107,6 +113,12 @@
       <DependentUpon>Rent.vb</DependentUpon>
     </Compile>
     <Compile Include="Rent.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Settings.Designer.vb">
+      <DependentUpon>Settings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Splash.vb">
@@ -155,6 +167,9 @@
     <EmbeddedResource Include="Cars.resx">
       <DependentUpon>Cars.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CheckOut.resx">
+      <DependentUpon>CheckOut.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Customers.resx">
       <DependentUpon>Customers.vb</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +181,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Rent.resx">
       <DependentUpon>Rent.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Settings.resx">
+      <DependentUpon>Settings.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Splash.resx">
       <DependentUpon>Splash.vb</DependentUpon>
@@ -232,6 +250,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Checkout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icons-Logout.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

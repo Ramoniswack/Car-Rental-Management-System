@@ -77,4 +77,16 @@
 
         Loadrecord()
     End Sub
+
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        Me.Hide()
+        Dim obj As New CheckOut
+        obj.Show()
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Dim obj As New Settings
+        obj.Show()
+    End Sub
 End Class

@@ -77,6 +77,11 @@ FLEET-EASE
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Icons_Logout">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:FLEET_EASE.My.Resources.Resources.Logout">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

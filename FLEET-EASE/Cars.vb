@@ -101,6 +101,7 @@
         Else
             MsgBox("Please select a row and fill in all the fields to update.")
         End If
+        clear()
     End Sub
 
     Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
@@ -112,6 +113,15 @@
             TxtColor.Text = row.Cells(3).Value.ToString()
             TxtAvailable.Text = row.Cells(4).Value.ToString()
         End If
+
+    End Sub
+
+    Sub clear()
+        TxtColor.Clear()
+        Txtmodel.Clear()
+        TxtCarname.Clear()
+        TxtAvailable.Clear()
+        TxtRegNum.Clear()
 
     End Sub
 

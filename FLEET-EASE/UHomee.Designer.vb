@@ -35,6 +35,13 @@ Partial Class UHomee
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Dgv1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Dgv = New System.Windows.Forms.DataGridView()
@@ -49,10 +56,17 @@ Partial Class UHomee
         Me.FleeteaseDataSet = New FLEET_EASE.fleeteaseDataSet()
         Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.FleeteaseDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblcarsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
+        Me.TblcarsTableAdapter = New FLEET_EASE.fleeteaseDataSetTableAdapters.tblcarsTableAdapter()
+        Me.FleeteaseDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
+        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.PictureBox4 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.BtnLogout = New System.Windows.Forms.Button()
         Me.BtnCustomers = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
@@ -60,20 +74,6 @@ Partial Class UHomee
         Me.Fleetease = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.FleeteaseDataSetBindingSource1 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblcarsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
-        Me.TblcarsTableAdapter = New FLEET_EASE.fleeteaseDataSetTableAdapters.tblcarsTableAdapter()
-        Me.FleeteaseDataSetBindingSource2 = New System.Windows.Forms.BindingSource(Me.components)
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -82,16 +82,16 @@ Partial Class UHomee
         CType(Me.TblcarsBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FleeteaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FleeteaseDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FleeteaseDataSetBindingSource1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TblcarsBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.FleeteaseDataSetBindingSource2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel7
@@ -192,6 +192,64 @@ Partial Class UHomee
         Me.Dgv1.RowTemplate.Height = 24
         Me.Dgv1.Size = New System.Drawing.Size(1053, 250)
         Me.Dgv1.TabIndex = 63
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.HeaderText = "#"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.ReadOnly = True
+        Me.DataGridViewTextBoxColumn1.Visible = False
+        Me.DataGridViewTextBoxColumn1.Width = 125
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn2.HeaderText = "RegNum"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.ReadOnly = True
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column8.HeaderText = "CusName"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.ReadOnly = True
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn4.HeaderText = "PickupLocation"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        Me.DataGridViewTextBoxColumn4.ReadOnly = True
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column4.DataPropertyName = "date"
+        Me.Column4.HeaderText = "RentDate"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.HeaderText = "ReturnDate"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        Me.Column6.ReadOnly = True
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column7.HeaderText = "Charges"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
         '
         'Label1
         '
@@ -316,6 +374,71 @@ Partial Class UHomee
         Me.Panel4.Size = New System.Drawing.Size(14, 67)
         Me.Panel4.TabIndex = 38
         '
+        'FleeteaseDataSetBindingSource1
+        '
+        Me.FleeteaseDataSetBindingSource1.DataSource = Me.FleeteaseDataSet
+        Me.FleeteaseDataSetBindingSource1.Position = 0
+        '
+        'TblcarsBindingSource
+        '
+        Me.TblcarsBindingSource.DataMember = "tblcars"
+        Me.TblcarsBindingSource.DataSource = Me.FleeteaseDataSet
+        '
+        'TblcarsTableAdapter
+        '
+        Me.TblcarsTableAdapter.ClearBeforeFill = True
+        '
+        'FleeteaseDataSetBindingSource2
+        '
+        Me.FleeteaseDataSetBindingSource2.DataSource = Me.FleeteaseDataSet
+        Me.FleeteaseDataSetBindingSource2.Position = 0
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel6.Location = New System.Drawing.Point(0, 238)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(14, 67)
+        Me.Panel6.TabIndex = 59
+        '
+        'PictureBox7
+        '
+        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox7.Image = Global.FLEET_EASE.My.Resources.Resources.Checkout
+        Me.PictureBox7.Location = New System.Drawing.Point(25, 451)
+        Me.PictureBox7.Name = "PictureBox7"
+        Me.PictureBox7.Size = New System.Drawing.Size(48, 52)
+        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox7.TabIndex = 80
+        Me.PictureBox7.TabStop = False
+        '
+        'PictureBox5
+        '
+        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox5.Image = Global.FLEET_EASE.My.Resources.Resources.employees
+        Me.PictureBox5.Location = New System.Drawing.Point(25, 238)
+        Me.PictureBox5.Name = "PictureBox5"
+        Me.PictureBox5.Size = New System.Drawing.Size(44, 69)
+        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox5.TabIndex = 61
+        Me.PictureBox5.TabStop = False
+        '
+        'Button3
+        '
+        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button3.FlatAppearance.BorderSize = 0
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Button3.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
+        Me.Button3.Location = New System.Drawing.Point(61, 253)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(152, 52)
+        Me.Button3.TabIndex = 60
+        Me.Button3.Text = "Customers"
+        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'PictureBox4
         '
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
@@ -349,17 +472,6 @@ Partial Class UHomee
         Me.PictureBox6.TabIndex = 54
         Me.PictureBox6.TabStop = False
         '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox3.Image = Global.FLEET_EASE.My.Resources.Resources.Cancel
-        Me.PictureBox3.Location = New System.Drawing.Point(25, 434)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(63, 83)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 51
-        Me.PictureBox3.TabStop = False
-        '
         'BtnLogout
         '
         Me.BtnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
@@ -388,7 +500,7 @@ Partial Class UHomee
         Me.BtnCustomers.Name = "BtnCustomers"
         Me.BtnCustomers.Size = New System.Drawing.Size(152, 52)
         Me.BtnCustomers.TabIndex = 47
-        Me.BtnCustomers.Text = "Cancel"
+        Me.BtnCustomers.Text = "CheckOut"
         Me.BtnCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.BtnCustomers.UseVisualStyleBackColor = True
         '
@@ -463,124 +575,13 @@ Partial Class UHomee
         Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button2.UseVisualStyleBackColor = True
         '
-        'FleeteaseDataSetBindingSource1
-        '
-        Me.FleeteaseDataSetBindingSource1.DataSource = Me.FleeteaseDataSet
-        Me.FleeteaseDataSetBindingSource1.Position = 0
-        '
-        'TblcarsBindingSource
-        '
-        Me.TblcarsBindingSource.DataMember = "tblcars"
-        Me.TblcarsBindingSource.DataSource = Me.FleeteaseDataSet
-        '
-        'TblcarsTableAdapter
-        '
-        Me.TblcarsTableAdapter.ClearBeforeFill = True
-        '
-        'FleeteaseDataSetBindingSource2
-        '
-        Me.FleeteaseDataSetBindingSource2.DataSource = Me.FleeteaseDataSet
-        Me.FleeteaseDataSetBindingSource2.Position = 0
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(0, 238)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(14, 67)
-        Me.Panel6.TabIndex = 59
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox5.Image = Global.FLEET_EASE.My.Resources.Resources.employees
-        Me.PictureBox5.Location = New System.Drawing.Point(25, 238)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(44, 69)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 61
-        Me.PictureBox5.TabStop = False
-        '
-        'Button3
-        '
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Button3.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.Button3.Location = New System.Drawing.Point(61, 253)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(152, 52)
-        Me.Button3.TabIndex = 60
-        Me.Button3.Text = "Customers"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.HeaderText = "#"
-        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        Me.DataGridViewTextBoxColumn1.ReadOnly = True
-        Me.DataGridViewTextBoxColumn1.Visible = False
-        Me.DataGridViewTextBoxColumn1.Width = 125
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn2.HeaderText = "RegNum"
-        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.ReadOnly = True
-        '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column8.HeaderText = "CusName"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
-        Me.Column8.ReadOnly = True
-        '
-        'DataGridViewTextBoxColumn4
-        '
-        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.DataGridViewTextBoxColumn4.HeaderText = "PickupLocation"
-        Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
-        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
-        Me.DataGridViewTextBoxColumn4.ReadOnly = True
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column4.DataPropertyName = "date"
-        Me.Column4.HeaderText = "RentDate"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.ReadOnly = True
-        '
-        'Column6
-        '
-        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column6.HeaderText = "ReturnDate"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        Me.Column6.ReadOnly = True
-        '
-        'Column7
-        '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column7.HeaderText = "Charges"
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.ReadOnly = True
-        '
         'UHomee
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1332, 725)
+        Me.Controls.Add(Me.PictureBox7)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.PictureBox5)
         Me.Controls.Add(Me.Button3)
@@ -592,7 +593,6 @@ Partial Class UHomee
         Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel2)
         Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.BtnLogout)
         Me.Controls.Add(Me.BtnCustomers)
         Me.Controls.Add(Me.PictureBox1)
@@ -614,16 +614,16 @@ Partial Class UHomee
         CType(Me.TblcarsBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FleeteaseDataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FleeteaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FleeteaseDataSetBindingSource1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TblcarsBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.FleeteaseDataSetBindingSource2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -633,7 +633,6 @@ Partial Class UHomee
     Friend WithEvents Panel5 As Panel
     Friend WithEvents Panel2 As Panel
     Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents PictureBox3 As PictureBox
     Friend WithEvents BtnLogout As Button
     Friend WithEvents BtnCustomers As Button
     Friend WithEvents PictureBox1 As PictureBox
@@ -676,4 +675,5 @@ Partial Class UHomee
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
+    Friend WithEvents PictureBox7 As PictureBox
 End Class
