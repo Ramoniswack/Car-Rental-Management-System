@@ -1,55 +1,57 @@
 ﻿Public Class Users
     Sub LoadRecord()
-        cn.Open()
-        Dgv.Rows.Clear()
-        Dim i As Integer
+        Try
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+            Dgv.Rows.Clear()
+            Dim i As Integer
 
-        cm = New SqlClient.SqlCommand("select *from tbllogin", cn)
-        dr = cm.ExecuteReader
-        While dr.Read
-            i = i + 1
-            Dgv.Rows.Add(i, dr.Item("Username"), dr.Item("Password"), dr.Item("Usertype"), dr.Item("Contact"))
-
-        End While
-
-
-        cn.Close()
+            cm = New SqlClient.SqlCommand("select * from tbllogin", cn)
+            dr = cm.ExecuteReader
+            While dr.Read
+                i = i + 1
+                Dgv.Rows.Add(i, dr.Item("Username"), dr.Item("Password"), dr.Item("Usertype"), dr.Item("Contact"))
+            End While
+        Catch ex As Exception
+            MsgBox("An error occurred while loading records: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
     End Sub
+
     Private Sub BtnAddUser_Click(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If TxtUsername.Text <> "" And TxtPasswword.Text <> "" And TxtUsertype.Text <> "" And TxtContact.Text <> "" Then
-            cn.Open()
-            cm = New SqlClient.SqlCommand("INSERT INTO tbllogin (Username, Password, Usertype, Contact) VALUES (@Username, @Password, @Usertype, @Contact)", cn)
-            With cm
-                .Parameters.AddWithValue("@Username", TxtUsername.Text)
-                .Parameters.AddWithValue("@Password", TxtPasswword.Text)
-                .Parameters.AddWithValue("@Usertype", TxtUsertype.Text)
-                .Parameters.AddWithValue("@Contact", TxtContact.Text)
-                .ExecuteNonQuery()
-                cn.Close()
-            End With
-            MsgBox("User saved successfully")
-
+            Try
+                If cn.State = ConnectionState.Closed Then
+                    cn.Open()
+                End If
+                cm = New SqlClient.SqlCommand("INSERT INTO tbllogin (Username, Password, Usertype, Contact) VALUES (@Username, @Password, @Usertype, @Contact)", cn)
+                With cm
+                    .Parameters.AddWithValue("@Username", TxtUsername.Text)
+                    .Parameters.AddWithValue("@Password", TxtPasswword.Text)
+                    .Parameters.AddWithValue("@Usertype", TxtUsertype.Text)
+                    .Parameters.AddWithValue("@Contact", TxtContact.Text)
+                    .ExecuteNonQuery()
+                End With
+                MsgBox("User saved successfully")
+            Catch ex As Exception
+                MsgBox("An error occurred while adding the user: " & ex.Message)
+            Finally
+                If cn.State = ConnectionState.Open Then
+                    cn.Close()
+                End If
+            End Try
         Else
             MsgBox("Fulfill all the requirements first")
         End If
 
-        TxtContact.Clear()
-        TxtUsertype.Clear()
-        TxtUsername.Clear()
-        TxtPasswword.Clear()
+        ClearFields()
         TxtUsername.Select()
-
         LoadRecord()
     End Sub
-
-
-
-
-
-
-
-
-
 
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
         Me.Hide()
@@ -70,21 +72,20 @@
     End Sub
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
-        TxtContact.Clear()
-        TxtUsertype.Clear()
-        TxtUsername.Clear()
-        TxtPasswword.Clear()
-        TxtUsername.Select()
+        ClearFields()
     End Sub
 
     Private Sub Users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
         If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.loggedinusername
-
+            LblUsername.Text = loginform.Loggedinusername
         End If
 
         LoadRecord()
+
+        ' Set DataGridView properties
+        Dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Dgv.MultiSelect = False
     End Sub
 
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
@@ -92,15 +93,31 @@
         Dim obj As New Login
         obj.Show()
     End Sub
+
     'UserId Value
     Dim UidValue As Integer = 0
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        Debug.WriteLine($"Selected Cells: {Dgv.SelectedCells.Count}, Selected Rows: {Dgv.SelectedRows.Count}")
 
-        If Dgv.SelectedRows.Count > 0 AndAlso TxtUsername.Text <> "" And TxtPasswword.Text <> "" And TxtUsertype.Text <> "" And TxtContact.Text <> "" And UidValue > 0 Then
-            Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+        If Dgv.SelectedCells.Count = 0 Then
+            MsgBox("Please select a row to update.")
+            Return
+        End If
+
+        Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+        Debug.WriteLine($"Selected Row Index: {selectedRowIndex}")
+
+        If TxtUsername.Text = "" Or TxtPasswword.Text = "" Or TxtUsertype.Text = "" Or TxtContact.Text = "" Then
+            MsgBox("Please fill in all the fields to update.")
+            Return
+        End If
+
+        Try
             UidValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
-            cn.Open()
-            cm = New SqlClient.SqlCommand("Update tbllogin SET username = @username, password = @password, usertype = @usertype, contact = @contact where Uid = @Uid", cn)
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+            cm = New SqlClient.SqlCommand("UPDATE tbllogin SET username = @username, password = @password, usertype = @usertype, contact = @contact WHERE Uid = @Uid", cn)
             With cm
                 .Parameters.AddWithValue("@Uid", UidValue)
                 .Parameters.AddWithValue("@username", TxtUsername.Text)
@@ -108,36 +125,42 @@
                 .Parameters.AddWithValue("@usertype", TxtUsertype.Text)
                 .Parameters.AddWithValue("@contact", TxtContact.Text)
                 .ExecuteNonQuery()
-                cn.Close()
             End With
             MsgBox("User updated successfully")
             LoadRecord()
-        Else
-            MsgBox("Please select a row and fill in all the fields to update.")
-
-        End If
-
+        Catch ex As Exception
+            MsgBox("An error occurred while updating the user: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+            End Try
+            ClearFields()
     End Sub
 
     Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
-
         If e.RowIndex >= 0 Then
+            Dgv.Rows(e.RowIndex).Selected = True
             Dim row As DataGridViewRow = Dgv.Rows(e.RowIndex)
-            ' TxtCusid .Text = row.Cells(0).Value.ToString()
-            TxtUsername.Text = row.Cells(1).Value.ToString()
-            TxtPasswword.Text = row.Cells(2).Value.ToString()
-            TxtUsertype.Text = row.Cells(3).Value.ToString()
-            TxtContact.Text = row.Cells(4).Value.ToString()
-        End If
+            TxtUsername.Text = If(row.Cells(1).Value IsNot Nothing, row.Cells(1).Value.ToString(), "")
+            TxtPasswword.Text = If(row.Cells(2).Value IsNot Nothing, row.Cells(2).Value.ToString(), "")
+            TxtUsertype.Text = If(row.Cells(3).Value IsNot Nothing, row.Cells(3).Value.ToString(), "")
+            TxtContact.Text = If(row.Cells(4).Value IsNot Nothing, row.Cells(4).Value.ToString(), "")
 
+            Debug.WriteLine($"Row clicked and selected: Username={TxtUsername.Text}, Usertype={TxtUsertype.Text}, Contact={TxtContact.Text}")
+        End If
 
     End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
-        If CheckBox1.Checked = True Then
-            TxtPasswword.UseSystemPasswordChar = False
-        Else
-            TxtPasswword.UseSystemPasswordChar = True
-        End If
+        TxtPasswword.UseSystemPasswordChar = Not CheckBox1.Checked
+    End Sub
+
+    Private Sub ClearFields()
+        TxtContact.Clear()
+        TxtUsertype.Clear()
+        TxtUsername.Clear()
+        TxtPasswword.Clear()
+        TxtUsername.Select()
     End Sub
 End Class

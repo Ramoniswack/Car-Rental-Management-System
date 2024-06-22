@@ -73,6 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cancel.Designer.vb">
+      <DependentUpon>Cancel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Cancel.vb" />
     <Compile Include="Cars.Designer.vb">
       <DependentUpon>Cars.vb</DependentUpon>
     </Compile>
@@ -164,6 +168,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Cancel.resx">
+      <DependentUpon>Cancel.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Cars.resx">
       <DependentUpon>Cars.vb</DependentUpon>
     </EmbeddedResource>

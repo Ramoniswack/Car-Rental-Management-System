@@ -46,6 +46,7 @@ Partial Class Settings
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.BtnHome = New System.Windows.Forms.Button()
         Me.PictureBox7 = New System.Windows.Forms.PictureBox()
         Me.PictureBox5 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -58,7 +59,6 @@ Partial Class Settings
         Me.Btnsettings = New System.Windows.Forms.Button()
         Me.Fleetease = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.BtnHome = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -321,6 +321,22 @@ Partial Class Settings
         Me.Label2.TabIndex = 68
         Me.Label2.Text = "UserName"
         '
+        'BtnHome
+        '
+        Me.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnHome.FlatAppearance.BorderSize = 0
+        Me.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnHome.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.BtnHome.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
+        Me.BtnHome.Location = New System.Drawing.Point(61, 170)
+        Me.BtnHome.Name = "BtnHome"
+        Me.BtnHome.Size = New System.Drawing.Size(152, 52)
+        Me.BtnHome.TabIndex = 97
+        Me.BtnHome.Text = "Home"
+        Me.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.BtnHome.UseVisualStyleBackColor = True
+        '
         'PictureBox7
         '
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
@@ -478,22 +494,6 @@ Partial Class Settings
         Me.Button1.Text = "Rent"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'BtnHome
-        '
-        Me.BtnHome.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnHome.FlatAppearance.BorderSize = 0
-        Me.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnHome.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.BtnHome.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.BtnHome.Location = New System.Drawing.Point(61, 170)
-        Me.BtnHome.Name = "BtnHome"
-        Me.BtnHome.Size = New System.Drawing.Size(152, 52)
-        Me.BtnHome.TabIndex = 97
-        Me.BtnHome.Text = "Home"
-        Me.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.BtnHome.UseVisualStyleBackColor = True
         '
         'Settings
         '

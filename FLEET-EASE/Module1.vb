@@ -4,7 +4,7 @@ Module Module1
     Public cm As New SqlCommand
     Public dr As SqlDataReader
 
-
+    Public LoggedInUsename As String = ""
 
 
 End Module

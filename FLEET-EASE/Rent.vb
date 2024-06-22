@@ -132,8 +132,9 @@ Public Class Rent
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ' Assuming you have a variable or property named loggedInUsername in your form
         Me.Hide()
-        Dim obj As New Settings
-        obj.Show()
+        Dim settingsForm As New Settings
+        settingsForm.Show()
     End Sub
 End Class

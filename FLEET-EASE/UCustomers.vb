@@ -1,7 +1,6 @@
 ﻿Public Class UCustomers
 
 
-
     Public Sub Loadrecord()
         cn.Open()
         Dgv.Rows.Clear()
@@ -85,6 +84,7 @@
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        ' Assuming you have a variable or property named loggedInUsername in your form
         Me.Hide()
         Dim obj As New Settings
         obj.Show()

@@ -1,56 +1,69 @@
 ﻿Public Class Cars
     Public Sub LoadRecord()
-        cn.Open()
-        Dgv.Rows.Clear()
-        Dim i As Integer
+        Try
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+            Dgv.Rows.Clear()
+            Dim i As Integer
 
-        cm = New SqlClient.SqlCommand("select *from tblcars", cn)
-        dr = cm.ExecuteReader
-        While dr.Read
-            i = i + 1
-            Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
-        End While
-        cn.Close()
+            cm = New SqlClient.SqlCommand("select * from tblcars", cn)
+            dr = cm.ExecuteReader
+            While dr.Read
+                i = i + 1
+                Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
+            End While
+        Catch ex As Exception
+            MsgBox("An error occurred while loading records: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
     End Sub
 
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
-        If TxtCarname.Text <> "" And Txtmodel.Text <> "" And TxtColor.Text <> "" And TxtAvailable.Text <> "" Then
-            cn.Open()
-            cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color,RegNumber, Available) VALUES (@Carname, @Model, @Color,@RegNumber, @Available)", cn)
-            With cm
-                .Parameters.AddWithValue("@CarName", TxtCarname.Text)
-                .Parameters.AddWithValue("@Model", Txtmodel.Text)
-                .Parameters.AddWithValue("@Color", TxtColor.Text)
-                .Parameters.AddWithValue("@RegNumber", TxtRegNum.Text)
-                .Parameters.AddWithValue("@Available", TxtAvailable.Text)
-                .ExecuteNonQuery()
-                cn.Close()
-            End With
-            MsgBox("Customer saved successfully")
+        If TxtCarname.Text <> "" And Txtmodel.Text <> "" And TxtColor.Text <> "" And TxtRegNum.Text <> "" And TxtAvailable.Text <> "" Then
+            Try
+                If cn.State = ConnectionState.Closed Then
+                    cn.Open()
+                End If
+                cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color, RegNumber, Available) VALUES (@Carname, @Model, @Color, @RegNumber, @Available)", cn)
+                With cm
+                    .Parameters.AddWithValue("@CarName", TxtCarname.Text)
+                    .Parameters.AddWithValue("@Model", Txtmodel.Text)
+                    .Parameters.AddWithValue("@Color", TxtColor.Text)
+                    .Parameters.AddWithValue("@RegNumber", TxtRegNum.Text)
+                    .Parameters.AddWithValue("@Available", TxtAvailable.Text)
+                    .ExecuteNonQuery()
+                End With
+                MsgBox("Car saved successfully")
+            Catch ex As Exception
+                MsgBox("An error occurred while adding the car: " & ex.Message)
+            Finally
+                If cn.State = ConnectionState.Open Then
+                    cn.Close()
+                End If
+            End Try
         Else
-            MsgBox("Please fullfill all requirements first")
+            MsgBox("Please fulfill all requirements first")
         End If
 
-        TxtColor.Clear()
-        Txtmodel.Clear()
-        TxtCarname.Clear()
-        TxtAvailable.Clear()
-        TxtRegNum.Clear()
-
+        clear()
         TxtCarname.Select()
-
         LoadRecord()
     End Sub
-
-
 
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
         If loginform IsNot Nothing Then
             LblUsername.Text = loginform.Loggedinusername
-
         End If
         LoadRecord()
+
+        ' Set DataGridView properties
+        Dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Dgv.MultiSelect = False
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles BtnCustomer.Click
@@ -77,43 +90,89 @@
         obj.Show()
     End Sub
 
-    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
-
-    End Sub
     Dim carIdValue As Integer = 0
+
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        If Dgv.SelectedRows.Count > 0 AndAlso TxtCarname.Text <> "" And TxtColor.Text <> "" And Txtmodel.Text <> "" And TxtAvailable.Text <> "" Then
-            Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+        Debug.WriteLine($"Selected Cells: {Dgv.SelectedCells.Count}, Selected Rows: {Dgv.SelectedRows.Count}")
+
+        ' Check if any cell is selected
+        If Dgv.SelectedCells.Count = 0 Then
+            MsgBox("Please select a row to update.")
+            Return
+        End If
+
+        ' Get the selected row index
+        Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+        Debug.WriteLine($"Selected Row Index: {selectedRowIndex}")
+
+        ' Check each field individually
+        If String.IsNullOrWhiteSpace(TxtCarname.Text) Then
+            MsgBox("Car name cannot be empty.")
+            Return
+        End If
+        If String.IsNullOrWhiteSpace(TxtColor.Text) Then
+            MsgBox("Color cannot be empty.")
+            Return
+        End If
+        If String.IsNullOrWhiteSpace(Txtmodel.Text) Then
+            MsgBox("Model cannot be empty.")
+            Return
+        End If
+        If String.IsNullOrWhiteSpace(TxtRegNum.Text) Then
+            MsgBox("Registration number cannot be empty.")
+            Return
+        End If
+        If String.IsNullOrWhiteSpace(TxtAvailable.Text) Then
+            MsgBox("Availability status cannot be empty.")
+            Return
+        End If
+
+        ' If we've made it this far, all checks have passed
+        Try
             carIdValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
-            cn.Open()
-            cm = New SqlClient.SqlCommand("UPDATE tblcars SET Carname = @Carname, Model = @Model, Color = @Color, Qty = @Qty WHERE Carid = @Carid", cn)
+
+            ' Check if the connection is already open
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+
+            cm = New SqlClient.SqlCommand("UPDATE tblcars SET Carname = @Carname, Model = @Model, Color = @Color, RegNumber = @RegNumber, Available = @Available WHERE Carid = @Carid", cn)
             With cm
                 .Parameters.AddWithValue("@CarId", carIdValue)
                 .Parameters.AddWithValue("@Carname", TxtCarname.Text)
                 .Parameters.AddWithValue("@Model", Txtmodel.Text)
                 .Parameters.AddWithValue("@Color", TxtColor.Text)
-                .Parameters.AddWithValue("@Qty", TxtAvailable.Text)
+                .Parameters.AddWithValue("@RegNumber", TxtRegNum.Text)
+                .Parameters.AddWithValue("@Available", TxtAvailable.Text)
                 .ExecuteNonQuery()
-                cn.Close()
             End With
             MsgBox("Car information updated successfully")
             LoadRecord()
-        Else
-            MsgBox("Please select a row and fill in all the fields to update.")
-        End If
+        Catch ex As Exception
+            MsgBox("An error occurred: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
         clear()
     End Sub
 
     Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
         If e.RowIndex >= 0 Then
-            Dim row As DataGridViewRow = Dgv.Rows(e.RowIndex)
-            ' TxtCarID.Text = row.Cells(0).Value.ToString()
-            TxtCarname.Text = row.Cells(1).Value.ToString()
-            Txtmodel.Text = row.Cells(2).Value.ToString()
-            TxtColor.Text = row.Cells(3).Value.ToString()
-            TxtAvailable.Text = row.Cells(4).Value.ToString()
-        End If
+            ' Select the entire row
+            Dgv.Rows(e.RowIndex).Selected = True
 
+            Dim row As DataGridViewRow = Dgv.Rows(e.RowIndex)
+            TxtCarname.Text = If(row.Cells(1).Value IsNot Nothing, row.Cells(1).Value.ToString(), "")
+            Txtmodel.Text = If(row.Cells(2).Value IsNot Nothing, row.Cells(2).Value.ToString(), "")
+            TxtColor.Text = If(row.Cells(3).Value IsNot Nothing, row.Cells(3).Value.ToString(), "")
+            TxtRegNum.Text = If(row.Cells(4).Value IsNot Nothing, row.Cells(4).Value.ToString(), "")
+            TxtAvailable.Text = If(row.Cells(5).Value IsNot Nothing, row.Cells(5).Value.ToString(), "")
+
+            ' Debug output
+            Debug.WriteLine($"Row clicked and selected: CarName={TxtCarname.Text}, Model={Txtmodel.Text}, Color={TxtColor.Text}, RegNum={TxtRegNum.Text}, Available={TxtAvailable.Text}")
+        End If
     End Sub
 
     Sub clear()
@@ -122,7 +181,9 @@
         TxtCarname.Clear()
         TxtAvailable.Clear()
         TxtRegNum.Clear()
-
     End Sub
 
+    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
+
+    End Sub
 End Class

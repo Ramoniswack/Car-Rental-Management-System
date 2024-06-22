@@ -1,16 +1,12 @@
-﻿Imports Microsoft.VisualBasic.ApplicationServices
+﻿
+Imports Microsoft.VisualBasic.ApplicationServices
 Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
-
 Public Class Login
     Public Property Loggedinusername As String
     Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
     End Sub
-
     Private Sub BtnGetStarted_Click(sender As Object, e As EventArgs) Handles BtnLogin.Click
-
-
         If TxtUsername.Text = "" Then
             MsgBox("Enter a Username")
             TxtUsername.Select()
@@ -28,18 +24,15 @@ Public Class Login
             Dim dt As DataTable = New DataTable()
             dt.Load(dr)
             If dt.Rows.Count > 0 Then
-                loggedinusername = dt.Rows(0)("Username").ToString()
+                Loggedinusername = dt.Rows(0)("Username").ToString()
                 MessageBox.Show("Logged in as:" & dt.Rows(0)("Usertype"))
-
                 If dt.Rows(0)("Usertype").ToString().ToLower() = "user" Then
                     cn.Close()
-
                     Dim u As New UHomee()
                     u.Show()
                     Me.Hide()
                 ElseIf dt.Rows(0)("Usertype").ToString().ToLower() = "admin" Then
                     cn.Close()
-
                     Dim h As New Homee()
                     h.Show()
                     Me.Hide()
@@ -49,13 +42,10 @@ Public Class Login
                 End If
             Else
                 cn.Close()
-
                 MsgBox("Invalid username or password")
             End If
         End If
     End Sub
-
-
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         If CheckBox1.Checked = True Then
             TxtPassword.UseSystemPasswordChar = False

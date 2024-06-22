@@ -59,4 +59,12 @@
         Dim obj As New Settings
         obj.Show()
     End Sub
+
+    Private Sub CheckOut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.Loggedinusername
+
+        End If
+    End Sub
 End Class
