@@ -88,7 +88,7 @@ Public Class Settings
             If rowsAffected > 0 Then
                 MessageBox.Show("Information updated successfully.")
                 Login.Loggedinusername = TxtUsername.Text  ' Update the logged-in username if it was changed
-                LblUsername.Text = "Logged in as: " & Login.Loggedinusername  ' Update the label
+                LblUsername.Text = Login.Loggedinusername  ' Update the label
             Else
                 MessageBox.Show("Failed to update information.")
             End If
@@ -155,5 +155,11 @@ Public Class Settings
 
     Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Me.Hide()
+        Dim obj As New Cancel
+        obj.Show()
     End Sub
 End Class

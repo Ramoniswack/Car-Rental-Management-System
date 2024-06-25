@@ -29,13 +29,8 @@
 
 
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
 
-    End Sub
 
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
-    End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
         Me.Hide()
@@ -55,6 +50,8 @@
             LblUsername.Text = loginform.loggedinusername
 
         End If
+
+
         'TODO: This line of code loads data into the 'FleeteaseDataSet.tblcars' table. You can move, or remove it, as needed.
         'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
         LoadRecord()
@@ -73,15 +70,5 @@
         obj.Show()
     End Sub
 
-    Private Sub Panel9_Paint(sender As Object, e As PaintEventArgs) Handles Panel9.Paint
 
-    End Sub
-
-    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub Dgv_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
 End Class

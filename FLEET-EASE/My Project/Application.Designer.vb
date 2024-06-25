@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.FLEET_EASE.Splash
+            Me.MainForm = Global.FLEET_EASE.Settings
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

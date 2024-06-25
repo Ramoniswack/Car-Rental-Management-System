@@ -76,7 +76,9 @@
     <Compile Include="Cancel.Designer.vb">
       <DependentUpon>Cancel.vb</DependentUpon>
     </Compile>
-    <Compile Include="Cancel.vb" />
+    <Compile Include="Cancel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Cars.Designer.vb">
       <DependentUpon>Cars.vb</DependentUpon>
     </Compile>

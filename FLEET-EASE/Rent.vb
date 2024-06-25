@@ -9,7 +9,7 @@ Public Class Rent
         Dim pickupLocation As String = TxtPickupfrom.Text
         Dim rentDate As Date = TxtRentDate.Value.Date
         Dim returnDate As Date = TxtReturnDate.Value.Date
-        Dim charges As Decimal = TxtCharges.Text
+        Dim charges As String = TxtCharges.Text
 
         Dim customerQuery As String = "SELECT COUNT(*) FROM tblcustomers WHERE cusid = @cusid AND customername = @customername"
         Dim customerCmd As New SqlCommand(customerQuery, cn)
@@ -46,7 +46,7 @@ Public Class Rent
 
                 ' Insert rental record and update car availability
                 cn.Open()
-                cm = New SqlClient.SqlCommand("INSERT INTO tblcarrentals3 (CarID, RegNumber, CusID, CusName, PickupLocation, RentDate, ReturnDate, Charges) VALUES (@CarID, @RegNumber, @CusID, @CusName, @PickupLocation, @RentDate, @ReturnDate, @Charges); UPDATE tblcars SET Available = 'NO' WHERE CarID = @CarID", cn)
+                cm = New SqlClient.SqlCommand("INSERT INTO tblcarrentals3 (CarID, RegNumber, CusID, CusName, PickupLocation, RentDate, ReturnDate, Charges,LoggedInUser,CreatedDate) VALUES (@CarID, @RegNumber, @CusID, @CusName, @PickupLocation, @RentDate, @ReturnDate, @Charges, @LoggedInUser, @CreatedDate); UPDATE tblcars SET Available = 'NO' WHERE CarID = @CarID", cn)
                 With cm
                     .Parameters.AddWithValue("@CarID", carID)
                     .Parameters.AddWithValue("@RegNumber", regNumber)
@@ -56,6 +56,8 @@ Public Class Rent
                     .Parameters.AddWithValue("@RentDate", rentDate)
                     .Parameters.AddWithValue("@ReturnDate", returnDate)
                     .Parameters.AddWithValue("@Charges", charges)
+                    .Parameters.AddWithValue("@LoggedInUser", LblUsername.Text)
+                    .Parameters.AddWithValue("@CreatedDate", DateTime.Now)
                     cm.ExecuteNonQuery()
                     cn.Close()
                 End With
@@ -137,4 +139,13 @@ Public Class Rent
         Dim settingsForm As New Settings
         settingsForm.Show()
     End Sub
+
+    Private Sub BtnCustomers_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
+        Me.Hide()
+        Dim obj As New Cancel
+        obj.Show()
+
+    End Sub
+
+
 End Class

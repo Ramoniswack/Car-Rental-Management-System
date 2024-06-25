@@ -59,6 +59,9 @@ Partial Class Settings
         Me.Btnsettings = New System.Windows.Forms.Button()
         Me.Fleetease = New System.Windows.Forms.PictureBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -68,6 +71,7 @@ Partial Class Settings
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -84,7 +88,7 @@ Partial Class Settings
         'Panel6
         '
         Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(0, 238)
+        Me.Panel6.Location = New System.Drawing.Point(1, 203)
         Me.Panel6.Name = "Panel6"
         Me.Panel6.Size = New System.Drawing.Size(14, 67)
         Me.Panel6.TabIndex = 98
@@ -92,7 +96,7 @@ Partial Class Settings
         'Panel4
         '
         Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(1, 536)
+        Me.Panel4.Location = New System.Drawing.Point(1, 551)
         Me.Panel4.Name = "Panel4"
         Me.Panel4.Size = New System.Drawing.Size(14, 67)
         Me.Panel4.TabIndex = 84
@@ -100,7 +104,7 @@ Partial Class Settings
         'Panel3
         '
         Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(1, 335)
+        Me.Panel3.Location = New System.Drawing.Point(1, 290)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(14, 67)
         Me.Panel3.TabIndex = 82
@@ -108,7 +112,7 @@ Partial Class Settings
         'Panel7
         '
         Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(1, 634)
+        Me.Panel7.Location = New System.Drawing.Point(1, 641)
         Me.Panel7.Name = "Panel7"
         Me.Panel7.Size = New System.Drawing.Size(14, 67)
         Me.Panel7.TabIndex = 85
@@ -116,7 +120,7 @@ Partial Class Settings
         'Panel5
         '
         Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(0, 436)
+        Me.Panel5.Location = New System.Drawing.Point(0, 464)
         Me.Panel5.Name = "Panel5"
         Me.Panel5.Size = New System.Drawing.Size(14, 67)
         Me.Panel5.TabIndex = 83
@@ -124,7 +128,7 @@ Partial Class Settings
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(0, 146)
+        Me.Panel2.Location = New System.Drawing.Point(1, 121)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(14, 67)
         Me.Panel2.TabIndex = 81
@@ -329,7 +333,7 @@ Partial Class Settings
         Me.BtnHome.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.BtnHome.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.BtnHome.Location = New System.Drawing.Point(61, 170)
+        Me.BtnHome.Location = New System.Drawing.Point(68, 125)
         Me.BtnHome.Name = "BtnHome"
         Me.BtnHome.Size = New System.Drawing.Size(152, 52)
         Me.BtnHome.TabIndex = 97
@@ -341,7 +345,7 @@ Partial Class Settings
         '
         Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox7.Image = Global.FLEET_EASE.My.Resources.Resources.Checkout
-        Me.PictureBox7.Location = New System.Drawing.Point(25, 451)
+        Me.PictureBox7.Location = New System.Drawing.Point(21, 477)
         Me.PictureBox7.Name = "PictureBox7"
         Me.PictureBox7.Size = New System.Drawing.Size(48, 52)
         Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -352,7 +356,7 @@ Partial Class Settings
         '
         Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox5.Image = Global.FLEET_EASE.My.Resources.Resources.employees
-        Me.PictureBox5.Location = New System.Drawing.Point(25, 238)
+        Me.PictureBox5.Location = New System.Drawing.Point(27, 203)
         Me.PictureBox5.Name = "PictureBox5"
         Me.PictureBox5.Size = New System.Drawing.Size(44, 69)
         Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -367,7 +371,7 @@ Partial Class Settings
         Me.Button3.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.Button3.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.Button3.Location = New System.Drawing.Point(61, 253)
+        Me.Button3.Location = New System.Drawing.Point(68, 218)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(152, 52)
         Me.Button3.TabIndex = 99
@@ -379,7 +383,7 @@ Partial Class Settings
         '
         Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox4.Image = Global.FLEET_EASE.My.Resources.Resources.Settings
-        Me.PictureBox4.Location = New System.Drawing.Point(18, 536)
+        Me.PictureBox4.Location = New System.Drawing.Point(12, 550)
         Me.PictureBox4.Name = "PictureBox4"
         Me.PictureBox4.Size = New System.Drawing.Size(63, 83)
         Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -390,7 +394,7 @@ Partial Class Settings
         '
         Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox2.Image = Global.FLEET_EASE.My.Resources.Resources.Carrent
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 335)
+        Me.PictureBox2.Location = New System.Drawing.Point(12, 290)
         Me.PictureBox2.Name = "PictureBox2"
         Me.PictureBox2.Size = New System.Drawing.Size(76, 74)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -401,7 +405,7 @@ Partial Class Settings
         '
         Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox6.Image = Global.FLEET_EASE.My.Resources.Resources.Logout
-        Me.PictureBox6.Location = New System.Drawing.Point(25, 649)
+        Me.PictureBox6.Location = New System.Drawing.Point(21, 656)
         Me.PictureBox6.Name = "PictureBox6"
         Me.PictureBox6.Size = New System.Drawing.Size(44, 52)
         Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -416,7 +420,7 @@ Partial Class Settings
         Me.BtnLogout.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.BtnLogout.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.BtnLogout.Location = New System.Drawing.Point(61, 649)
+        Me.BtnLogout.Location = New System.Drawing.Point(61, 663)
         Me.BtnLogout.Name = "BtnLogout"
         Me.BtnLogout.Size = New System.Drawing.Size(152, 52)
         Me.BtnLogout.TabIndex = 92
@@ -432,7 +436,7 @@ Partial Class Settings
         Me.BtnCustomers.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCustomers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.BtnCustomers.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.BtnCustomers.Location = New System.Drawing.Point(61, 462)
+        Me.BtnCustomers.Location = New System.Drawing.Point(68, 484)
         Me.BtnCustomers.Name = "BtnCustomers"
         Me.BtnCustomers.Size = New System.Drawing.Size(152, 52)
         Me.BtnCustomers.TabIndex = 91
@@ -444,7 +448,7 @@ Partial Class Settings
         '
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.PictureBox1.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.PictureBox1.Location = New System.Drawing.Point(25, 161)
+        Me.PictureBox1.Location = New System.Drawing.Point(25, 121)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(44, 52)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
@@ -460,7 +464,7 @@ Partial Class Settings
         Me.Btnsettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Btnsettings.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Btnsettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Btnsettings.Location = New System.Drawing.Point(50, 520)
+        Me.Btnsettings.Location = New System.Drawing.Point(50, 537)
         Me.Btnsettings.Name = "Btnsettings"
         Me.Btnsettings.Size = New System.Drawing.Size(170, 113)
         Me.Btnsettings.TabIndex = 89
@@ -487,7 +491,7 @@ Partial Class Settings
         Me.Button1.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.Button1.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.Button1.Location = New System.Drawing.Point(50, 348)
+        Me.Button1.Location = New System.Drawing.Point(61, 305)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(152, 52)
         Me.Button1.TabIndex = 95
@@ -495,16 +499,54 @@ Partial Class Settings
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Location = New System.Drawing.Point(-1, 382)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(14, 67)
+        Me.Panel9.TabIndex = 102
+        '
+        'PictureBox3
+        '
+        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
+        Me.PictureBox3.Image = Global.FLEET_EASE.My.Resources.Resources.Cancel
+        Me.PictureBox3.Location = New System.Drawing.Point(21, 373)
+        Me.PictureBox3.Name = "PictureBox3"
+        Me.PictureBox3.Size = New System.Drawing.Size(63, 83)
+        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.PictureBox3.TabIndex = 104
+        Me.PictureBox3.TabStop = False
+        '
+        'Button2
+        '
+        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Button2.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
+        Me.Button2.Location = New System.Drawing.Point(68, 404)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(152, 52)
+        Me.Button2.TabIndex = 103
+        Me.Button2.Text = "Cancel"
+        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1332, 725)
+        Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.BtnHome)
         Me.Controls.Add(Me.PictureBox7)
+        Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.Panel6)
         Me.Controls.Add(Me.PictureBox5)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PictureBox4)
         Me.Controls.Add(Me.Panel4)
@@ -535,6 +577,7 @@ Partial Class Settings
         CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -577,4 +620,7 @@ Partial Class Settings
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents TxtRenewpassword As TextBox
     Friend WithEvents TxtNewpassword As TextBox
+    Friend WithEvents Panel9 As Panel
+    Friend WithEvents PictureBox3 As PictureBox
+    Friend WithEvents Button2 As Button
 End Class
