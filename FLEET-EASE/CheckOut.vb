@@ -22,29 +22,29 @@
 
     End Sub
 
-    Private Sub BtnCustoers_Click(sender As Object, e As EventArgs) Handles BtnCustoers.Click
+    Private Sub BtnCustoers_Click(sender As Object, e As EventArgs)
 
     End Sub
 
-    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
+    Private Sub BtnHome_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New UHomee
         obj.Show()
     End Sub
 
-    Private Sub BtnCustomer_Click(sender As Object, e As EventArgs) Handles BtnCustomer.Click
+    Private Sub BtnCustomer_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New UCustomers
         obj.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Rent
         obj.Show()
     End Sub
 
-    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Login
         obj.Show()
@@ -54,7 +54,7 @@
 
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Settings
         obj.Show()
@@ -66,5 +66,49 @@
             LblUsername.Text = loginform.Loggedinusername
 
         End If
+    End Sub
+
+    Private Sub BtnCheckout_Click(sender As Object, e As EventArgs) Handles BtnCheckout.Click
+        Me.Hide()
+        Dim oBJ As New CheckOut()
+        oBJ.Show()
+    End Sub
+
+    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
+        Me.Hide()
+        Dim oBJ As New UHomee()
+        oBJ.Show()
+    End Sub
+
+    Private Sub BtnCustomers_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
+        Me.Hide()
+        Dim oBJ As New UCustomers()
+        oBJ.Show()
+    End Sub
+
+    Private Sub BtnRent_Click(sender As Object, e As EventArgs) Handles BtnRent.Click
+        Me.Hide()
+        Dim oBJ As New Rent()
+        oBJ.Show()
+    End Sub
+
+    Private Sub BtnSettings_Click(sender As Object, e As EventArgs) Handles BtnSettings.Click
+        Me.Hide()
+        Dim oBJ As New Settings()
+        oBJ.Show()
+    End Sub
+
+    Private Sub Label10_Click(sender As Object, e As EventArgs) Handles Label10.Click
+
+    End Sub
+
+    Private Sub BtnLogout_Click_1(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        Me.Hide()
+        Dim obj As New Login
+        obj.Show()
+    End Sub
+
+    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
+
     End Sub
 End Class

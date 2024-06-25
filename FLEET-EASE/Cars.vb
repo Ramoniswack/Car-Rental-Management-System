@@ -1,4 +1,6 @@
-﻿Public Class Cars
+﻿Imports Microsoft.VisualBasic.ApplicationServices
+
+Public Class Cars
     Public Sub LoadRecord()
         Try
             If cn.State = ConnectionState.Closed Then
@@ -66,25 +68,25 @@
         Dgv.MultiSelect = False
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles BtnCustomer.Click
+    Private Sub Button2_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Customers
         obj.Show()
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Homee
         obj.Show()
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles BtnUsers.Click
+    Private Sub Button3_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Users
         obj.Show()
     End Sub
 
-    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Login
         obj.Show()
@@ -185,5 +187,117 @@
 
     Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
 
+    End Sub
+
+    Private Sub BtnHome_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Homee
+        obj.Show()
+    End Sub
+
+    Private Sub BtnUsers_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Users
+        obj.Show()
+    End Sub
+
+    Private Sub BtnCustomers_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Customers
+        obj.Show()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub BtnStats_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub BtnLogout_Click_1(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Login
+        obj.Show()
+    End Sub
+
+    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
+        Me.Hide()
+        Dim obj As New Homee
+        obj.Show()
+    End Sub
+
+    Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
+
+    End Sub
+
+    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
+
+    End Sub
+
+    Private Sub Panel7_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
+
+    End Sub
+
+    Private Sub Panel6_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
+
+    End Sub
+
+    Private Sub Panel5_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
+
+    End Sub
+
+    Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
+
+    End Sub
+
+    Private Sub Panel3_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
+
+    End Sub
+
+    Private Sub BtnLogout_Click_2(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        Me.Hide()
+        Dim obj As New Login
+        obj.Show()
+    End Sub
+
+    Private Sub BtnStats_Click_1(sender As Object, e As EventArgs) Handles BtnStats.Click
+
+    End Sub
+
+    Private Sub BtnCustomers_Click_1(sender As Object, e As EventArgs) Handles BtnCustomers.Click
+        Me.Hide()
+        Dim obj As New Customers
+        obj.Show()
+    End Sub
+
+    Private Sub BtnUsers_Click_1(sender As Object, e As EventArgs) Handles BtnUsers.Click
+        Me.Hide()
+        Dim obj As New Users
+        obj.Show()
     End Sub
 End Class

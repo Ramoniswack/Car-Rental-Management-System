@@ -263,5 +263,74 @@
   <ItemGroup>
     <None Include="Resources\Icons-Logout.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subhome.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subcustomers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subrent.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subrent1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subcheck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Settings1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sublogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subhome1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Subhome2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subcar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subusers.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subcustomers %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\substatistics.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sublogout1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subcustomers1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Homee1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Car %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\subusers1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Users1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\substats.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

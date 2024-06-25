@@ -23,12 +23,6 @@ Partial Class Settings
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.Panel6 = New System.Windows.Forms.Panel()
-        Me.Panel4 = New System.Windows.Forms.Panel()
-        Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel7 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.Panel2 = New System.Windows.Forms.Panel()
         Me.LblUsername = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel8 = New System.Windows.Forms.Panel()
@@ -46,32 +40,22 @@ Partial Class Settings
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TxtUsername = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
-        Me.BtnHome = New System.Windows.Forms.Button()
-        Me.PictureBox7 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox5 = New System.Windows.Forms.PictureBox()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.PictureBox4 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PictureBox6 = New System.Windows.Forms.PictureBox()
-        Me.BtnLogout = New System.Windows.Forms.Button()
-        Me.BtnCustomers = New System.Windows.Forms.Button()
-        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Btnsettings = New System.Windows.Forms.Button()
-        Me.Fleetease = New System.Windows.Forms.PictureBox()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.Panel5 = New System.Windows.Forms.Panel()
+        Me.Panel4 = New System.Windows.Forms.Panel()
+        Me.Panel3 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
-        Me.PictureBox3 = New System.Windows.Forms.PictureBox()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Panel6 = New System.Windows.Forms.Panel()
+        Me.BtnHome = New System.Windows.Forms.Button()
+        Me.BtnCustomers = New System.Windows.Forms.Button()
+        Me.BtnLogout = New System.Windows.Forms.Button()
+        Me.BtnCheckout = New System.Windows.Forms.Button()
+        Me.BtnSettings = New System.Windows.Forms.Button()
+        Me.BtnRent = New System.Windows.Forms.Button()
+        Me.Fleetease = New System.Windows.Forms.PictureBox()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label3
@@ -84,54 +68,6 @@ Partial Class Settings
         Me.Label3.Size = New System.Drawing.Size(98, 27)
         Me.Label3.TabIndex = 35
         Me.Label3.Text = "Settings"
-        '
-        'Panel6
-        '
-        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel6.Location = New System.Drawing.Point(1, 203)
-        Me.Panel6.Name = "Panel6"
-        Me.Panel6.Size = New System.Drawing.Size(14, 67)
-        Me.Panel6.TabIndex = 98
-        '
-        'Panel4
-        '
-        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel4.Location = New System.Drawing.Point(1, 551)
-        Me.Panel4.Name = "Panel4"
-        Me.Panel4.Size = New System.Drawing.Size(14, 67)
-        Me.Panel4.TabIndex = 84
-        '
-        'Panel3
-        '
-        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel3.Location = New System.Drawing.Point(1, 290)
-        Me.Panel3.Name = "Panel3"
-        Me.Panel3.Size = New System.Drawing.Size(14, 67)
-        Me.Panel3.TabIndex = 82
-        '
-        'Panel7
-        '
-        Me.Panel7.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel7.Location = New System.Drawing.Point(1, 641)
-        Me.Panel7.Name = "Panel7"
-        Me.Panel7.Size = New System.Drawing.Size(14, 67)
-        Me.Panel7.TabIndex = 85
-        '
-        'Panel5
-        '
-        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel5.Location = New System.Drawing.Point(0, 464)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(14, 67)
-        Me.Panel5.TabIndex = 83
-        '
-        'Panel2
-        '
-        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel2.Location = New System.Drawing.Point(1, 121)
-        Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(14, 67)
-        Me.Panel2.TabIndex = 81
         '
         'LblUsername
         '
@@ -208,11 +144,11 @@ Partial Class Settings
         '
         Me.Label6.AutoSize = True
         Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(3, 226)
+        Me.Label6.Location = New System.Drawing.Point(31, 228)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(217, 27)
+        Me.Label6.Size = New System.Drawing.Size(173, 22)
         Me.Label6.TabIndex = 82
         Me.Label6.Text = "Re-enter Password"
         '
@@ -220,11 +156,11 @@ Partial Class Settings
         '
         Me.Label5.AutoSize = True
         Me.Label5.BackColor = System.Drawing.Color.Transparent
-        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(40, 159)
+        Me.Label5.Location = New System.Drawing.Point(70, 163)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(171, 27)
+        Me.Label5.Size = New System.Drawing.Size(136, 22)
         Me.Label5.TabIndex = 81
         Me.Label5.Text = "New Password"
         '
@@ -255,11 +191,11 @@ Partial Class Settings
         '
         Me.Label4.AutoSize = True
         Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(43, 103)
+        Me.Label4.Location = New System.Drawing.Point(78, 106)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(161, 27)
+        Me.Label4.Size = New System.Drawing.Size(128, 22)
         Me.Label4.TabIndex = 78
         Me.Label4.Text = "Old Password"
         '
@@ -297,11 +233,11 @@ Partial Class Settings
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label1.Location = New System.Drawing.Point(100, 293)
+        Me.Label1.Location = New System.Drawing.Point(125, 293)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(103, 27)
+        Me.Label1.Size = New System.Drawing.Size(81, 22)
         Me.Label1.TabIndex = 74
         Me.Label1.Text = "Contact"
         '
@@ -317,13 +253,61 @@ Partial Class Settings
         '
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(83, 46)
+        Me.Label2.Location = New System.Drawing.Point(104, 50)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(128, 27)
+        Me.Label2.Size = New System.Drawing.Size(102, 22)
         Me.Label2.TabIndex = 68
         Me.Label2.Text = "UserName"
+        '
+        'Panel2
+        '
+        Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel2.Location = New System.Drawing.Point(-1, 125)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(10, 63)
+        Me.Panel2.TabIndex = 121
+        '
+        'Panel5
+        '
+        Me.Panel5.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel5.Location = New System.Drawing.Point(-1, 650)
+        Me.Panel5.Name = "Panel5"
+        Me.Panel5.Size = New System.Drawing.Size(10, 63)
+        Me.Panel5.TabIndex = 132
+        '
+        'Panel4
+        '
+        Me.Panel4.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel4.Location = New System.Drawing.Point(-1, 552)
+        Me.Panel4.Name = "Panel4"
+        Me.Panel4.Size = New System.Drawing.Size(10, 63)
+        Me.Panel4.TabIndex = 130
+        '
+        'Panel3
+        '
+        Me.Panel3.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel3.Location = New System.Drawing.Point(-1, 451)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(10, 63)
+        Me.Panel3.TabIndex = 131
+        '
+        'Panel9
+        '
+        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Location = New System.Drawing.Point(-1, 337)
+        Me.Panel9.Name = "Panel9"
+        Me.Panel9.Size = New System.Drawing.Size(10, 63)
+        Me.Panel9.TabIndex = 128
+        '
+        'Panel6
+        '
+        Me.Panel6.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel6.Location = New System.Drawing.Point(-1, 234)
+        Me.Panel6.Name = "Panel6"
+        Me.Panel6.Size = New System.Drawing.Size(10, 63)
+        Me.Panel6.TabIndex = 129
         '
         'BtnHome
         '
@@ -332,101 +316,14 @@ Partial Class Settings
         Me.BtnHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnHome.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnHome.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.BtnHome.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.BtnHome.Location = New System.Drawing.Point(68, 125)
+        Me.BtnHome.Image = Global.FLEET_EASE.My.Resources.Resources.Subhome
+        Me.BtnHome.Location = New System.Drawing.Point(9, 127)
         Me.BtnHome.Name = "BtnHome"
-        Me.BtnHome.Size = New System.Drawing.Size(152, 52)
-        Me.BtnHome.TabIndex = 97
+        Me.BtnHome.Size = New System.Drawing.Size(208, 60)
+        Me.BtnHome.TabIndex = 126
         Me.BtnHome.Text = "Home"
-        Me.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.BtnHome.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnHome.UseVisualStyleBackColor = True
-        '
-        'PictureBox7
-        '
-        Me.PictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox7.Image = Global.FLEET_EASE.My.Resources.Resources.Checkout
-        Me.PictureBox7.Location = New System.Drawing.Point(21, 477)
-        Me.PictureBox7.Name = "PictureBox7"
-        Me.PictureBox7.Size = New System.Drawing.Size(48, 52)
-        Me.PictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox7.TabIndex = 101
-        Me.PictureBox7.TabStop = False
-        '
-        'PictureBox5
-        '
-        Me.PictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox5.Image = Global.FLEET_EASE.My.Resources.Resources.employees
-        Me.PictureBox5.Location = New System.Drawing.Point(27, 203)
-        Me.PictureBox5.Name = "PictureBox5"
-        Me.PictureBox5.Size = New System.Drawing.Size(44, 69)
-        Me.PictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox5.TabIndex = 100
-        Me.PictureBox5.TabStop = False
-        '
-        'Button3
-        '
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button3.FlatAppearance.BorderSize = 0
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Button3.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.Button3.Location = New System.Drawing.Point(68, 218)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(152, 52)
-        Me.Button3.TabIndex = 99
-        Me.Button3.Text = "Customers"
-        Me.Button3.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'PictureBox4
-        '
-        Me.PictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox4.Image = Global.FLEET_EASE.My.Resources.Resources.Settings
-        Me.PictureBox4.Location = New System.Drawing.Point(12, 550)
-        Me.PictureBox4.Name = "PictureBox4"
-        Me.PictureBox4.Size = New System.Drawing.Size(63, 83)
-        Me.PictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox4.TabIndex = 96
-        Me.PictureBox4.TabStop = False
-        '
-        'PictureBox2
-        '
-        Me.PictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox2.Image = Global.FLEET_EASE.My.Resources.Resources.Carrent
-        Me.PictureBox2.Location = New System.Drawing.Point(12, 290)
-        Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(76, 74)
-        Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox2.TabIndex = 94
-        Me.PictureBox2.TabStop = False
-        '
-        'PictureBox6
-        '
-        Me.PictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox6.Image = Global.FLEET_EASE.My.Resources.Resources.Logout
-        Me.PictureBox6.Location = New System.Drawing.Point(21, 656)
-        Me.PictureBox6.Name = "PictureBox6"
-        Me.PictureBox6.Size = New System.Drawing.Size(44, 52)
-        Me.PictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox6.TabIndex = 93
-        Me.PictureBox6.TabStop = False
-        '
-        'BtnLogout
-        '
-        Me.BtnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.BtnLogout.FlatAppearance.BorderSize = 0
-        Me.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.BtnLogout.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.BtnLogout.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.BtnLogout.Location = New System.Drawing.Point(61, 663)
-        Me.BtnLogout.Name = "BtnLogout"
-        Me.BtnLogout.Size = New System.Drawing.Size(152, 52)
-        Me.BtnLogout.TabIndex = 92
-        Me.BtnLogout.Text = "Logout"
-        Me.BtnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.BtnLogout.UseVisualStyleBackColor = True
         '
         'BtnCustomers
         '
@@ -435,42 +332,79 @@ Partial Class Settings
         Me.BtnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.BtnCustomers.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnCustomers.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.BtnCustomers.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.BtnCustomers.Location = New System.Drawing.Point(68, 484)
+        Me.BtnCustomers.Image = Global.FLEET_EASE.My.Resources.Resources.subcustomers
+        Me.BtnCustomers.Location = New System.Drawing.Point(9, 235)
         Me.BtnCustomers.Name = "BtnCustomers"
-        Me.BtnCustomers.Size = New System.Drawing.Size(152, 52)
-        Me.BtnCustomers.TabIndex = 91
-        Me.BtnCustomers.Text = "CheckOut"
-        Me.BtnCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
+        Me.BtnCustomers.Size = New System.Drawing.Size(209, 60)
+        Me.BtnCustomers.TabIndex = 127
+        Me.BtnCustomers.Text = "Customers"
+        Me.BtnCustomers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnCustomers.UseVisualStyleBackColor = True
         '
-        'PictureBox1
+        'BtnLogout
         '
-        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox1.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.PictureBox1.Location = New System.Drawing.Point(25, 121)
-        Me.PictureBox1.Name = "PictureBox1"
-        Me.PictureBox1.Size = New System.Drawing.Size(44, 52)
-        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox1.TabIndex = 90
-        Me.PictureBox1.TabStop = False
+        Me.BtnLogout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnLogout.FlatAppearance.BorderSize = 0
+        Me.BtnLogout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnLogout.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnLogout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.BtnLogout.Image = Global.FLEET_EASE.My.Resources.Resources.sublogout
+        Me.BtnLogout.Location = New System.Drawing.Point(9, 651)
+        Me.BtnLogout.Name = "BtnLogout"
+        Me.BtnLogout.Size = New System.Drawing.Size(209, 63)
+        Me.BtnLogout.TabIndex = 124
+        Me.BtnLogout.Text = "Logout"
+        Me.BtnLogout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnLogout.UseVisualStyleBackColor = True
         '
-        'Btnsettings
+        'BtnCheckout
         '
-        Me.Btnsettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Btnsettings.BackgroundImage = Global.FLEET_EASE.My.Resources.Resources.button1black1
-        Me.Btnsettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Btnsettings.FlatAppearance.BorderSize = 0
-        Me.Btnsettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Btnsettings.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Btnsettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Btnsettings.Location = New System.Drawing.Point(50, 537)
-        Me.Btnsettings.Name = "Btnsettings"
-        Me.Btnsettings.Size = New System.Drawing.Size(170, 113)
-        Me.Btnsettings.TabIndex = 89
-        Me.Btnsettings.Text = "Settings"
-        Me.Btnsettings.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.Btnsettings.UseVisualStyleBackColor = False
+        Me.BtnCheckout.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnCheckout.FlatAppearance.BorderSize = 0
+        Me.BtnCheckout.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnCheckout.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnCheckout.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.BtnCheckout.Image = Global.FLEET_EASE.My.Resources.Resources.subcheck
+        Me.BtnCheckout.Location = New System.Drawing.Point(9, 452)
+        Me.BtnCheckout.Name = "BtnCheckout"
+        Me.BtnCheckout.Size = New System.Drawing.Size(209, 63)
+        Me.BtnCheckout.TabIndex = 123
+        Me.BtnCheckout.Text = "CheckOut"
+        Me.BtnCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnCheckout.UseVisualStyleBackColor = True
+        '
+        'BtnSettings
+        '
+        Me.BtnSettings.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.BtnSettings.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnSettings.FlatAppearance.BorderSize = 0
+        Me.BtnSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnSettings.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnSettings.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.BtnSettings.Image = Global.FLEET_EASE.My.Resources.Resources.Settings1
+        Me.BtnSettings.Location = New System.Drawing.Point(9, 554)
+        Me.BtnSettings.Name = "BtnSettings"
+        Me.BtnSettings.Size = New System.Drawing.Size(209, 59)
+        Me.BtnSettings.TabIndex = 122
+        Me.BtnSettings.Text = "Settings"
+        Me.BtnSettings.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnSettings.UseVisualStyleBackColor = False
+        '
+        'BtnRent
+        '
+        Me.BtnRent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.BtnRent.FlatAppearance.BorderSize = 0
+        Me.BtnRent.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.BtnRent.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnRent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.BtnRent.Image = Global.FLEET_EASE.My.Resources.Resources.subrent1
+        Me.BtnRent.Location = New System.Drawing.Point(11, 337)
+        Me.BtnRent.Name = "BtnRent"
+        Me.BtnRent.Size = New System.Drawing.Size(208, 63)
+        Me.BtnRent.TabIndex = 125
+        Me.BtnRent.Text = "Rent"
+        Me.BtnRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
+        Me.BtnRent.UseVisualStyleBackColor = True
         '
         'Fleetease
         '
@@ -483,129 +417,45 @@ Partial Class Settings
         Me.Fleetease.TabIndex = 87
         Me.Fleetease.TabStop = False
         '
-        'Button1
-        '
-        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button1.FlatAppearance.BorderSize = 0
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Button1.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.Button1.Location = New System.Drawing.Point(61, 305)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(152, 52)
-        Me.Button1.TabIndex = 95
-        Me.Button1.Text = "Rent"
-        Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'Panel9
-        '
-        Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Panel9.Location = New System.Drawing.Point(-1, 382)
-        Me.Panel9.Name = "Panel9"
-        Me.Panel9.Size = New System.Drawing.Size(14, 67)
-        Me.Panel9.TabIndex = 102
-        '
-        'PictureBox3
-        '
-        Me.PictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
-        Me.PictureBox3.Image = Global.FLEET_EASE.My.Resources.Resources.Cancel
-        Me.PictureBox3.Location = New System.Drawing.Point(21, 373)
-        Me.PictureBox3.Name = "PictureBox3"
-        Me.PictureBox3.Size = New System.Drawing.Size(63, 83)
-        Me.PictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.PictureBox3.TabIndex = 104
-        Me.PictureBox3.TabStop = False
-        '
-        'Button2
-        '
-        Me.Button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Button2.FlatAppearance.BorderSize = 0
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
-        Me.Button2.Image = Global.FLEET_EASE.My.Resources.Resources.Homee
-        Me.Button2.Location = New System.Drawing.Point(68, 404)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(152, 52)
-        Me.Button2.TabIndex = 103
-        Me.Button2.Text = "Cancel"
-        Me.Button2.TextImageRelation = System.Windows.Forms.TextImageRelation.TextAboveImage
-        Me.Button2.UseVisualStyleBackColor = True
-        '
         'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(1332, 725)
-        Me.Controls.Add(Me.Panel9)
         Me.Controls.Add(Me.BtnHome)
-        Me.Controls.Add(Me.PictureBox7)
-        Me.Controls.Add(Me.PictureBox3)
-        Me.Controls.Add(Me.Panel6)
-        Me.Controls.Add(Me.PictureBox5)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.PictureBox4)
+        Me.Controls.Add(Me.BtnCustomers)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.BtnLogout)
+        Me.Controls.Add(Me.BtnCheckout)
+        Me.Controls.Add(Me.BtnSettings)
+        Me.Controls.Add(Me.Panel5)
         Me.Controls.Add(Me.Panel4)
         Me.Controls.Add(Me.Panel3)
-        Me.Controls.Add(Me.PictureBox2)
-        Me.Controls.Add(Me.Panel7)
-        Me.Controls.Add(Me.Panel5)
-        Me.Controls.Add(Me.Panel2)
-        Me.Controls.Add(Me.PictureBox6)
-        Me.Controls.Add(Me.BtnLogout)
-        Me.Controls.Add(Me.BtnCustomers)
-        Me.Controls.Add(Me.PictureBox1)
-        Me.Controls.Add(Me.Btnsettings)
+        Me.Controls.Add(Me.Panel9)
+        Me.Controls.Add(Me.Panel6)
+        Me.Controls.Add(Me.BtnRent)
         Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.Fleetease)
         Me.Controls.Add(Me.Panel1)
-        Me.Controls.Add(Me.Button1)
         Me.Name = "Settings"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Settings"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
-        CType(Me.PictureBox7, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox5, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox4, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox6, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
     Friend WithEvents Label3 As Label
-    Friend WithEvents PictureBox7 As PictureBox
-    Friend WithEvents Panel6 As Panel
-    Friend WithEvents PictureBox5 As PictureBox
-    Friend WithEvents Button3 As Button
-    Friend WithEvents PictureBox4 As PictureBox
-    Friend WithEvents Panel4 As Panel
-    Friend WithEvents Panel3 As Panel
-    Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Panel7 As Panel
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents Panel2 As Panel
-    Friend WithEvents PictureBox6 As PictureBox
-    Friend WithEvents BtnLogout As Button
-    Friend WithEvents BtnCustomers As Button
-    Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Btnsettings As Button
     Friend WithEvents LblUsername As Label
     Friend WithEvents Fleetease As PictureBox
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents BtnHome As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents Label5 As Label
     Friend WithEvents CheckBox1 As CheckBox
@@ -620,7 +470,16 @@ Partial Class Settings
     Friend WithEvents CheckBox2 As CheckBox
     Friend WithEvents TxtRenewpassword As TextBox
     Friend WithEvents TxtNewpassword As TextBox
+    Friend WithEvents BtnHome As Button
+    Friend WithEvents BtnCustomers As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents BtnLogout As Button
+    Friend WithEvents BtnCheckout As Button
+    Friend WithEvents BtnSettings As Button
+    Friend WithEvents Panel5 As Panel
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents Panel3 As Panel
     Friend WithEvents Panel9 As Panel
-    Friend WithEvents PictureBox3 As PictureBox
-    Friend WithEvents Button2 As Button
+    Friend WithEvents Panel6 As Panel
+    Friend WithEvents BtnRent As Button
 End Class

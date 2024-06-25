@@ -47,6 +47,26 @@ FLEET-EASE
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Car__1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Car__1_1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Car__2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Car1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:FLEET_EASE.My.Resources.Resources.Carrent">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -77,6 +97,11 @@ FLEET-EASE
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Homee1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:FLEET_EASE.My.Resources.Resources.Icons_Logout">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
@@ -92,12 +117,102 @@ FLEET-EASE
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Settings1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:FLEET_EASE.My.Resources.Resources.Statistics">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subcar">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subcheck">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subcustomers">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subcustomers__2_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subcustomers1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Subhome">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Subhome1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Subhome2">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.sublogout">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.sublogout1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subrent">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subrent1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.substatistics">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.substats">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subusers">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.subusers1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 <member name="P:FLEET_EASE.My.Resources.Resources.Users">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:FLEET_EASE.My.Resources.Resources.Users1">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

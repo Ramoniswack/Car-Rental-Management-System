@@ -123,33 +123,129 @@
         txtCustomerName.Select()
     End Sub
 
-    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
+    Private Sub BtnHome_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Homee
         obj.Show()
     End Sub
 
-    Private Sub BtnCars_Click(sender As Object, e As EventArgs) Handles BtnCars.Click
+    Private Sub BtnCars_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Cars
         obj.Show()
     End Sub
 
-    Private Sub BtnUsers_Click(sender As Object, e As EventArgs) Handles BtnUsers.Click
+    Private Sub BtnUsers_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Users
         obj.Show()
     End Sub
 
-    Private Sub BtnStatistics_Click(sender As Object, e As EventArgs) Handles BtnStatistics.Click
+    Private Sub BtnStatistics_Click(sender As Object, e As EventArgs)
         'Me.Hide()
         'Dim obj As New 
         'obj.Show()
     End Sub
 
-    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Login
+        obj.Show()
+    End Sub
+
+    Private Sub BtnCheckout_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub BtnCustomers_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub BtnCustomers_Click_1(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Homee
+        obj.Show()
+    End Sub
+
+    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Cars
+        obj.Show()
+    End Sub
+
+    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub BtnUsers_Click_1(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Users
+        obj.Show()
+    End Sub
+
+    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub BtnCustomers_Click_2(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
+
+    End Sub
+
+    Private Sub BtnStats_Click(sender As Object, e As EventArgs)
+
+    End Sub
+
+    Private Sub BtnLogout_Click_1(sender As Object, e As EventArgs)
+        Me.Hide()
+        Dim obj As New Login
+        obj.Show()
+    End Sub
+
+    Private Sub Button1_Click_1(sender As Object, e As EventArgs) Handles BtnCars.Click
+        Me.Hide()
+        Dim obj As New Cars
+        obj.Show()
+    End Sub
+
+    Private Sub BtnUsers_Click_2(sender As Object, e As EventArgs) Handles BtnUsers.Click
+        Me.Hide()
+        Dim obj As New Users
+        obj.Show()
+    End Sub
+
+    Private Sub BtnLogout_Click_2(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        Me.Hide()
+        Dim obj As New Login
+        obj.Show()
+    End Sub
+
+    Private Sub BtnCustomers_Click_3(sender As Object, e As EventArgs) Handles BtnCustomers.Click
+
+    End Sub
+
+    Private Sub BtnHome_Click_2(sender As Object, e As EventArgs) Handles BtnHome.Click
+        Me.Hide()
+        Dim obj As New Homee
         obj.Show()
     End Sub
 End Class
