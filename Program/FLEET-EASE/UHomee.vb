@@ -1,31 +1,58 @@
-﻿Public Class UHomee
+﻿Imports System.Data.SqlClient
 
-    Public Sub LoadRecord()
-        cn.Open()
-        Dgv.Rows.Clear()
-        Dim i As Integer
+Public Class UHomee
 
-        cm = New SqlClient.SqlCommand("select *from tblcars", cn)
-        dr = cm.ExecuteReader
-        While dr.Read
-            i = i + 1
-            Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
-        End While
-        cn.Close()
+    Public Sub LoadRecord1()
+        Try
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+            cn.Open()
+            Dgv.Rows.Clear()
+            Dim i As Integer = 0
+
+            cm = New SqlClient.SqlCommand("SELECT * FROM tblcars", cn)
+            Using dr As SqlDataReader = cm.ExecuteReader()
+                While dr.Read()
+                    i += 1
+                    Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
+                End While
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred while loading records: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
     End Sub
 
-    Public Sub Loadrecord1()
-        cn.Open()
-        Dgv1.Rows.Clear()
-        Dim i As Integer
+    Public Sub Loadrecord()
+        Try
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+            cn.Open()
+            Dgv1.Rows.Clear()
+            Dim i As Integer = 0
 
-        cm = New SqlClient.SqlCommand("select *from tblcarrentals3", cn)
-        dr = cm.ExecuteReader
-        While dr.Read
-            i = i + 1
-            Dgv1.Rows.Add(i, dr.Item("RegNumber"), dr.Item("CusName"), dr.Item("PickupLocation"), dr.Item("RentDate"), dr.Item("ReturnDate"), dr.Item("Charges"))
-        End While
-        cn.Close()
+            cm = New SqlClient.SqlCommand("SELECT cr.* FROM tblcarrentals3 cr " &
+                                      "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
+                                      "WHERE (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
+                                      "AND c.Available = 'NO'", cn)
+            Using dr As SqlDataReader = cm.ExecuteReader()
+                While dr.Read()
+                    i += 1
+                    Dgv1.Rows.Add(i, dr.Item("RegNumber"), dr.Item("CusName"), dr.Item("PickupLocation"), dr.Item("RentDate"), dr.Item("ReturnDate"), dr.Item("Charges"))
+                End While
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred while loading records: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
     End Sub
 
 
@@ -52,7 +79,7 @@
 
 
         'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
-        LoadRecord()
+        Loadrecord()
         Loadrecord1()
 
     End Sub
@@ -69,9 +96,7 @@
         obj.Show()
     End Sub
 
-    Private Sub Dgv1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv1.CellContentClick
 
-    End Sub
 
     Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
 
@@ -97,73 +122,7 @@
         obj.Show()
     End Sub
 
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs)
 
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel7_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub LblUsername_Click(sender As Object, e As EventArgs) Handles LblUsername.Click
-
-    End Sub
-
-    Private Sub Label1_Click(sender As Object, e As EventArgs) Handles Label1.Click
-
-    End Sub
-
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
-    Private Sub Label3_Click(sender As Object, e As EventArgs) Handles Label3.Click
-
-    End Sub
-
-    Private Sub PictureBox7_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox5_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox4_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox6_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub PictureBox1_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Fleetease_Click(sender As Object, e As EventArgs) Handles Fleetease.Click
-
-    End Sub
-
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
-
-    End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs)
         Me.Hide()
@@ -217,23 +176,11 @@
         obj.Show()
     End Sub
 
-    Private Sub Panel5_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
 
-    End Sub
 
-    Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
-
-    End Sub
-
-    Private Sub Panel3_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
-    End Sub
-
-    Private Sub Panel6_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
-
-    End Sub
-
-    Private Sub Panel7_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
-
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
+        Me.Hide()
+        Dim obj As New Cancel
+        obj.Show()
     End Sub
 End Class

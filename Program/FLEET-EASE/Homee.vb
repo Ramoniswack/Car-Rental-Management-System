@@ -1,24 +1,36 @@
 ﻿Public Class Homee
 
     Public Sub LoadRecord()
-        cn.Open()
-        Dgv.Rows.Clear()
-        Dim i As Integer
+        Try
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+            Dgv.Rows.Clear()
+            Dim i As Integer
 
-        cm = New SqlClient.SqlCommand("select *from tblcars", cn)
-        dr = cm.ExecuteReader
-        While dr.Read
-            i = i + 1
-            Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
-        End While
-        cn.Close()
+            cm = New SqlClient.SqlCommand("select * from tblcars", cn)
+            dr = cm.ExecuteReader
+            While dr.Read
+                i = i + 1
+                Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
+            End While
+        Catch ex As Exception
+            MsgBox("An error occurred while loading records: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
     End Sub
     Public Sub Loadrecord1()
         cn.Open()
         Dgv1.Rows.Clear()
         Dim i As Integer
 
-        cm = New SqlClient.SqlCommand("select *from tblcarrentals3", cn)
+        cm = New SqlClient.SqlCommand("SELECT cr.* FROM tblcarrentals3 cr " &
+                                  "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
+                                  "WHERE (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
+                                  "AND c.Available = 'NO'", cn)
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
@@ -111,7 +123,9 @@
     End Sub
 
     Private Sub BtnStats_Click(sender As Object, e As EventArgs) Handles BtnStats.Click
-
+        Me.Hide()
+        Dim obj As New Statistics
+        obj.Show()
     End Sub
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click

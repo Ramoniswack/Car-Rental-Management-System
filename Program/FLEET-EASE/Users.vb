@@ -265,7 +265,9 @@
     End Sub
 
     Private Sub BtnStats_Click_1(sender As Object, e As EventArgs) Handles BtnStats.Click
-
+        Me.Hide()
+        Dim obj As New Statistics
+        obj.Show()
     End Sub
 
     Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel2.Paint

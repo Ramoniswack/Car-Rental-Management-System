@@ -153,13 +153,41 @@ Public Class Settings
         clear()
     End Sub
 
-    Private Sub Panel1_Paint(sender As Object, e As PaintEventArgs) Handles Panel1.Paint
 
+
+    Private Sub BtnHome_Click_2(sender As Object, e As EventArgs) Handles BtnHome.Click
+        Me.Hide()
+        Dim obj As New UHomee
+        obj.Show()
     End Sub
 
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
+    Private Sub BtnCustomers_Click_1(sender As Object, e As EventArgs) Handles BtnCustomers.Click
+        Me.Hide()
+        Dim obj As New UCustomers
+        obj.Show()
+    End Sub
+
+    Private Sub BtnRent_Click(sender As Object, e As EventArgs) Handles BtnRent.Click
+        Me.Hide()
+        Dim obj As New Rent
+        obj.Show()
+    End Sub
+
+    Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
         Dim obj As New Cancel
+        obj.Show()
+    End Sub
+
+    Private Sub BtnCheckout_Click(sender As Object, e As EventArgs) Handles BtnCheckout.Click
+        Me.Hide()
+        Dim obj As New CheckOut
+        obj.Show()
+    End Sub
+
+    Private Sub BtnSettings_Click(sender As Object, e As EventArgs) Handles BtnSettings.Click
+        Me.Hide()
+        Dim obj As New Settings
         obj.Show()
     End Sub
 
@@ -167,61 +195,5 @@ Public Class Settings
         Me.Hide()
         Dim obj As New Login
         obj.Show()
-    End Sub
-
-    Private Sub BtnCheckout_Click(sender As Object, e As EventArgs) Handles BtnCheckout.Click
-        Me.Hide()
-        Dim oBJ As New CheckOut()
-        oBJ.Show()
-    End Sub
-
-    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
-        Me.Hide()
-        Dim oBJ As New UHomee()
-        oBJ.Show()
-    End Sub
-
-    Private Sub Label5_Click(sender As Object, e As EventArgs) Handles Label5.Click
-
-    End Sub
-
-    Private Sub Btnsettings_Click(sender As Object, e As EventArgs) Handles BtnSettings.Click
-
-    End Sub
-
-    Private Sub BtnCustomers_Click_1(sender As Object, e As EventArgs) Handles BtnCustomers.Click
-        Me.Hide()
-        Dim oBJ As New UCustomers()
-        oBJ.Show()
-    End Sub
-
-    Private Sub Panel2_Paint(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
-
-    Private Sub Panel5_Paint(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
-
-    End Sub
-
-    Private Sub Panel4_Paint(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
-
-    End Sub
-
-    Private Sub Panel3_Paint(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
-
-    End Sub
-
-    Private Sub Panel9_Paint(sender As Object, e As PaintEventArgs) Handles Panel9.Paint
-
-    End Sub
-
-    Private Sub Panel6_Paint(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
-
-    End Sub
-
-    Private Sub BtnRent_Click(sender As Object, e As EventArgs) Handles BtnRent.Click
-        Me.Hide()
-        Dim oBJ As New Rent()
-        oBJ.Show()
     End Sub
 End Class

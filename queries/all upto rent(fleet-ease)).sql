@@ -17,6 +17,9 @@ ADD usertype nvarchar(50)
 ALTER TABLE tbllogin
 ADD Contact nvarchar(50)
 
+ALTER TABLE tbllogin ADD LastLoginDate DATETIME
+alter table tbllogin add LoginCount Int Default 0
+
 
 
 
@@ -43,7 +46,11 @@ ADD LicenseID nvarchar(50)
 
 
 
+<<<<<<< HEAD
 -- previously
+=======
+
+>>>>>>> 34a9dec18eb717259f191a27cdb9ce2653e796b0
 create table tblcars
 (
 Carid int primary key identity (1,1),
@@ -59,6 +66,7 @@ ADD Active BIT NOT NULL DEFAULT 1;
 Alter table tblcars
 add QTY nvarchar(20);
 
+<<<<<<< HEAD
 Alter table tblcars
  Drop column active;
 
@@ -114,9 +122,13 @@ ALTER TABLE tblcars
 ADD CONSTRAINT UQ_tblcars_regnumber UNIQUE (regnumber);
 
 
-
+ALTER TABLE tblcars
+ADD LastMaintenanceDate DATE,
+    TotalKilometers INT DEFAULT 0,
+    LastMaintenanceKilometers INT DEFAULT 0;
 
 truncate table tblcars
+
 
 
 
@@ -160,6 +172,8 @@ delete from tblcarrentals1
 
 
 
+<<<<<<< HEAD
+
 
 create table tblcarrentals2
 (
@@ -176,7 +190,6 @@ create table tblcarrentals2
 select *from tblcarrentals2
 
 
-0000000.00
 
 CREATE TABLE tblCarRentals3
 (
@@ -193,8 +206,14 @@ CREATE TABLE tblCarRentals3
     FOREIGN KEY (CusID) REFERENCES tblcustomers(CusID)
 );
 
+
+
 select *from tblcarrentals3
 ALTER TABLE tblCarRentals3 ADD IsCancelled BIT DEFAULT 0
+
+ALTER TABLE tblCarRentals3
+ADD LoggedInUser NVARCHAR(50),
+    CreatedDate DATETIME;
 
 
 
@@ -228,15 +247,44 @@ CREATE TABLE tblcancel (
     FOREIGN KEY (CarID) REFERENCES tblcars(CarID),
     FOREIGN KEY (CusID) REFERENCES tblcustomers(cusid)
 );
+
+
+
+CREATE TABLE tblcheckouts (
+    CheckoutID INT PRIMARY KEY IDENTITY(1,1),
+    RentalID INT,
+    CarID INT,
+    RegNumber VARCHAR(50),
+    CusID VARCHAR(50),
+    CusName VARCHAR(100),
+    RentDate DATE,
+    ReturnDate DATE,
+    ActualReturnDate DATE,
+    Charges DECIMAL(10,2),
+    DelayDays INT,
+    Fine DECIMAL(10,2),
+    TotalCharges DECIMAL(10,2),
+    LoggedInUser VARCHAR(50),
+    CreatedDate DATETIME,
+    FOREIGN KEY (RentalID) REFERENCES tblcarrentals3(RentalID),
+    FOREIGN KEY (CarID) REFERENCES tblcars(CarID)
+);
+ALTER TABLE tblcheckouts
+ADD FineDescription NVARCHAR(200)
+
+
+
+
 select *From tblcancel
 select *From tblcarrentals3
 select *from tblcars
 SELECT *fROM TBLCUSTOMERS
+select *from tblcheckouts
+select *from tbllogin
+select *from tblcars
 
 
 
-
-
-
-
-
+=======
+0000000.00
+>>>>>>> 34a9dec18eb717259f191a27cdb9ce2653e796b0
