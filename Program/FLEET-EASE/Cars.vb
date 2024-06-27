@@ -259,4 +259,8 @@ Public Class Cars
 
     Private Sub TxtColor_TextChanged(sender As Object, e As EventArgs) Handles TxtColor.TextChanged
     End Sub
+
+    Private Sub TxtInitialKm_TextChanged(sender As Object, e As EventArgs) Handles TxtInitialKm.TextChanged
+
+    End Sub
 End Class

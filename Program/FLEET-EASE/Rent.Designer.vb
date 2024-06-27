@@ -56,9 +56,12 @@ Partial Class Rent
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.TxtCheckoutOdometer = New System.Windows.Forms.NumericUpDown()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.TxtCheckoutOdometer, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblUsername
@@ -95,6 +98,8 @@ Partial Class Rent
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.TxtCheckoutOdometer)
+        Me.Panel8.Controls.Add(Me.Label8)
         Me.Panel8.Controls.Add(Me.Label7)
         Me.Panel8.Controls.Add(Me.Label5)
         Me.Panel8.Controls.Add(Me.Label11)
@@ -449,6 +454,25 @@ Partial Class Rent
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(66, 462)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(165, 22)
+        Me.Label8.TabIndex = 85
+        Me.Label8.Text = "Check Odometer"
+        '
+        'TxtCheckoutOdometer
+        '
+        Me.TxtCheckoutOdometer.Location = New System.Drawing.Point(252, 462)
+        Me.TxtCheckoutOdometer.Name = "TxtCheckoutOdometer"
+        Me.TxtCheckoutOdometer.Size = New System.Drawing.Size(120, 22)
+        Me.TxtCheckoutOdometer.TabIndex = 86
+        '
         'Rent
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -481,6 +505,7 @@ Partial Class Rent
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
         CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.TxtCheckoutOdometer, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -519,4 +544,6 @@ Partial Class Rent
     Friend WithEvents Panel6 As Panel
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Button1 As Button
+    Friend WithEvents Label8 As Label
+    Friend WithEvents TxtCheckoutOdometer As NumericUpDown
 End Class

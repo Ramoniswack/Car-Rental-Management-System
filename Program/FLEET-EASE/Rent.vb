@@ -3,6 +3,10 @@
 Public Class Rent
 
     Private Sub Rentvehicle()
+        ' Store the initial value immediately when the method is called
+        Dim initialOdometerValue As Integer = CInt(TxtCheckoutOdometer.Value)
+        Console.WriteLine("Initial Checkout Odometer Value: " & initialOdometerValue)
+
         Dim regNumber As String = TxtRegNum.Text
         Dim cusID As String = TxtCusid.Text
         Dim customername As String = Txtcusname.Text
@@ -10,6 +14,15 @@ Public Class Rent
         Dim rentDate As Date = TxtRentDate.Value.Date
         Dim returnDate As Date = TxtReturnDate.Value.Date
         Dim charges As String = TxtCharges.Text
+
+        ' Right before using the value, check if it has changed
+        If CInt(TxtCheckoutOdometer.Value) <> initialOdometerValue Then
+            Console.WriteLine("Warning: Odometer value changed unexpectedly. Using original value.")
+            TxtCheckoutOdometer.Value = initialOdometerValue
+        End If
+
+        Dim checkoutOdometer As Integer = CInt(TxtCheckoutOdometer.Value)
+        Console.WriteLine("Final Checkout Odometer Value: " & checkoutOdometer)
 
         Dim customerQuery As String = "SELECT COUNT(*) FROM tblcustomers WHERE cusid = @cusid AND customername = @customername"
         Dim customerCmd As New SqlCommand(customerQuery, cn)
@@ -46,7 +59,7 @@ Public Class Rent
 
                 ' Insert rental record and update car availability
                 cn.Open()
-                cm = New SqlClient.SqlCommand("INSERT INTO tblcarrentals3 (CarID, RegNumber, CusID, CusName, PickupLocation, RentDate, ReturnDate, Charges,LoggedInUser,CreatedDate) VALUES (@CarID, @RegNumber, @CusID, @CusName, @PickupLocation, @RentDate, @ReturnDate, @Charges, @LoggedInUser, @CreatedDate); UPDATE tblcars SET Available = 'NO' WHERE CarID = @CarID", cn)
+                cm = New SqlClient.SqlCommand("INSERT INTO tblcarrentals3 (CarID, RegNumber, CusID, CusName, PickupLocation, RentDate, ReturnDate, Charges, LoggedInUser, CreatedDate, CheckoutOdometer) VALUES (@CarID, @RegNumber, @CusID, @CusName, @PickupLocation, @RentDate, @ReturnDate, @Charges, @LoggedInUser, @CreatedDate, @CheckoutOdometer); UPDATE tblcars SET Available = 'NO' WHERE CarID = @CarID", cn)
                 With cm
                     .Parameters.AddWithValue("@CarID", carID)
                     .Parameters.AddWithValue("@RegNumber", regNumber)
@@ -58,19 +71,28 @@ Public Class Rent
                     .Parameters.AddWithValue("@Charges", charges)
                     .Parameters.AddWithValue("@LoggedInUser", LblUsername.Text)
                     .Parameters.AddWithValue("@CreatedDate", DateTime.Now)
+                    Console.WriteLine("Checkout Odometer before SQL: " & checkoutOdometer)
+                    .Parameters.Add("@CheckoutOdometer", SqlDbType.Int).Value = checkoutOdometer
+
+                    Console.WriteLine("SQL Query: " & cm.CommandText)
+                    Console.WriteLine("Parameter values:")
+                    For Each param As SqlParameter In cm.Parameters
+                        Console.WriteLine($"{param.ParameterName}: {param.Value}")
+                    Next
+
                     cm.ExecuteNonQuery()
-                    cn.Close()
                 End With
 
+                ' Check the inserted value
+                Dim checkInsertCmd As New SqlCommand("SELECT TOP 1 CheckoutOdometer FROM tblcarrentals3 WHERE CarID = @CarID ORDER BY CreatedDate DESC", cn)
+                checkInsertCmd.Parameters.AddWithValue("@CarID", carID)
+                Dim insertedValue As Object = checkInsertCmd.ExecuteScalar()
+                Console.WriteLine("Value in database after insert: " & insertedValue)
+
+                cn.Close()
+
                 MessageBox.Show("Vehicle rented successfully!")
-                TxtRegNum.Clear()
-                TxtCusid.Clear()
-                Txtcusname.Clear()
-                TxtPickupfrom.Clear()
-                TxtRentDate.Value = DateTime.Now
-                TxtReturnDate.Value = DateTime.Now
-                TxtCharges.Clear()
-                TxtRegNum.Select()
+                ClearFields()
             Else
                 reader.Close()
                 cn.Close()
@@ -83,8 +105,23 @@ Public Class Rent
         End If
     End Sub
 
+    Private Sub ClearFields()
+        TxtRegNum.Clear()
+        TxtCusid.Clear()
+        Txtcusname.Clear()
+        TxtPickupfrom.Clear()
+        TxtRentDate.Value = DateTime.Now
+        TxtReturnDate.Value = DateTime.Now
+        TxtCharges.Clear()
+        TxtCheckoutOdometer.Value = 0
+        TxtRegNum.Select()
+    End Sub
+
     Private Sub BtnRent_Click(sender As Object, e As EventArgs) Handles BtnRent.Click
+        Dim originalValue As Integer = CInt(TxtCheckoutOdometer.Value)
+        Console.WriteLine("Value before clicking Rent: " & originalValue)
         Rentvehicle()
+        Console.WriteLine("Value after Rentvehicle() call: " & TxtCheckoutOdometer.Value)
     End Sub
 
     Private Sub Rent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -92,9 +129,13 @@ Public Class Rent
         If loginform IsNot Nothing Then
             LblUsername.Text = loginform.Loggedinusername
         End If
+
+        ' Configure TxtCheckoutOdometer
+        TxtCheckoutOdometer.Minimum = 0
+        TxtCheckoutOdometer.Maximum = 1000000  ' Or whatever maximum makes sense
+        TxtCheckoutOdometer.Increment = 1
+        TxtCheckoutOdometer.ThousandsSeparator = True
     End Sub
-
-
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
         Me.Hide()
@@ -137,4 +178,13 @@ Public Class Rent
         Dim obj As New Login
         obj.Show()
     End Sub
+
+    ' Optional: If you decide to use a TextBox instead of NumericUpDown
+    'Private Sub TxtCheckoutOdometer_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCheckoutOdometer.KeyPress
+    '    ' Allow only digits and control characters
+    '    If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
+    '        e.Handled = True
+    '    End If
+    'End Sub
+
 End Class

@@ -216,9 +216,14 @@ ADD LoggedInUser NVARCHAR(50),
     CreatedDate DATETIME;
 
 
+	ALTER TABLE tblcarrentals3
+ADD CheckoutOdometer INT NOT NULL DEFAULT 0;
 
+alter table tblcarrentals3
+add KilometersDriven Int;
 
-
+ALTER TABLE tblcarrentals3
+ADD ReturnOdometer INT;
 
 
 
@@ -272,7 +277,9 @@ CREATE TABLE tblcheckouts (
 ALTER TABLE tblcheckouts
 ADD FineDescription NVARCHAR(200)
 
-
+ALTER TABLE tblcheckouts
+ADD ReturnOdometer INT NOT NULL DEFAULT 0,
+    KilometersDriven INT NOT NULL DEFAULT 0;
 
 
 select *From tblcancel

@@ -32,6 +32,7 @@ Public Class CheckOut
     Private returnDate As Date
     Private charges As Decimal
     Private finedescription As String
+    Private checkoutodometer As Integer
     Private Sub LoadRentalDetails()
         If String.IsNullOrWhiteSpace(TxtRegNum.Text) Then
             ' If the registration number is empty, just clear the fields and return
@@ -41,12 +42,12 @@ Public Class CheckOut
 
         Dim inputRegNumber As String = TxtRegNum.Text.Trim()
 
-        Dim rentalQuery As String = "SELECT cr.RentalID, cr.CarID, cr.RegNumber, cr.CusID, cr.CusName, cr.RentDate, cr.ReturnDate, cr.Charges " &
-                                "FROM tblcarrentals3 cr " &
-                                "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
-                                "WHERE cr.RegNumber = @RegNumber AND c.Available = 'NO' " &
-                                "AND (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
-                                "ORDER BY cr.RentalID DESC"
+        Dim rentalQuery As String = "SELECT cr.RentalID, cr.CarID, cr.RegNumber, cr.CusID, cr.CusName, cr.RentDate, cr.ReturnDate, cr.Charges, cr.CheckoutOdometer " &
+                            "FROM tblcarrentals3 cr " &
+                            "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
+                            "WHERE cr.RegNumber = @RegNumber AND c.Available = 'NO' " &
+                            "AND (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
+                            "ORDER BY cr.RentalID DESC"
 
         Try
             If cn.State = ConnectionState.Closed Then
@@ -67,6 +68,7 @@ Public Class CheckOut
                 rentDate = CDate(dr("RentDate"))
                 returnDate = CDate(dr("ReturnDate"))
                 charges = CDec(dr("Charges"))
+                checkoutodometer = CInt(dr("CheckoutOdometer"))
 
                 ' Populate the form fields
                 TxtCusid.Text = cusID
@@ -78,6 +80,11 @@ Public Class CheckOut
                 ' Set the minimum date for actual return date
                 TxtActualReturndate.MinDate = rentDate
                 TxtActualReturndate.Value = Date.Today
+
+                ' Set the minimum and initial value for the return odometer
+                Txtreturnodometer.Minimum = checkoutodometer
+                Txtreturnodometer.Value = checkoutodometer
+                Txtreturnodometer.Maximum = Integer.MaxValue ' Set a high maximum value
             Else
                 ' Only show the message if the form is visible and the registration number isn't empty
                 If Me.Visible AndAlso Not String.IsNullOrWhiteSpace(inputRegNumber) Then
@@ -100,25 +107,22 @@ Public Class CheckOut
     End Sub
 
     Private Sub ProcessCheckout()
-        If rentalID = 0 Or rentalID = 1 Then
+        If rentalID = 0 Or carID = 0 Then
             MessageBox.Show("Please load a valid rental record first.")
             Return
         End If
 
         ' Check if the rental is still active (not cancelled) and the car is still unavailable
         Dim checkQuery As String = "SELECT cr.iscancelled, c.Available FROM tblcarrentals3 cr " &
-                               "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
-                               "WHERE cr.RentalID = @RentalID"
+               "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
+               "WHERE cr.RentalID = @RentalID"
         Dim checkCmd As New SqlCommand(checkQuery, cn)
         checkCmd.Parameters.AddWithValue("@RentalID", rentalID)
-
         cn.Open()
         Dim reader As SqlDataReader = checkCmd.ExecuteReader()
-
         If reader.Read() Then
             Dim isCancelled As Boolean = Convert.ToBoolean(reader("iscancelled"))
             Dim isAvailable As Boolean = (reader("Available").ToString().ToUpper() = "YES")
-
             If isCancelled Or isAvailable Then
                 reader.Close()
                 cn.Close()
@@ -133,7 +137,6 @@ Public Class CheckOut
             ClearFields()
             Return
         End If
-
         reader.Close()
         cn.Close()
 
@@ -146,12 +149,18 @@ Public Class CheckOut
         End If
         Dim totalCharges As Decimal = charges + fine
 
-        ' Insert checkout record and update car availability
+        ' Get return odometer reading and calculate kilometers driven
+        Dim returnOdometer As Integer = CInt(Txtreturnodometer.Value)
+        Dim kilometersDriven As Integer = returnOdometer - checkoutodometer
+
+        ' Insert checkout record, update car availability, and set TotalKilometers to return odometer value
         cn.Open()
         cm = New SqlClient.SqlCommand(
-            "INSERT INTO tblcheckouts (RentalID, CarID, RegNumber, CusID, CusName, RentDate, ReturnDate, ActualReturnDate, Charges, DelayDays, Fine, TotalCharges, LoggedInUser, CreatedDate, FineDescription) " &
-            "VALUES (@RentalID, @CarID, @RegNumber, @CusID, @CusName, @RentDate, @ReturnDate, @ActualReturnDate, @Charges, @DelayDays, @Fine, @TotalCharges, @LoggedInUser, @CreatedDate, @FineDescription); " &
-            "UPDATE tblcars SET Available = 'YES' WHERE CarID = @CarID", cn)
+        "INSERT INTO tblcheckouts (RentalID, CarID, RegNumber, CusID, CusName, RentDate, ReturnDate, ActualReturnDate, Charges, DelayDays, Fine, TotalCharges, LoggedInUser, CreatedDate, FineDescription, ReturnOdometer, KilometersDriven) " &
+        "VALUES (@RentalID, @CarID, @RegNumber, @CusID, @CusName, @RentDate, @ReturnDate, @ActualReturnDate, @Charges, @DelayDays, @Fine, @TotalCharges, @LoggedInUser, @CreatedDate, @FineDescription, @ReturnOdometer, @KilometersDriven); " &
+        "UPDATE tblcars SET Available = 'YES', TotalKilometers = @ReturnOdometer WHERE CarID = @CarID; " &
+        "UPDATE tblcarrentals3 SET ReturnOdometer = @ReturnOdometer, KilometersDriven = @KilometersDriven WHERE RentalID = @RentalID", cn)
+
         With cm
             .Parameters.AddWithValue("@RentalID", rentalID)
             .Parameters.AddWithValue("@CarID", carID)
@@ -168,13 +177,15 @@ Public Class CheckOut
             .Parameters.AddWithValue("@LoggedInUser", LblUsername.Text)
             .Parameters.AddWithValue("@CreatedDate", DateTime.Now)
             .Parameters.AddWithValue("@FineDescription", TxtFinedescription.Text)
-            cm.ExecuteNonQuery()
+            .Parameters.AddWithValue("@ReturnOdometer", returnOdometer)
+            .Parameters.AddWithValue("@KilometersDriven", kilometersDriven)
+            .ExecuteNonQuery()
         End With
         cn.Close()
 
-
-        MessageBox.Show("Checkout processed successfully! The car is now marked as available.")
+        MessageBox.Show("Checkout processed successfully! The car is now marked as available and its total kilometers have been updated to the return odometer reading.")
         ClearFields()
+        Loadrecord()
     End Sub
 
     Private Sub ClearFields()
@@ -187,7 +198,7 @@ Public Class CheckOut
         TxtCharges.Clear()
         TxtFine.Clear()
         TxtFinedescription.Clear()
-
+        Txtreturnodometer.Value = Txtreturnodometer.Minimum
         TxtRegNum.Select()
 
         ' Reset the private fields
@@ -199,6 +210,11 @@ Public Class CheckOut
         rentDate = Date.MinValue
         returnDate = Date.MinValue
         charges = 0
+    End Sub
+    Private Sub TxtReturnOdometer_ValueChanged(sender As Object, e As EventArgs) Handles Txtreturnodometer.ValueChanged
+        If Txtreturnodometer.Value < checkoutodometer Then
+            Txtreturnodometer.Value = checkoutodometer
+        End If
     End Sub
 
     Private Sub TxtRegNum_Leave(sender As Object, e As EventArgs) Handles TxtRegNum.Leave
@@ -221,7 +237,20 @@ Public Class CheckOut
 
         LoadRecord()
     End Sub
-
+    Private Sub UpdateCarTotalKilometers(carID As Integer, additionalKilometers As Integer)
+        Try
+            cn.Open()
+            Dim query As String = "UPDATE tblcars SET TotalKilometers = TotalKilometers + @AdditionalKilometers WHERE CarID = @CarID"
+            cm = New SqlCommand(query, cn)
+            cm.Parameters.AddWithValue("@AdditionalKilometers", additionalKilometers)
+            cm.Parameters.AddWithValue("@CarID", carID)
+            cm.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show("Error updating total kilometers: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then cn.Close()
+        End Try
+    End Sub
     Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
         Me.Hide()
         Dim obj As New UHomee
