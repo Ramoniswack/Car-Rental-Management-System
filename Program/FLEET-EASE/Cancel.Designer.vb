@@ -426,6 +426,7 @@ Partial Class Cancel
         Me.Controls.Add(Me.Panel1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Cancel"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Cancel"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()

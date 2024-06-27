@@ -39,13 +39,13 @@ Partial Class Statistics
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
+        Me.BtnDone = New System.Windows.Forms.Button()
         Me.DGV = New System.Windows.Forms.DataGridView()
         Me.BtnIndividualTransactions = New System.Windows.Forms.Button()
         Me.BtnVehicleMaintenanceAlert = New System.Windows.Forms.Button()
         Me.BtnOverallTransactionSummary = New System.Windows.Forms.Button()
         Me.BtnUserlogindetails = New System.Windows.Forms.Button()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.BtnDone = New System.Windows.Forms.Button()
         CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel8.SuspendLayout()
         Me.Panel9.SuspendLayout()
@@ -253,6 +253,16 @@ Partial Class Statistics
         Me.Panel9.Size = New System.Drawing.Size(1029, 583)
         Me.Panel9.TabIndex = 158
         '
+        'BtnDone
+        '
+        Me.BtnDone.Font = New System.Drawing.Font("Century Gothic", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDone.Location = New System.Drawing.Point(190, 532)
+        Me.BtnDone.Name = "BtnDone"
+        Me.BtnDone.Size = New System.Drawing.Size(72, 29)
+        Me.BtnDone.TabIndex = 161
+        Me.BtnDone.Text = "DONE"
+        Me.BtnDone.UseVisualStyleBackColor = True
+        '
         'DGV
         '
         Me.DGV.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
@@ -343,16 +353,6 @@ Partial Class Statistics
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1094, 684)
         Me.Panel1.TabIndex = 157
-        '
-        'BtnDone
-        '
-        Me.BtnDone.Font = New System.Drawing.Font("Century Gothic", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnDone.Location = New System.Drawing.Point(268, 429)
-        Me.BtnDone.Name = "BtnDone"
-        Me.BtnDone.Size = New System.Drawing.Size(52, 89)
-        Me.BtnDone.TabIndex = 161
-        Me.BtnDone.Text = "DONE"
-        Me.BtnDone.UseVisualStyleBackColor = True
         '
         'Statistics
         '

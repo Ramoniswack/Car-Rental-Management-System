@@ -17,11 +17,10 @@ Public Class Login
         Else
             Try
                 cn.Open()
-                Dim query As String = "SELECT * FROM tbllogin WHERE username = @username AND password = @password"
+                Dim query As String = "SELECT * FROM tbllogin WHERE username = @username COLLATE Latin1_General_CS_AS AND password = @password COLLATE Latin1_General_CS_AS"
                 cm = New SqlClient.SqlCommand(query, cn)
                 cm.Parameters.AddWithValue("@username", TxtUsername.Text)
                 cm.Parameters.AddWithValue("@password", TxtPassword.Text)
-
                 Dim dt As New DataTable()
                 Dim adapter As New SqlDataAdapter(cm)
                 adapter.Fill(dt)
@@ -31,7 +30,7 @@ Public Class Login
                     MessageBox.Show("Logged in as: " & dt.Rows(0)("Usertype"))
 
                     ' Update LastLoginDate and increment LoginCount
-                    Dim updateQuery As String = "UPDATE tbllogin SET LastLoginDate = @lastLoginDate, LoginCount = ISNULL(LoginCount, 0) + 1 WHERE Username = @username"
+                    Dim updateQuery As String = "UPDATE tbllogin SET LastLoginDate = @lastLoginDate, LoginCount = ISNULL(LoginCount, 0) + 1 WHERE Username = @username COLLATE Latin1_General_CS_AS"
                     Dim updateCmd As New SqlClient.SqlCommand(updateQuery, cn)
                     updateCmd.Parameters.AddWithValue("@lastLoginDate", DateTime.Now)
                     updateCmd.Parameters.AddWithValue("@username", Loggedinusername)

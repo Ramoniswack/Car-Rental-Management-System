@@ -1,5 +1,5 @@
-﻿
-Imports System.Data.SqlClient
+﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 
 Public Class Settings
     ' Define connection string and SQL objects
@@ -22,7 +22,6 @@ Public Class Settings
             MessageBox.Show($"Error in Settings_Load: {ex.Message}")
         End Try
     End Sub
-
 
     Private Sub LoadUserInfo()
         Try
@@ -51,8 +50,18 @@ Public Class Settings
             Return
         End If
 
+        If Not IsValidPassword(TxtNewpassword.Text) Then
+            MessageBox.Show("New password must be at least 8 characters long, contain at least one capital letter, one number, and one symbol.")
+            Return
+        End If
+
         If TxtNewpassword.Text <> TxtRenewpassword.Text Then
             MessageBox.Show("New passwords do not match.")
+            Return
+        End If
+
+        If Not IsValidContact(TxtContact.Text) Then
+            MessageBox.Show("Contact must be exactly 10 digits.")
             Return
         End If
 
@@ -65,18 +74,22 @@ Public Class Settings
             cn.Open()
 
             ' First, verify the old password
-            cm = New SqlCommand("SELECT COUNT(*) FROM tbllogin WHERE username = @username AND password = @oldPassword", cn)
+            cm = New SqlCommand("SELECT password FROM tbllogin WHERE username = @username", cn)
             cm.Parameters.AddWithValue("@username", Login.Loggedinusername)
-            cm.Parameters.AddWithValue("@oldPassword", TxtOldpassword.Text)
+            Dim storedPassword As String = CStr(cm.ExecuteScalar())
 
-            Dim count As Integer = CInt(cm.ExecuteScalar())
-
-            If count = 0 Then
+            If storedPassword <> TxtOldpassword.Text Then
                 MessageBox.Show("Old password is incorrect.")
                 Return
             End If
 
-            ' If old password is correct, proceed with update
+            ' Check if the new password is the same as the old password
+            If TxtNewpassword.Text = TxtOldpassword.Text Then
+                MessageBox.Show("New password cannot be the same as the old password.")
+                Return
+            End If
+
+            ' If old password is correct and new password is different, proceed with update
             cm = New SqlCommand("UPDATE tbllogin SET username = @newUsername, password = @newPassword, contact = @newContact WHERE username = @currentUsername", cn)
             cm.Parameters.AddWithValue("@newUsername", TxtUsername.Text)
             cm.Parameters.AddWithValue("@newPassword", TxtNewpassword.Text)
@@ -100,6 +113,17 @@ Public Class Settings
         clear()
     End Sub
 
+    Private Function IsValidPassword(password As String) As Boolean
+        ' Check if password is at least 8 characters long, contains at least one capital letter, one number, and one symbol
+        Dim regex As New Regex("^(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$")
+        Return regex.IsMatch(password)
+    End Function
+
+    Private Function IsValidContact(contact As String) As Boolean
+        ' Check if contact is exactly 10 digits
+        Return Regex.IsMatch(contact, "^\d{10}$")
+    End Function
+
     Sub clear()
         TxtContact.Clear()
         TxtNewpassword.Clear()
@@ -107,53 +131,18 @@ Public Class Settings
         TxtRenewpassword.Clear()
         TxtUsername.Clear()
     End Sub
+
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         TxtOldpassword.UseSystemPasswordChar = Not CheckBox1.Checked
-
-    End Sub
-
-    Private Sub BtnHome_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New UHomee
-        obj.Show()
-
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New UCustomers
-        obj.Show()
-    End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New Rent
-        obj.Show()
-    End Sub
-
-    Private Sub BtnCustomers_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New CheckOut
-        obj.Show()
-    End Sub
-
-    Private Sub BtnLogout_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New Login
-        obj.Show()
     End Sub
 
     Private Sub CheckBox2_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox2.CheckedChanged
-
         TxtNewpassword.UseSystemPasswordChar = Not CheckBox2.Checked
-
     End Sub
 
     Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
         clear()
     End Sub
-
-
 
     Private Sub BtnHome_Click_2(sender As Object, e As EventArgs) Handles BtnHome.Click
         Me.Hide()

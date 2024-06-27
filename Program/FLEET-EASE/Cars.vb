@@ -1,4 +1,6 @@
 ﻿Imports Microsoft.VisualBasic.ApplicationServices
+Imports System.Text.RegularExpressions
+Imports System.Data.SqlClient
 
 Public Class Cars
     Public Sub LoadRecord()
@@ -27,54 +29,114 @@ Public Class Cars
         End Try
     End Sub
 
-    Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
-        If TxtCarname.Text <> "" And Txtmodel.Text <> "" And TxtColor.Text <> "" And TxtRegNum.Text <> "" And TxtAvailable.Text <> "" Then
-            Try
-                If cn.State = ConnectionState.Closed Then
-                    cn.Open()
-                End If
-                cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color, RegNumber, Available, TotalKilometers, LastMaintenanceDate, LastMaintenanceKilometers) VALUES (@Carname, @Model, @Color, @RegNumber, @Available, @TotalKilometers, @LastMaintenanceDate, @LastMaintenanceKilometers)", cn)
-                With cm
-                    .Parameters.AddWithValue("@CarName", TxtCarname.Text)
-                    .Parameters.AddWithValue("@Model", Txtmodel.Text)
-                    .Parameters.AddWithValue("@Color", TxtColor.Text)
-                    .Parameters.AddWithValue("@RegNumber", TxtRegNum.Text)
-                    .Parameters.AddWithValue("@Available", TxtAvailable.Text)
-                    .Parameters.AddWithValue("@TotalKilometers", Convert.ToInt32(TxtInitialKm.Text))
-                    .Parameters.AddWithValue("@LastMaintenanceDate", Convert.ToDateTime(TxtLastmaintenancedate.Text))
-                    .Parameters.AddWithValue("@LastMaintenanceKilometers", Convert.ToInt32(TxtInitialKm.Text))
-                    .ExecuteNonQuery()
-                End With
-                MsgBox("Car saved successfully")
-            Catch ex As Exception
-                MsgBox("An error occurred while adding the car: " & ex.Message)
-            Finally
-                If cn.State = ConnectionState.Open Then
-                    cn.Close()
-                End If
-            End Try
-        Else
-            MsgBox("Please fulfill all requirements first")
+    Private Function ValidateInputs() As Boolean
+        ' Validate Car Name
+        If String.IsNullOrWhiteSpace(TxtCarname.Text) OrElse Not Char.IsUpper(TxtCarname.Text(0)) Then
+            MsgBox("Car name must start with a capital letter.")
+            Return False
         End If
+
+        ' Validate Model
+        If String.IsNullOrWhiteSpace(Txtmodel.Text) OrElse Not Char.IsUpper(Txtmodel.Text(0)) Then
+            MsgBox("Model must start with a capital letter.")
+            Return False
+        End If
+
+        ' Validate Color
+        If String.IsNullOrWhiteSpace(TxtColor.Text) OrElse Not Char.IsUpper(TxtColor.Text(0)) Then
+            MsgBox("Color must start with a capital letter.")
+            Return False
+        End If
+
+        ' Validate Registration Number
+        If Not IsValidRegNumber(TxtRegNum.Text) Then
+            MsgBox("Invalid registration number format. Please use the format: ZZ00X0000 (e.g., BA20B2080)")
+            Return False
+        End If
+
+        ' Validate other fields
+        If String.IsNullOrWhiteSpace(TxtAvaiable.Text) Then
+            MsgBox("Availability status cannot be empty.")
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(TxtInitialKm.Text) OrElse Not Integer.TryParse(TxtInitialKm.Text, Nothing) Then
+            MsgBox("Initial kilometers must be a valid number.")
+            Return False
+        End If
+
+        If String.IsNullOrWhiteSpace(TxtLastmaintenancedate.Text) OrElse Not Date.TryParse(TxtLastmaintenancedate.Text, Nothing) Then
+            MsgBox("Last maintenance date must be a valid date.")
+            Return False
+        End If
+
+        Return True
+    End Function
+
+    Private Function IsValidRegNumber(regNumber As String) As Boolean
+        Dim pattern As String = "^(BA|GA|KO|LU|ME|NA|RA|SA)\d{1,2}[A-E]\d{4}$"
+        Return Regex.IsMatch(regNumber, pattern)
+    End Function
+
+    Private Function IsRegNumberDuplicate(regNumber As String, excludeCarId As Integer) As Boolean
+        Try
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+            Dim query As String = "SELECT COUNT(*) FROM tblcars WHERE RegNumber = @RegNumber AND CarID <> @CarID"
+            cm = New SqlClient.SqlCommand(query, cn)
+            cm.Parameters.AddWithValue("@RegNumber", regNumber)
+            cm.Parameters.AddWithValue("@CarID", excludeCarId)
+            Dim count As Integer = CInt(cm.ExecuteScalar())
+            Return count > 0
+        Catch ex As Exception
+            MsgBox("Error checking for duplicate registration number: " & ex.Message)
+            Return True ' Assume duplicate to be safe
+        Finally
+            If cn.State = ConnectionState.Open Then cn.Close()
+        End Try
+    End Function
+
+    Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
+        If Not ValidateInputs() Then
+            Return
+        End If
+
+        If IsRegNumberDuplicate(TxtRegNum.Text, -1) Then
+            MsgBox("This registration number already exists in Records.")
+            clear()
+            Return
+        End If
+
+        Try
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+            cm = New SqlClient.SqlCommand("INSERT INTO tblcars (Carname, Model, Color, RegNumber, Available, TotalKilometers, LastMaintenanceDate, LastMaintenanceKilometers) VALUES (@Carname, @Model, @Color, @RegNumber, @Available, @TotalKilometers, @LastMaintenanceDate, @LastMaintenanceKilometers)", cn)
+            With cm
+                .Parameters.AddWithValue("@CarName", TxtCarname.Text)
+                .Parameters.AddWithValue("@Model", Txtmodel.Text)
+                .Parameters.AddWithValue("@Color", TxtColor.Text)
+                .Parameters.AddWithValue("@RegNumber", TxtRegNum.Text)
+                .Parameters.AddWithValue("@Available", TxtAvaiable.Text)
+                .Parameters.AddWithValue("@TotalKilometers", Convert.ToInt32(TxtInitialKm.Text))
+                .Parameters.AddWithValue("@LastMaintenanceDate", Convert.ToDateTime(TxtLastmaintenancedate.Text))
+                .Parameters.AddWithValue("@LastMaintenanceKilometers", Convert.ToInt32(TxtInitialKm.Text))
+                .ExecuteNonQuery()
+            End With
+            MsgBox("Car saved successfully")
+        Catch ex As Exception
+            MsgBox("An error occurred while adding the car: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
 
         clear()
         TxtCarname.Select()
         LoadRecord()
     End Sub
-
-    Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
-        LoadRecord()
-
-        ' Set DataGridView properties
-        Dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
-        Dgv.MultiSelect = False
-    End Sub
-
-    Dim carIdValue As Integer = 0
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
         Try
@@ -87,6 +149,10 @@ Public Class Cars
 
             If Dgv.SelectedCells.Count = 0 AndAlso Dgv.SelectedRows.Count = 0 Then
                 MsgBox("Please select a row to update.")
+                Return
+            End If
+
+            If Not ValidateInputs() Then
                 Return
             End If
 
@@ -104,37 +170,12 @@ Public Class Cars
                 Return
             End If
 
-            ' Check each field individually
-            If String.IsNullOrWhiteSpace(TxtCarname.Text) Then
-                MsgBox("Car name cannot be empty.")
-                Return
-            End If
-            If String.IsNullOrWhiteSpace(TxtColor.Text) Then
-                MsgBox("Color cannot be empty.")
-                Return
-            End If
-            If String.IsNullOrWhiteSpace(Txtmodel.Text) Then
-                MsgBox("Model cannot be empty.")
-                Return
-            End If
-            If String.IsNullOrWhiteSpace(TxtRegNum.Text) Then
-                MsgBox("Registration number cannot be empty.")
-                Return
-            End If
-            If String.IsNullOrWhiteSpace(TxtAvailable.Text) Then
-                MsgBox("Availability status cannot be empty.")
-                Return
-            End If
-            If String.IsNullOrWhiteSpace(TxtInitialKm.Text) Then
-                MsgBox("Initial kilometers cannot be empty.")
-                Return
-            End If
-            If String.IsNullOrWhiteSpace(TxtLastmaintenancedate.Text) Then
-                MsgBox("Last maintenance date cannot be empty.")
-                Return
-            End If
-
             carIdValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+
+            If IsRegNumberDuplicate(TxtRegNum.Text, carIdValue) Then
+                MsgBox("This registration number already exists for another car.")
+                Return
+            End If
 
             If cn.State = ConnectionState.Closed Then
                 cn.Open()
@@ -147,7 +188,7 @@ Public Class Cars
                 .Parameters.AddWithValue("@Model", Txtmodel.Text)
                 .Parameters.AddWithValue("@Color", TxtColor.Text)
                 .Parameters.AddWithValue("@RegNumber", TxtRegNum.Text)
-                .Parameters.AddWithValue("@Available", TxtAvailable.Text)
+                .Parameters.AddWithValue("@Available", TxtAvaiable.Text)
                 .Parameters.AddWithValue("@TotalKilometers", Convert.ToInt32(TxtInitialKm.Text))
                 .Parameters.AddWithValue("@LastMaintenanceDate", Convert.ToDateTime(TxtLastmaintenancedate.Text))
                 .Parameters.AddWithValue("@LastMaintenanceKilometers", Convert.ToInt32(TxtInitialKm.Text))
@@ -167,6 +208,20 @@ Public Class Cars
         clear()
     End Sub
 
+    Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.Loggedinusername
+        End If
+        LoadRecord()
+
+        ' Set DataGridView properties
+        Dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
+        Dgv.MultiSelect = False
+    End Sub
+
+    Dim carIdValue As Integer = 0
+
     Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
         Try
             Debug.WriteLine($"Cell clicked. RowIndex: {e.RowIndex}, ColumnIndex: {e.ColumnIndex}")
@@ -179,11 +234,11 @@ Public Class Cars
                 Txtmodel.Text = If(row.Cells(2).Value IsNot Nothing, row.Cells(2).Value.ToString(), "")
                 TxtColor.Text = If(row.Cells(3).Value IsNot Nothing, row.Cells(3).Value.ToString(), "")
                 TxtRegNum.Text = If(row.Cells(4).Value IsNot Nothing, row.Cells(4).Value.ToString(), "")
-                TxtAvailable.Text = If(row.Cells(5).Value IsNot Nothing, row.Cells(5).Value.ToString(), "")
+                TxtAvaiable.Text = If(row.Cells(5).Value IsNot Nothing, row.Cells(5).Value.ToString(), "")
                 TxtInitialKm.Text = If(row.Cells(6).Value IsNot Nothing, row.Cells(6).Value.ToString(), "")
                 TxtLastmaintenancedate.Text = If(row.Cells(7).Value IsNot Nothing, CType(row.Cells(7).Value, DateTime).ToString("yyyy-MM-dd"), "")
 
-                Debug.WriteLine($"Row clicked and selected: CarName={TxtCarname.Text}, Model={Txtmodel.Text}, Color={TxtColor.Text}, RegNum={TxtRegNum.Text}, Available={TxtAvailable.Text}, InitialKm={TxtInitialKm.Text}, LastMaintenanceDate={TxtLastmaintenancedate.Text}")
+                Debug.WriteLine($"Row clicked and selected: CarName={TxtCarname.Text}, Model={Txtmodel.Text}, Color={TxtColor.Text}, RegNum={TxtRegNum.Text}, Available={TxtAvaiable.Text}, InitialKm={TxtInitialKm.Text}, LastMaintenanceDate={TxtLastmaintenancedate.Text}")
             Else
                 Debug.WriteLine($"Invalid row index: {e.RowIndex}")
             End If
@@ -197,40 +252,16 @@ Public Class Cars
         TxtColor.Clear()
         Txtmodel.Clear()
         TxtCarname.Clear()
-        TxtAvailable.Clear()
+        TxtAvaiable.Text = ""
         TxtRegNum.Clear()
         TxtInitialKm.Clear()
-        TxtLastmaintenancedate.Refresh()
-    End Sub
-
-    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
+        TxtLastmaintenancedate.Value = DateTime.Now
     End Sub
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
         Me.Hide()
         Dim obj As New Homee
         obj.Show()
-    End Sub
-
-    Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-    End Sub
-
-    Private Sub Button1_Click_2(sender As Object, e As EventArgs) Handles Button1.Click
-    End Sub
-
-    Private Sub Panel7_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel7.Paint
-    End Sub
-
-    Private Sub Panel6_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel6.Paint
-    End Sub
-
-    Private Sub Panel5_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel5.Paint
-    End Sub
-
-    Private Sub Panel4_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel4.Paint
-    End Sub
-
-    Private Sub Panel3_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel3.Paint
     End Sub
 
     Private Sub BtnLogout_Click_2(sender As Object, e As EventArgs) Handles BtnLogout.Click
@@ -255,12 +286,5 @@ Public Class Cars
         Me.Hide()
         Dim obj As New Users
         obj.Show()
-    End Sub
-
-    Private Sub TxtColor_TextChanged(sender As Object, e As EventArgs) Handles TxtColor.TextChanged
-    End Sub
-
-    Private Sub TxtInitialKm_TextChanged(sender As Object, e As EventArgs) Handles TxtInitialKm.TextChanged
-
     End Sub
 End Class

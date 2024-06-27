@@ -42,7 +42,6 @@ Partial Class Users
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.BtnAddUser = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TxtUsertype = New System.Windows.Forms.TextBox()
         Me.TxtUsername = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.LblUsername = New System.Windows.Forms.Label()
@@ -59,6 +58,7 @@ Partial Class Users
         Me.BtnStats = New System.Windows.Forms.Button()
         Me.BtnCustomers = New System.Windows.Forms.Button()
         Me.BtnUsers = New System.Windows.Forms.Button()
+        Me.TxtUsertype = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +89,7 @@ Partial Class Users
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.TxtUsertype)
         Me.Panel9.Controls.Add(Me.CheckBox1)
         Me.Panel9.Controls.Add(Me.BtnUpdate)
         Me.Panel9.Controls.Add(Me.Label4)
@@ -99,7 +100,6 @@ Partial Class Users
         Me.Panel9.Controls.Add(Me.Dgv)
         Me.Panel9.Controls.Add(Me.BtnAddUser)
         Me.Panel9.Controls.Add(Me.Label5)
-        Me.Panel9.Controls.Add(Me.TxtUsertype)
         Me.Panel9.Controls.Add(Me.TxtUsername)
         Me.Panel9.Controls.Add(Me.Label3)
         Me.Panel9.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -273,14 +273,6 @@ Partial Class Users
         Me.Label5.Size = New System.Drawing.Size(112, 27)
         Me.Label5.TabIndex = 54
         Me.Label5.Text = "UserType"
-        '
-        'TxtUsertype
-        '
-        Me.TxtUsertype.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtUsertype.Location = New System.Drawing.Point(220, 132)
-        Me.TxtUsertype.Name = "TxtUsertype"
-        Me.TxtUsertype.Size = New System.Drawing.Size(722, 36)
-        Me.TxtUsertype.TabIndex = 53
         '
         'TxtUsername
         '
@@ -467,6 +459,16 @@ Partial Class Users
         Me.BtnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnUsers.UseVisualStyleBackColor = True
         '
+        'TxtUsertype
+        '
+        Me.TxtUsertype.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtUsertype.FormattingEnabled = True
+        Me.TxtUsertype.Items.AddRange(New Object() {"Yes", "No"})
+        Me.TxtUsertype.Location = New System.Drawing.Point(220, 138)
+        Me.TxtUsertype.Name = "TxtUsertype"
+        Me.TxtUsertype.Size = New System.Drawing.Size(121, 31)
+        Me.TxtUsertype.TabIndex = 68
+        '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -507,7 +509,6 @@ Partial Class Users
     Friend WithEvents Dgv As DataGridView
     Friend WithEvents BtnAddUser As Button
     Friend WithEvents Label5 As Label
-    Friend WithEvents TxtUsertype As TextBox
     Friend WithEvents TxtUsername As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents LblUsername As Label
@@ -537,4 +538,5 @@ Partial Class Users
     Friend WithEvents BtnStats As Button
     Friend WithEvents BtnCustomers As Button
     Friend WithEvents BtnUsers As Button
+    Friend WithEvents TxtUsertype As ComboBox
 End Class

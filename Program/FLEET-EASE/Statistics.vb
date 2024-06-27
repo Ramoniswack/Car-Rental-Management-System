@@ -4,6 +4,11 @@ Imports Microsoft.VisualBasic.ApplicationServices
 Public Class Statistics
 
     Private Sub Statistics_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.Loggedinusername
+
+        End If
         ' Load initial data (you can choose which one to load by default)
         LoadIndividualCarStats()
     End Sub

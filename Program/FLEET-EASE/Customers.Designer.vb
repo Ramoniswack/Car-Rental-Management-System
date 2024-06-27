@@ -34,7 +34,6 @@ Partial Class Customers
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button8 = New System.Windows.Forms.Button()
         Me.BtnAddCustomer = New System.Windows.Forms.Button()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.TxtAddress = New System.Windows.Forms.TextBox()
@@ -71,7 +70,6 @@ Partial Class Customers
         Me.Panel9.Controls.Add(Me.TxtLicecnseCode)
         Me.Panel9.Controls.Add(Me.Label4)
         Me.Panel9.Controls.Add(Me.Dgv)
-        Me.Panel9.Controls.Add(Me.Button8)
         Me.Panel9.Controls.Add(Me.BtnAddCustomer)
         Me.Panel9.Controls.Add(Me.Label6)
         Me.Panel9.Controls.Add(Me.TxtAddress)
@@ -91,7 +89,7 @@ Partial Class Customers
         Me.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnUpdate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnUpdate.Location = New System.Drawing.Point(430, 286)
+        Me.BtnUpdate.Location = New System.Drawing.Point(612, 281)
         Me.BtnUpdate.Name = "BtnUpdate"
         Me.BtnUpdate.Size = New System.Drawing.Size(160, 80)
         Me.BtnUpdate.TabIndex = 63
@@ -182,24 +180,13 @@ Partial Class Customers
         Me.Column2.Name = "Column2"
         Me.Column2.Width = 125
         '
-        'Button8
-        '
-        Me.Button8.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Button8.Location = New System.Drawing.Point(762, 286)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(168, 80)
-        Me.Button8.TabIndex = 59
-        Me.Button8.Text = "DELETE"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
         'BtnAddCustomer
         '
         Me.BtnAddCustomer.BackColor = System.Drawing.Color.Transparent
         Me.BtnAddCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAddCustomer.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAddCustomer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnAddCustomer.Location = New System.Drawing.Point(596, 286)
+        Me.BtnAddCustomer.Location = New System.Drawing.Point(778, 281)
         Me.BtnAddCustomer.Name = "BtnAddCustomer"
         Me.BtnAddCustomer.Size = New System.Drawing.Size(160, 80)
         Me.BtnAddCustomer.TabIndex = 58
@@ -494,7 +481,6 @@ Partial Class Customers
     Friend WithEvents Fleetease As PictureBox
     Friend WithEvents Label3 As Label
     Friend WithEvents txtCustomerName As TextBox
-    Friend WithEvents Button8 As Button
     Friend WithEvents BtnAddCustomer As Button
     Friend WithEvents Label6 As Label
     Friend WithEvents TxtAddress As TextBox

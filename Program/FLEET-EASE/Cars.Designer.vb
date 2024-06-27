@@ -35,7 +35,6 @@ Partial Class Cars
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.LblColor = New System.Windows.Forms.Label()
-        Me.TxtAvailable = New System.Windows.Forms.TextBox()
         Me.Dgv = New System.Windows.Forms.DataGridView()
         Me.CarID = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -64,6 +63,7 @@ Partial Class Cars
         Me.BtnStats = New System.Windows.Forms.Button()
         Me.BtnCustomers = New System.Windows.Forms.Button()
         Me.BtnUsers = New System.Windows.Forms.Button()
+        Me.TxtAvaiable = New System.Windows.Forms.ComboBox()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -94,6 +94,7 @@ Partial Class Cars
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.TxtAvaiable)
         Me.Panel9.Controls.Add(Me.TxtLastmaintenancedate)
         Me.Panel9.Controls.Add(Me.Label7)
         Me.Panel9.Controls.Add(Me.TxtInitialKm)
@@ -102,7 +103,6 @@ Partial Class Cars
         Me.Panel9.Controls.Add(Me.Label1)
         Me.Panel9.Controls.Add(Me.BtnUpdate)
         Me.Panel9.Controls.Add(Me.LblColor)
-        Me.Panel9.Controls.Add(Me.TxtAvailable)
         Me.Panel9.Controls.Add(Me.Dgv)
         Me.Panel9.Controls.Add(Me.BtnAddCustomer)
         Me.Panel9.Controls.Add(Me.Label5)
@@ -201,14 +201,6 @@ Partial Class Cars
         Me.LblColor.Size = New System.Drawing.Size(120, 27)
         Me.LblColor.TabIndex = 62
         Me.LblColor.Text = "Available"
-        '
-        'TxtAvailable
-        '
-        Me.TxtAvailable.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtAvailable.Location = New System.Drawing.Point(220, 253)
-        Me.TxtAvailable.Name = "TxtAvailable"
-        Me.TxtAvailable.Size = New System.Drawing.Size(146, 36)
-        Me.TxtAvailable.TabIndex = 61
         '
         'Dgv
         '
@@ -520,6 +512,16 @@ Partial Class Cars
         Me.BtnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnUsers.UseVisualStyleBackColor = True
         '
+        'TxtAvaiable
+        '
+        Me.TxtAvaiable.Font = New System.Drawing.Font("Century Gothic", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtAvaiable.FormattingEnabled = True
+        Me.TxtAvaiable.Items.AddRange(New Object() {"Yes", "No"})
+        Me.TxtAvaiable.Location = New System.Drawing.Point(220, 254)
+        Me.TxtAvaiable.Name = "TxtAvaiable"
+        Me.TxtAvaiable.Size = New System.Drawing.Size(121, 31)
+        Me.TxtAvaiable.TabIndex = 70
+        '
         'Cars
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -568,7 +570,6 @@ Partial Class Cars
     Friend WithEvents LblUsername As Label
     Friend WithEvents Fleetease As PictureBox
     Friend WithEvents LblColor As Label
-    Friend WithEvents TxtAvailable As TextBox
     Friend WithEvents BtnUpdate As Button
     Friend WithEvents TxtRegNum As TextBox
     Friend WithEvents Label1 As Label
@@ -595,4 +596,5 @@ Partial Class Cars
     Friend WithEvents TxtInitialKm As TextBox
     Friend WithEvents TxtLastmaintenancedate As DateTimePicker
     Friend WithEvents Label7 As Label
+    Friend WithEvents TxtAvaiable As ComboBox
 End Class

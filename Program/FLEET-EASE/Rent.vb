@@ -1,19 +1,25 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 
 Public Class Rent
-
     Private Sub Rentvehicle()
         ' Store the initial value immediately when the method is called
         Dim initialOdometerValue As Integer = CInt(TxtCheckoutOdometer.Value)
         Console.WriteLine("Initial Checkout Odometer Value: " & initialOdometerValue)
 
-        Dim regNumber As String = TxtRegNum.Text
+        Dim regNumber As String = TxtRegNum.Text.ToUpper()
         Dim cusID As String = TxtCusid.Text
         Dim customername As String = Txtcusname.Text
-        Dim pickupLocation As String = TxtPickupfrom.Text
+        Dim pickupLocation As String = CapitalizeFirstLetter(TxtPickupfrom.Text)
         Dim rentDate As Date = TxtRentDate.Value.Date
         Dim returnDate As Date = TxtReturnDate.Value.Date
         Dim charges As String = TxtCharges.Text
+
+        ' Validate registration number format
+        If Not IsValidRegNumber(regNumber) Then
+            MessageBox.Show("Invalid registration number format. Please use the format: ZZ00X0000 (e.g., BA20B2080)")
+            Return
+        End If
 
         ' Right before using the value, check if it has changed
         If CInt(TxtCheckoutOdometer.Value) <> initialOdometerValue Then
@@ -105,6 +111,18 @@ Public Class Rent
         End If
     End Sub
 
+    Private Function IsValidRegNumber(regNumber As String) As Boolean
+        Dim pattern As String = "^(BA|GA|KO|LU|ME|NA|RA|SA)\d{1,2}[A-E]\d{4}$"
+        Return Regex.IsMatch(regNumber, pattern)
+    End Function
+
+    Private Function CapitalizeFirstLetter(input As String) As String
+        If String.IsNullOrEmpty(input) Then
+            Return input
+        End If
+        Return Char.ToUpper(input(0)) & input.Substring(1)
+    End Function
+
     Private Sub ClearFields()
         TxtRegNum.Clear()
         TxtCusid.Clear()
@@ -135,6 +153,34 @@ Public Class Rent
         TxtCheckoutOdometer.Maximum = 1000000  ' Or whatever maximum makes sense
         TxtCheckoutOdometer.Increment = 1
         TxtCheckoutOdometer.ThousandsSeparator = True
+    End Sub
+
+    Private Sub TxtCusid_Leave(sender As Object, e As EventArgs) Handles TxtCusid.Leave
+        ' Fetch customer name when customer ID is entered
+        If Not String.IsNullOrEmpty(TxtCusid.Text) Then
+            Try
+                cn.Open()
+                Dim query As String = "SELECT customername FROM tblcustomers WHERE cusid = @cusid"
+                Dim cmd As New SqlCommand(query, cn)
+                cmd.Parameters.AddWithValue("@cusid", TxtCusid.Text)
+                Dim result As Object = cmd.ExecuteScalar()
+                If result IsNot Nothing Then
+                    Txtcusname.Text = result.ToString()
+                Else
+                    Txtcusname.Clear()
+                    MessageBox.Show("No customer found with this ID.")
+                End If
+            Catch ex As Exception
+                MessageBox.Show("Error fetching customer name: " & ex.Message)
+            Finally
+                cn.Close()
+            End Try
+        End If
+    End Sub
+
+    Private Sub TxtPickupfrom_Leave(sender As Object, e As EventArgs) Handles TxtPickupfrom.Leave
+        ' Capitalize first letter of pickup location
+        TxtPickupfrom.Text = CapitalizeFirstLetter(TxtPickupfrom.Text)
     End Sub
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
@@ -178,13 +224,4 @@ Public Class Rent
         Dim obj As New Login
         obj.Show()
     End Sub
-
-    ' Optional: If you decide to use a TextBox instead of NumericUpDown
-    'Private Sub TxtCheckoutOdometer_KeyPress(sender As Object, e As KeyPressEventArgs) Handles TxtCheckoutOdometer.KeyPress
-    '    ' Allow only digits and control characters
-    '    If Not Char.IsDigit(e.KeyChar) AndAlso Not Char.IsControl(e.KeyChar) Then
-    '        e.Handled = True
-    '    End If
-    'End Sub
-
 End Class
