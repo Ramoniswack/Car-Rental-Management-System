@@ -1,0 +1,211 @@
+<mxfile host="Electron" modified="2024-06-28T12:28:12.770Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="4phvtVlQYMayj2DinE7x" version="24.2.5" type="device">
+  <diagram name="Page-1" id="3GHOwXT9-v9iNImFkbUI">
+    <mxGraphModel dx="2072" dy="1250" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="#ffffff" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="OcRUEp-kltOgxROJY-33-9" value="" style="group;strokeWidth=3;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="720" y="423" width="101" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="OcRUEp-kltOgxROJY-33-9">
+          <mxGeometry width="91.89743589743588" height="91.89743589743588" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-11" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50.5" y="180.34871794871793" as="sourcePoint" />
+            <mxPoint x="50.5" y="91.89743589743588" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-12" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13.8875" y="222.85128205128203" as="sourcePoint" />
+            <mxPoint x="50.5" y="179.2" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-13" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="51.762499999999996" y="180.34871794871793" as="sourcePoint" />
+            <mxPoint x="88.375" y="223.99999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-25" value="" style="endArrow=none;html=1;rounded=0;fontColor=#000000;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-9">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="144" as="sourcePoint" />
+            <mxPoint x="101" y="144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="192" y="120" width="485" height="833" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-21" value="&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;ADMIN&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="660" width="105" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-22" value="&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;USER&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="722" y="662" width="93" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-26" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="358" y="139" width="153" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-27" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;entryX=0;entryY=0.737;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=3;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="447" as="sourcePoint" />
+            <mxPoint x="181" y="348" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-30" value="" style="group;strokeWidth=3;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="36" y="431" width="101" height="224" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-31" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="OcRUEp-kltOgxROJY-33-30">
+          <mxGeometry width="91.89743589743588" height="91.89743589743588" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-32" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50.5" y="180.34871794871793" as="sourcePoint" />
+            <mxPoint x="50.5" y="91.89743589743588" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-33" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="13.8875" y="222.85128205128203" as="sourcePoint" />
+            <mxPoint x="50.5" y="179.2" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-34" value="" style="endArrow=none;html=1;rounded=0;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="51.762499999999996" y="180.34871794871793" as="sourcePoint" />
+            <mxPoint x="88.375" y="223.99999999999997" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-35" value="" style="endArrow=none;html=1;rounded=0;fontColor=#000000;strokeColor=#000000;strokeWidth=3;" edge="1" parent="OcRUEp-kltOgxROJY-33-30">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint y="144" as="sourcePoint" />
+            <mxPoint x="101" y="144" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-36" value="&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Login&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="389" y="171" width="84" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-37" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=1.014;entryY=0.722;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="726" y="422" as="sourcePoint" />
+            <mxPoint x="758" y="299" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-38" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="296" y="291" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-39" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="147" y="467" as="sourcePoint" />
+            <mxPoint x="308" y="385" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-40" value="&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Manage&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;User&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="303" y="302" width="116" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-41" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="298" y="413" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-42" value="&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Manage&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Car&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="305" y="424" width="116" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-43" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="286" y="549" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-44" value="&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Manage&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 20px;&quot; color=&quot;#000000&quot;&gt;Customers&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="293" y="565" width="116" height="68" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-45" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="1">
+          <mxGeometry x="283.5" y="685" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-46" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 27px;&quot;&gt;View&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 27px;&quot;&gt;Stats&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="308.5" y="696" width="80" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-47" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-41">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="157" y="477" as="sourcePoint" />
+            <mxPoint x="318" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-48" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=0.009;entryY=0.388;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-44">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="150" y="487" as="sourcePoint" />
+            <mxPoint x="318" y="395" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-49" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="148" y="516" as="sourcePoint" />
+            <mxPoint x="304" y="601" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-54" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="455" y="415" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-52" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="OcRUEp-kltOgxROJY-33-54">
+          <mxGeometry width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-53" value="&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Manage&lt;/font&gt;&lt;div&gt;&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Rent&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="OcRUEp-kltOgxROJY-33-54">
+          <mxGeometry x="7" y="11" width="116" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-55" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="454" y="553" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-56" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="OcRUEp-kltOgxROJY-33-55">
+          <mxGeometry width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-57" value="&lt;div&gt;&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Cancel&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;font style=&quot;font-size: 27px;&quot; color=&quot;#000000&quot;&gt;Rent&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="OcRUEp-kltOgxROJY-33-55">
+          <mxGeometry x="14" y="11" width="102" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-58" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="449" y="681" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-59" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="OcRUEp-kltOgxROJY-33-58">
+          <mxGeometry width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-60" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 27px;&quot;&gt;Check&lt;/span&gt;&lt;/font&gt;&lt;div&gt;&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 27px;&quot;&gt;out&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="OcRUEp-kltOgxROJY-33-58">
+          <mxGeometry x="18" y="11" width="95" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-61" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="458" y="807" width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-62" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#000000;strokeWidth=3;" vertex="1" parent="OcRUEp-kltOgxROJY-33-61">
+          <mxGeometry width="135" height="102" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-63" value="&lt;font color=&quot;#000000&quot;&gt;&lt;span style=&quot;font-size: 27px;&quot;&gt;Settings&lt;/span&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="OcRUEp-kltOgxROJY-33-61">
+          <mxGeometry x="7" y="28" width="116" height="44" as="geometry" />
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-64" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-52">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="704" y="462" as="sourcePoint" />
+            <mxPoint x="523" y="227" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-65" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=1;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-56">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="714" y="488" as="sourcePoint" />
+            <mxPoint x="594.94" y="564.028" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-66" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="715" y="516" as="sourcePoint" />
+            <mxPoint x="585" y="694" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-67" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=1.013;entryY=0.333;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="OcRUEp-kltOgxROJY-33-62">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="720" y="532" as="sourcePoint" />
+            <mxPoint x="595" y="704" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OcRUEp-kltOgxROJY-33-68" value="" style="endArrow=classic;html=1;rounded=0;fontFamily=Helvetica;fontSize=12;fontColor=default;strokeColor=#000000;strokeWidth=3;entryX=1.029;entryY=-0.082;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="706" y="479" as="sourcePoint" />
+            <mxPoint x="412.36400000000003" y="569.424" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

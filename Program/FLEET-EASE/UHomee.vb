@@ -55,14 +55,18 @@ Public Class UHomee
         obj.Show()
     End Sub
     Private Sub UHomee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        LoggedInUsename = ""
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'LoggedInUsename = ""
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
+        'End If
         'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
+        UpdateUsername()
         Loadrecord()
         LoadRecord1()
+    End Sub
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
     End Sub
     Private Sub BtnCustomers_Click_1(sender As Object, e As EventArgs) Handles BtnCustomers.Click
         Me.Hide()

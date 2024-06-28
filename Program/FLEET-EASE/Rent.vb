@@ -154,18 +154,20 @@ Public Class Rent
     End Sub
 
     Private Sub Rent_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
-
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
+        'End If
+        UpdateUsername()
         ' Configure TxtCheckoutOdometer
         TxtCheckoutOdometer.Minimum = 0
         TxtCheckoutOdometer.Maximum = 1000000  ' Or whatever maximum makes sense
         TxtCheckoutOdometer.Increment = 1
         TxtCheckoutOdometer.ThousandsSeparator = True
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub TxtCusid_Leave(sender As Object, e As EventArgs) Handles TxtCusid.Leave
         ' Fetch customer name when customer ID is entered
         If Not String.IsNullOrEmpty(TxtCusid.Text) Then

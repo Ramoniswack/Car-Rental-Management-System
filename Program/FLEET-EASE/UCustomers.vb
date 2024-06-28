@@ -39,14 +39,17 @@
 
 
     Private Sub UCustomers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
 
-        End If
+        'End If
+        UpdateUsername()
         Loadrecord()
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
         If ValidateInputs() Then
             If Not IsContactOrLicenseCodeDuplicate() Then

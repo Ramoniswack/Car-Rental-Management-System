@@ -8,26 +8,30 @@ Public Class Settings
     Private cm As SqlCommand
 
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Try
-            Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-            If loginform IsNot Nothing AndAlso Not String.IsNullOrEmpty(loginform.Loggedinusername) Then
-                Login.Loggedinusername = loginform.Loggedinusername
-                LblUsername.Text = $"{Login.Loggedinusername}"
-            Else
-                MessageBox.Show("Unable to retrieve logged-in username.")
-                Return
-            End If
-            LoadUserInfo()
-        Catch ex As Exception
-            MessageBox.Show($"Error in Settings_Load: {ex.Message}")
-        End Try
+        'Try
+        '    Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        '    If loginform IsNot Nothing AndAlso Not String.IsNullOrEmpty(loginform.LoggedInUsename) Then
+        '        Login.LoggedInUsename = loginform.LoggedInUsename
+        '        LblUsername.Text = $"{Login.LoggedInUsename}"
+        '    Else
+        '        MessageBox.Show("Unable to retrieve logged-in username.")
+        '        Return
+        '    End If
+        '    LoadUserInfo()
+        'Catch ex As Exception
+        '    MessageBox.Show($"Error in Settings_Load: {ex.Message}")
+        'End Try
+        UpdateUsername()
+        LoadUserInfo()
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub LoadUserInfo()
         Try
             cn.Open()
             cm = New SqlCommand("SELECT username, contact FROM tbllogin WHERE username = @username", cn)
-            cm.Parameters.AddWithValue("@username", Login.Loggedinusername)
+            cm.Parameters.AddWithValue("@username", Login.LoggedInUsename)
 
             Using dr As SqlDataReader = cm.ExecuteReader()
                 If dr.Read() Then
@@ -65,7 +69,7 @@ Public Class Settings
             Return
         End If
 
-        If TxtUsername.Text <> Login.Loggedinusername Then
+        If TxtUsername.Text <> Login.LoggedInUsename Then
             MessageBox.Show("Cannot change other user's information.")
             Return
         End If
@@ -75,7 +79,7 @@ Public Class Settings
 
             ' First, verify the old password
             cm = New SqlCommand("SELECT password FROM tbllogin WHERE username = @username", cn)
-            cm.Parameters.AddWithValue("@username", Login.Loggedinusername)
+            cm.Parameters.AddWithValue("@username", Login.LoggedInUsename)
             Dim storedPassword As String = CStr(cm.ExecuteScalar())
 
             If storedPassword <> TxtOldpassword.Text Then
@@ -94,14 +98,14 @@ Public Class Settings
             cm.Parameters.AddWithValue("@newUsername", TxtUsername.Text)
             cm.Parameters.AddWithValue("@newPassword", TxtNewpassword.Text)
             cm.Parameters.AddWithValue("@newContact", TxtContact.Text)
-            cm.Parameters.AddWithValue("@currentUsername", Login.Loggedinusername)
+            cm.Parameters.AddWithValue("@currentUsername", Login.LoggedInUsename)
 
             Dim rowsAffected As Integer = cm.ExecuteNonQuery()
 
             If rowsAffected > 0 Then
                 MessageBox.Show("Information updated successfully.")
-                Login.Loggedinusername = TxtUsername.Text  ' Update the logged-in username if it was changed
-                LblUsername.Text = Login.Loggedinusername  ' Update the label
+                Login.LoggedInUsename = TxtUsername.Text  ' Update the logged-in username if it was changed
+                LblUsername.Text = Login.LoggedInUsename  ' Update the label
             Else
                 MessageBox.Show("Failed to update information.")
             End If

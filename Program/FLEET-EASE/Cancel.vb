@@ -5,11 +5,12 @@ Public Class Cancel
     Private LoggedInUsername As String = ""  ' Add this line to store the username
 
     Private Sub Cancel_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LoggedInUsername = loginform.Loggedinusername  ' Store the username
-            LblUsername.Text = LoggedInUsername
-        End If
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LoggedInUsername = loginform.LoggedInUsename  ' Store the username
+        '    LblUsername.Text = LoggedInUsename
+        'End If
+        UpdateUsername()
 
         ' Set up DataGridView columns
         With Dgv1
@@ -28,7 +29,9 @@ Public Class Cancel
 
         Loadrecord()
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Public Sub Loadrecord()
         If cn.State = ConnectionState.Open Then
             cn.Close()

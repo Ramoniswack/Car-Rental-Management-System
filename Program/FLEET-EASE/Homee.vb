@@ -57,12 +57,7 @@
     End Sub
 
     Private Sub Homee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.loggedinusername
-
-        End If
-
+        UpdateUsername()
 
         'TODO: This line of code loads data into the 'FleeteaseDataSet.tblcars' table. You can move, or remove it, as needed.
         'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
@@ -70,6 +65,10 @@
         Loadrecord1()
     End Sub
 
+
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub BtnUsers_Click(sender As Object, e As EventArgs) Handles BtnUsers.Click
         Me.Hide()
         Dim obj As New Users
@@ -133,6 +132,7 @@
     End Sub
 
     Private Sub BtnLogout_Click_1(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        Module1.LoggedInUsename = ""
         Me.Hide()
         Dim obj As New Login
         obj.Show()

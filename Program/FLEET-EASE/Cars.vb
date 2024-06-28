@@ -208,14 +208,17 @@ Public Class Cars
         End Try
         clear()
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'FleeteaseDataSet.tblcars' table. You can move, or remove it, as needed.
         'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
+        'End If
+        UpdateUsername()
         LoadRecord()
 
         ' Set DataGridView properties

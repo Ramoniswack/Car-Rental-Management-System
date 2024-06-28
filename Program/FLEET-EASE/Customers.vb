@@ -174,17 +174,20 @@ Public Class Customers
     End Function
 
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
+        'End If
+        UpdateUsername()
         LoadRecord()
 
         ' Set DataGridView properties
         Dgv.SelectionMode = DataGridViewSelectionMode.FullRowSelect
         Dgv.MultiSelect = False
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
         If e.RowIndex >= 0 Then
             Dgv.Rows(e.RowIndex).Selected = True

@@ -230,12 +230,12 @@ Public Class CheckOut
     End Sub
 
     Private Sub CheckOut_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
-
-        LoadRecord()
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
+        'End If
+        UpdateUsername()
+        Loadrecord()
     End Sub
     Private Sub UpdateCarTotalKilometers(carID As Integer, additionalKilometers As Integer)
         Try
@@ -256,7 +256,9 @@ Public Class CheckOut
         Dim obj As New UHomee
         obj.Show()
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub BtnCustomers_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
         Me.Hide()
         Dim obj As New UCustomers

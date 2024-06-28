@@ -188,11 +188,11 @@ Public Class Users
     End Function
 
     Private Sub Users_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
-
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
+        'End If
+        UpdateUsername()
         LoadRecord()
 
         ' Set DataGridView properties
@@ -200,9 +200,11 @@ Public Class Users
         Dgv.MultiSelect = False
 
         ' Populate TxtUsertype ComboBox
-        TxtUsertype.Items.AddRange({"Admin", "User"})
+        ' TxtUsertype.Items.AddRange({"Admin", "User"})
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
         If e.RowIndex >= 0 Then
             Dgv.Rows(e.RowIndex).Selected = True
@@ -257,17 +259,7 @@ Public Class Users
         obj.Show()
     End Sub
 
-    Private Sub Users_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
-        LblUsername.Text = LoggedInUsename
-        LoadUserInfo()
-    End Sub
 
-    Private Sub LoadUserInfo()
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
-        End If
-    End Sub
 
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         TxtPasswword.UseSystemPasswordChar = Not CheckBox1.Checked

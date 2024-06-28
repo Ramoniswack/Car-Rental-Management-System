@@ -4,12 +4,13 @@ Imports Microsoft.VisualBasic.ApplicationServices
 Public Class Statistics
 
     Private Sub Statistics_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        If loginform IsNot Nothing Then
-            LblUsername.Text = loginform.Loggedinusername
+        'Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        'If loginform IsNot Nothing Then
+        '    LblUsername.Text = loginform.LoggedInUsename
 
-        End If
+        'End If
         ' Load initial data (you can choose which one to load by default)
+        UpdateUsername()
         LoadIndividualCarStats()
     End Sub
 
@@ -35,7 +36,9 @@ Public Class Statistics
             If cn.State = ConnectionState.Open Then cn.Close()
         End Try
     End Sub
-
+    Public Sub UpdateUsername()
+        LblUsername.Text = Module1.LoggedInUsename
+    End Sub
     Private Sub LoadOverallTransactions()
         Try
             cn.Open()

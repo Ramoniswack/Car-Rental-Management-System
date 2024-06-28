@@ -4,7 +4,6 @@ E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.Cars.resources
 E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.CheckOut.resources
 E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.Customers.resources
 E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.Homee.resources
-E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.IndividualCarTransactions.resources
 E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.Login.resources
 E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.Rent.resources
 E:\HIDDEN-REPOS\Program\FLEET-EASE\obj\Debug\FLEET_EASE.Settings.resources
