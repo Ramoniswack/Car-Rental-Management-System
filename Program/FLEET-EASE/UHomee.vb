@@ -1,7 +1,5 @@
 ﻿Imports System.Data.SqlClient
-
 Public Class UHomee
-
     Public Sub LoadRecord1()
         Try
             If cn.State = ConnectionState.Open Then
@@ -10,7 +8,6 @@ Public Class UHomee
             cn.Open()
             Dgv.Rows.Clear()
             Dim i As Integer = 0
-
             cm = New SqlClient.SqlCommand("SELECT * FROM tblcars", cn)
             Using dr As SqlDataReader = cm.ExecuteReader()
                 While dr.Read()
@@ -26,7 +23,6 @@ Public Class UHomee
             End If
         End Try
     End Sub
-
     Public Sub Loadrecord()
         Try
             If cn.State = ConnectionState.Open Then
@@ -35,7 +31,6 @@ Public Class UHomee
             cn.Open()
             Dgv1.Rows.Clear()
             Dim i As Integer = 0
-
             cm = New SqlClient.SqlCommand("SELECT cr.* FROM tblcarrentals3 cr " &
                                       "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
                                       "WHERE (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
@@ -54,130 +49,47 @@ Public Class UHomee
             End If
         End Try
     End Sub
-
-
-
     Private Sub BtnLogout_Click(sender As Object, e As EventArgs)
         Me.Hide()
         Dim obj As New Login
         obj.Show()
     End Sub
-
-
     Private Sub UHomee_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        LoggedInUsename = ""
         If loginform IsNot Nothing Then
             LblUsername.Text = loginform.Loggedinusername
-
         End If
-
-
-
-
-
-
-
-
         'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
         Loadrecord()
-        Loadrecord1()
-
+        LoadRecord1()
     End Sub
-
-    Private Sub Button1_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New Rent
-        obj.Show()
-    End Sub
-
-    Private Sub Button3_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New UCustomers
-        obj.Show()
-    End Sub
-
-
-
-    Private Sub Dgv_CellContentClick(sender As Object, e As DataGridViewCellEventArgs)
-
-    End Sub
-
-    Private Sub BtnHome_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Dgv_CellContentClick_1(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellContentClick
-
-    End Sub
-
-    Private Sub BtnCustomers_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New CheckOut
-        obj.Show()
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New Settings
-        obj.Show()
-    End Sub
-
-
-
-    Private Sub Button4_Click(sender As Object, e As EventArgs)
-        Me.Hide()
-        Dim obj As New Cancel
-        obj.Show()
-    End Sub
-
-    Private Sub PictureBox3_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub Panel10_Paint(sender As Object, e As PaintEventArgs)
-
-    End Sub
-
     Private Sub BtnCustomers_Click_1(sender As Object, e As EventArgs) Handles BtnCustomers.Click
         Me.Hide()
         Dim oBJ As New UCustomers()
         oBJ.Show()
     End Sub
-
     Private Sub BtnRent_Click(sender As Object, e As EventArgs) Handles BtnRent.Click
         Me.Hide()
         Dim oBJ As New Rent()
         oBJ.Show()
     End Sub
-
-    Private Sub BtnHome_Click_1(sender As Object, e As EventArgs)
-
-    End Sub
-
     Private Sub BtnCheckout_Click(sender As Object, e As EventArgs) Handles BtnCheckout.Click
         Me.Hide()
         Dim oBJ As New CheckOut()
         oBJ.Show()
     End Sub
-
     Private Sub BtnSettings_Click(sender As Object, e As EventArgs) Handles BtnSettings.Click
         Me.Hide()
         Dim oBJ As New Settings()
         oBJ.Show()
     End Sub
-
-    Private Sub Panel2_Paint_1(sender As Object, e As PaintEventArgs) Handles Panel2.Paint
-
-    End Sub
-
     Private Sub BtnLogout_Click_1(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        LoggedInUsename = ""
         Me.Hide()
         Dim obj As New Login
         obj.Show()
     End Sub
-
-
-
     Private Sub BtnCancel_Click(sender As Object, e As EventArgs) Handles BtnCancel.Click
         Me.Hide()
         Dim obj As New Cancel

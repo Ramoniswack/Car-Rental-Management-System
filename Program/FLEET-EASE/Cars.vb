@@ -3,7 +3,7 @@ Imports System.Text.RegularExpressions
 Imports System.Data.SqlClient
 
 Public Class Cars
-    Public Sub LoadRecord()
+    Sub LoadRecord()
         Try
             If cn.State = ConnectionState.Closed Then
                 cn.Open()
@@ -16,6 +16,7 @@ Public Class Cars
             While dr.Read
                 i = i + 1
                 Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"), dr.Item("TotalKilometers"), dr.Item("LastMaintenanceDate"), dr.Item("LastMaintenanceKilometers"))
+                Debug.WriteLine($"Row {i}: CarID={dr.Item("CarID")}, Carname={dr.Item("Carname")}, Model={dr.Item("Model")}, Color={dr.Item("Color")}, RegNumber={dr.Item("RegNumber")}, Available={dr.Item("Available")}, TotalKilometers={dr.Item("TotalKilometers")}, LastMaintenanceDate={dr.Item("LastMaintenanceDate")}, LastMaintenanceKilometers={dr.Item("LastMaintenanceKilometers")}")
             End While
             Debug.WriteLine($"LoadRecord completed. Total rows loaded: {i}")
         Catch ex As Exception
@@ -209,6 +210,8 @@ Public Class Cars
     End Sub
 
     Private Sub Customers_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'TODO: This line of code loads data into the 'FleeteaseDataSet.tblcars' table. You can move, or remove it, as needed.
+        'Me.TblcarsTableAdapter.Fill(Me.FleeteaseDataSet.tblcars)
         Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
         If loginform IsNot Nothing Then
             LblUsername.Text = loginform.Loggedinusername
@@ -224,21 +227,40 @@ Public Class Cars
 
     Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
         Try
-            Debug.WriteLine($"Cell clicked. RowIndex: {e.RowIndex}, ColumnIndex: {e.ColumnIndex}")
-
             If e.RowIndex >= 0 AndAlso e.RowIndex < Dgv.Rows.Count Then
                 Dgv.Rows(e.RowIndex).Selected = True
-
                 Dim row As DataGridViewRow = Dgv.Rows(e.RowIndex)
-                TxtCarname.Text = If(row.Cells(1).Value IsNot Nothing, row.Cells(1).Value.ToString(), "")
-                Txtmodel.Text = If(row.Cells(2).Value IsNot Nothing, row.Cells(2).Value.ToString(), "")
-                TxtColor.Text = If(row.Cells(3).Value IsNot Nothing, row.Cells(3).Value.ToString(), "")
-                TxtRegNum.Text = If(row.Cells(4).Value IsNot Nothing, row.Cells(4).Value.ToString(), "")
-                TxtAvaiable.Text = If(row.Cells(5).Value IsNot Nothing, row.Cells(5).Value.ToString(), "")
-                TxtInitialKm.Text = If(row.Cells(6).Value IsNot Nothing, row.Cells(6).Value.ToString(), "")
-                TxtLastmaintenancedate.Text = If(row.Cells(7).Value IsNot Nothing, CType(row.Cells(7).Value, DateTime).ToString("yyyy-MM-dd"), "")
 
-                Debug.WriteLine($"Row clicked and selected: CarName={TxtCarname.Text}, Model={Txtmodel.Text}, Color={TxtColor.Text}, RegNum={TxtRegNum.Text}, Available={TxtAvaiable.Text}, InitialKm={TxtInitialKm.Text}, LastMaintenanceDate={TxtLastmaintenancedate.Text}")
+                Debug.WriteLine($"Number of cells in the selected row: {row.Cells.Count}")
+
+                ' Populate the text boxes with data from the selected row
+                TxtCarname.Text = GetCellValue(row, 1)
+                Txtmodel.Text = GetCellValue(row, 2)
+                TxtColor.Text = GetCellValue(row, 3)
+                TxtRegNum.Text = GetCellValue(row, 4)
+                TxtAvaiable.Text = GetCellValue(row, 5)
+                TxtInitialKm.Text = GetCellValue(row, 6)  ' This is TotalKilometers
+
+                ' Handle LastMaintenanceDate
+                If row.Cells.Count > 7 AndAlso row.Cells(7).Value IsNot Nothing Then
+                    If DateTime.TryParse(row.Cells(7).Value.ToString(), Nothing) Then
+                        TxtLastmaintenancedate.Value = Convert.ToDateTime(row.Cells(7).Value)
+                    Else
+                        TxtLastmaintenancedate.Value = DateTime.Now
+                    End If
+                Else
+                    TxtLastmaintenancedate.Value = DateTime.Now
+                End If
+
+                ' Handle LastMaintenanceKilometers (assuming it's the last column)
+                If row.Cells.Count > 8 Then
+                    Dim lastMaintenanceKm As String = GetCellValue(row, 8)
+                    ' You can add this to a label or another text box if needed
+                    ' For now, we'll just log it
+                    Debug.WriteLine($"Last Maintenance Kilometers: {lastMaintenanceKm}")
+                End If
+
+                Debug.WriteLine($"Row clicked and selected: CarName={TxtCarname.Text}, Model={Txtmodel.Text}, Color={TxtColor.Text}, RegNum={TxtRegNum.Text}, Available={TxtAvaiable.Text}, TotalKilometers={TxtInitialKm.Text}, LastMaintenanceDate={TxtLastmaintenancedate.Value}")
             Else
                 Debug.WriteLine($"Invalid row index: {e.RowIndex}")
             End If
@@ -248,6 +270,13 @@ Public Class Cars
         End Try
     End Sub
 
+    ' Helper function to safely get cell values
+    Private Function GetCellValue(row As DataGridViewRow, index As Integer) As String
+        If row.Cells.Count > index AndAlso row.Cells(index).Value IsNot Nothing Then
+            Return row.Cells(index).Value.ToString()
+        End If
+        Return String.Empty
+    End Function
     Sub clear()
         TxtColor.Clear()
         Txtmodel.Clear()

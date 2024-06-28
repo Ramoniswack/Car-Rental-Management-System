@@ -6,5 +6,5 @@ Module Module1
 
     Public LoggedInUsename As String = ""
 
-
+    Public Property CurrentloggedInUser As String = ""
 End Module

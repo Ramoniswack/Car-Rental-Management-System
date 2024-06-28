@@ -3,6 +3,17 @@ Imports System.Text.RegularExpressions
 
 Public Class Rent
     Private Sub Rentvehicle()
+
+        ' Check if every details are entered
+        If String.IsNullOrWhiteSpace(TxtRegNum.Text) OrElse
+   String.IsNullOrWhiteSpace(TxtCusid.Text) OrElse
+   String.IsNullOrWhiteSpace(Txtcusname.Text) OrElse
+   String.IsNullOrWhiteSpace(TxtPickupfrom.Text) OrElse
+   String.IsNullOrWhiteSpace(TxtCharges.Text) Then
+            MessageBox.Show("Please fill in all required fields.", "Missing Information", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+            Return
+        End If
+
         ' Store the initial value immediately when the method is called
         Dim initialOdometerValue As Integer = CInt(TxtCheckoutOdometer.Value)
         Console.WriteLine("Initial Checkout Odometer Value: " & initialOdometerValue)

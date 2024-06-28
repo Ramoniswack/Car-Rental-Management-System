@@ -1,6 +1,12 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Text.RegularExpressions
 
 Public Class Users
+    Private ConnectionString As String = "Data Source=DESKTOP-FE6OBHL\SQLEXPRESS;Initial Catalog=fleetease;Integrated Security=True;"
+    Private cn As New SqlConnection(ConnectionString)
+    Private cm As SqlCommand
+    Private dr As SqlDataReader
+
     Sub LoadRecord()
         Try
             If cn.State = ConnectionState.Closed Then
@@ -33,8 +39,6 @@ Public Class Users
             Else
                 MsgBox("This username or contact number already exists in the database.")
             End If
-        Else
-            MsgBox("Please fulfill all the requirements first.")
         End If
     End Sub
 
@@ -45,9 +49,9 @@ Public Class Users
             Return False
         End If
 
-        ' Check if Password starts with a capital letter
-        If Not Char.IsUpper(TxtPasswword.Text.FirstOrDefault()) Then
-            MsgBox("Password must start with a capital letter.")
+        ' Check if Password is valid
+        If Not IsValidPassword(TxtPasswword.Text) Then
+            MsgBox("Password must be at least 8 characters long, contain at least one capital letter, one number, and one symbol.")
             Return False
         End If
 
@@ -58,12 +62,23 @@ Public Class Users
         End If
 
         ' Check if Contact has exactly 10 digits
-        If Not (TxtContact.Text.Length = 10 AndAlso TxtContact.Text.All(AddressOf Char.IsDigit)) Then
+        If Not IsValidContact(TxtContact.Text) Then
             MsgBox("Contact must be exactly 10 digits.")
             Return False
         End If
 
         Return True
+    End Function
+
+    Private Function IsValidPassword(password As String) As Boolean
+        ' Check if password is at least 8 characters long, contains at least one capital letter, one number, and one symbol
+        Dim regex As New Regex("^(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{8,}$")
+        Return regex.IsMatch(password)
+    End Function
+
+    Private Function IsValidContact(contact As String) As Boolean
+        ' Check if contact is exactly 10 digits
+        Return Regex.IsMatch(contact, "^\d{10}$")
     End Function
 
     Private Function IsUsernameOrContactDuplicate() As Boolean
@@ -211,6 +226,51 @@ Public Class Users
         ClearFields()
     End Sub
 
-    ' Other event handlers remain the same...
+    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
+        Me.Hide()
+        Dim obj As New Homee
+        obj.Show()
+    End Sub
 
+    Private Sub BtnCars_Click(sender As Object, e As EventArgs) Handles BtnCars.Click
+        Me.Hide()
+        Dim obj As New Cars
+        obj.Show()
+    End Sub
+
+    Private Sub BtnCustomers_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
+        Me.Hide()
+        Dim obj As New Customers
+        obj.Show()
+    End Sub
+
+    Private Sub BtnStats_Click(sender As Object, e As EventArgs) Handles BtnStats.Click
+        Me.Hide()
+        Dim obj As New Statistics
+        obj.Show()
+    End Sub
+
+    Private Sub BtnLogout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        LoggedInUsename = ""
+        Me.Hide()
+        Dim obj As New Login
+        obj.Show()
+    End Sub
+
+    Private Sub Users_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+        LblUsername.Text = LoggedInUsename
+        LoadUserInfo()
+    End Sub
+
+    Private Sub LoadUserInfo()
+        Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
+        If loginform IsNot Nothing Then
+            LblUsername.Text = loginform.Loggedinusername
+        End If
+    End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        TxtPasswword.UseSystemPasswordChar = Not CheckBox1.Checked
+
+    End Sub
 End Class
