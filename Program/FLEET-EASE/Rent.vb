@@ -2,6 +2,122 @@
 Imports System.Text.RegularExpressions
 
 Public Class Rent
+
+
+    Public Sub LoadRecord1()
+        Try
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+            cn.Open()
+            Dgv.Rows.Clear()
+            Dim i As Integer = 0
+            cm = New SqlClient.SqlCommand("SELECT * FROM tblcars", cn)
+            Using dr As SqlDataReader = cm.ExecuteReader()
+                While dr.Read()
+                    i += 1
+                    Dgv.Rows.Add(dr.Item("CarID"), dr.Item("Carname"), dr.Item("Model"), dr.Item("Color"), dr.Item("RegNumber"), dr.Item("Available"))
+                End While
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("An error occurred while loading records: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
+    End Sub
+
+
+
+    Public Sub Loadrecord()
+        cn.Open()
+        Dgv1.Rows.Clear()
+        Dim i As Integer
+
+        cm = New SqlClient.SqlCommand("select *from tblcustomers", cn)
+        dr = cm.ExecuteReader
+        While dr.Read
+            i = i + 1
+            Dgv1.Rows.Add(i, dr.Item("CustomerName"), dr.Item("Contact"), dr.Item("Address"), dr.Item("LicenseID"))
+
+        End While
+
+        cn.Close()
+
+
+    End Sub
+
+    Private Sub LoadAvailableCars()
+        'Try
+        '    cn.Open()
+        '    Dim query As String = "SELECT RegNumber, CarName FROM tblcars WHERE Available = 'YES'"
+        '    Dim cmd As New SqlCommand(query, cn)
+        '    Dim adapter As New SqlDataAdapter(cmd)
+        '    Dim dt As New DataTable()
+        '    adapter.Fill(dt)
+
+        '    TxtRegNum.DataSource = dt
+        '    TxtRegNum.DisplayMember = "RegNumber"
+        '    TxtRegNum.ValueMember = "RegNumber"
+
+        '    ' Set the format string to display both RegNumber and CarName
+        '    TxtRegNum.FormatString = "{0} - {1}"
+        '    TxtRegNum.FormattingEnabled = True
+
+        'Catch ex As Exception
+        '    MessageBox.Show("Error loading available cars: " & ex.Message)
+        'Finally
+        '    cn.Close()
+        'End Try
+    End Sub
+
+    Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
+        If e.RowIndex >= 0 Then
+            ' Debug: Print all column names and indices
+            For i As Integer = 0 To Dgv.Columns.Count - 1
+                Console.WriteLine($"Column {i}: {Dgv.Columns(i).Name}")
+            Next
+
+            Dim selectedRow As DataGridViewRow = Dgv.Rows(e.RowIndex)
+
+            ' Assuming RegNumber is the 5th column (index 4), adjust if necessary
+            Dim regNumber As String = selectedRow.Cells(4).Value.ToString()
+
+            Console.WriteLine($"Selected RegNumber: {regNumber}")
+            TxtRegNum.Text = regNumber
+            '    ' If TxtRegNum is a ComboBox
+            '    Dim index As Integer = TxtRegNum.FindStringExact(regNumber)
+            '    If index <> -1 Then
+            '        TxtRegNum.SelectedIndex = index
+            '    Else
+            '        ' If it's not found in the ComboBox, just set the text
+            '        TxtRegnum.Text = regNumber
+            '    End If
+        End If
+    End Sub
+    Private Sub Dgv1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv1.CellClick
+        If e.RowIndex >= 0 Then
+            ' Debug: Print all column names and indices
+            For i As Integer = 0 To Dgv1.Columns.Count - 1
+                Console.WriteLine($"Column {i}: {Dgv1.Columns(i).Name}")
+            Next
+
+            Dim selectedRow As DataGridViewRow = Dgv1.Rows(e.RowIndex)
+
+            ' Adjust these indices based on the debug output
+            TxtCusid.Text = selectedRow.Cells(1).Value.ToString()  ' Assuming CusID is the second column
+            Txtcusname.Text = selectedRow.Cells(2).Value.ToString()  ' Assuming CustomerName is the third column
+
+            Console.WriteLine($"Selected CusID: {TxtCusid.Text}")
+            Console.WriteLine($"Selected CustomerName: {Txtcusname.Text}")
+        End If
+    End Sub
+
+    Private Sub FormatComboBoxItem(sender As Object, e As ListControlConvertEventArgs)
+        Dim row As DataRowView = DirectCast(e.ListItem, DataRowView)
+        e.Value = $"{row("RegNumber")} - {row("CarName")}"
+    End Sub
     Private Sub Rentvehicle()
 
         ' Check if every details are entered
@@ -135,7 +251,7 @@ Public Class Rent
     End Function
 
     Private Sub ClearFields()
-        TxtRegNum.Clear()
+        TxtRegNum.Refresh()
         TxtCusid.Clear()
         Txtcusname.Clear()
         TxtPickupfrom.Clear()
@@ -164,6 +280,8 @@ Public Class Rent
         TxtCheckoutOdometer.Maximum = 1000000  ' Or whatever maximum makes sense
         TxtCheckoutOdometer.Increment = 1
         TxtCheckoutOdometer.ThousandsSeparator = True
+        LoadRecord1()
+        Loadrecord()
     End Sub
     Public Sub UpdateUsername()
         LblUsername.Text = Module1.LoggedInUsename

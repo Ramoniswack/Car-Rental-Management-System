@@ -22,10 +22,31 @@ Partial Class Rent
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.LblUsername = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.Dgv1 = New System.Windows.Forms.DataGridView()
+        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.Dgv = New System.Windows.Forms.DataGridView()
+        Me.CarID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DataGridViewTextBoxColumn5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.TxtCheckoutOdometer = New System.Windows.Forms.NumericUpDown()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
@@ -37,7 +58,6 @@ Partial Class Rent
         Me.TxtReturnDate = New System.Windows.Forms.DateTimePicker()
         Me.TxtRentDate = New System.Windows.Forms.DateTimePicker()
         Me.Txtcusname = New System.Windows.Forms.TextBox()
-        Me.TxtRegNum = New System.Windows.Forms.TextBox()
         Me.TxtCharges = New System.Windows.Forms.TextBox()
         Me.TxtPickupfrom = New System.Windows.Forms.TextBox()
         Me.BtnRent = New System.Windows.Forms.Button()
@@ -56,12 +76,13 @@ Partial Class Rent
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.TxtCheckoutOdometer = New System.Windows.Forms.NumericUpDown()
+        Me.TxtRegNum = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
-        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TxtCheckoutOdometer, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'LblUsername
@@ -98,6 +119,11 @@ Partial Class Rent
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.TxtRegNum)
+        Me.Panel8.Controls.Add(Me.Label10)
+        Me.Panel8.Controls.Add(Me.Dgv1)
+        Me.Panel8.Controls.Add(Me.Label9)
+        Me.Panel8.Controls.Add(Me.Dgv)
         Me.Panel8.Controls.Add(Me.TxtCheckoutOdometer)
         Me.Panel8.Controls.Add(Me.Label8)
         Me.Panel8.Controls.Add(Me.Label7)
@@ -111,7 +137,6 @@ Partial Class Rent
         Me.Panel8.Controls.Add(Me.TxtReturnDate)
         Me.Panel8.Controls.Add(Me.TxtRentDate)
         Me.Panel8.Controls.Add(Me.Txtcusname)
-        Me.Panel8.Controls.Add(Me.TxtRegNum)
         Me.Panel8.Controls.Add(Me.TxtCharges)
         Me.Panel8.Controls.Add(Me.TxtPickupfrom)
         Me.Panel8.Controls.Add(Me.BtnRent)
@@ -120,13 +145,200 @@ Partial Class Rent
         Me.Panel8.Size = New System.Drawing.Size(1091, 620)
         Me.Panel8.TabIndex = 0
         '
+        'Label10
+        '
+        Me.Label10.AutoSize = True
+        Me.Label10.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label10.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label10.ForeColor = System.Drawing.Color.White
+        Me.Label10.Location = New System.Drawing.Point(550, 337)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(130, 27)
+        Me.Label10.TabIndex = 90
+        Me.Label10.Text = "Customers"
+        '
+        'Dgv1
+        '
+        Me.Dgv1.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgv1.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
+        Me.Dgv1.ColumnHeadersHeight = 40
+        Me.Dgv1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn3, Me.Column4, Me.DataGridViewTextBoxColumn4})
+        Me.Dgv1.Location = New System.Drawing.Point(555, 367)
+        Me.Dgv1.Name = "Dgv1"
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgv1.RowHeadersDefaultCellStyle = DataGridViewCellStyle2
+        Me.Dgv1.RowHeadersVisible = False
+        Me.Dgv1.RowHeadersWidth = 51
+        Me.Dgv1.RowTemplate.Height = 24
+        Me.Dgv1.Size = New System.Drawing.Size(511, 250)
+        Me.Dgv1.TabIndex = 89
+        '
+        'DataGridViewTextBoxColumn1
+        '
+        Me.DataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.DataGridViewTextBoxColumn1.HeaderText = "CusID"
+        Me.DataGridViewTextBoxColumn1.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
+        Me.DataGridViewTextBoxColumn1.Width = 77
+        '
+        'DataGridViewTextBoxColumn2
+        '
+        Me.DataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.DataGridViewTextBoxColumn2.HeaderText = "Customer Name"
+        Me.DataGridViewTextBoxColumn2.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
+        Me.DataGridViewTextBoxColumn2.Width = 134
+        '
+        'DataGridViewTextBoxColumn3
+        '
+        Me.DataGridViewTextBoxColumn3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.DataGridViewTextBoxColumn3.HeaderText = "Contact"
+        Me.DataGridViewTextBoxColumn3.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
+        Me.DataGridViewTextBoxColumn3.Width = 88
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column4.HeaderText = "Address"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 94
+        '
+        'DataGridViewTextBoxColumn4
+        '
+        Me.DataGridViewTextBoxColumn4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn4.HeaderText = "LicenseID"
+        Me.DataGridViewTextBoxColumn4.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn4.Name = "DataGridViewTextBoxColumn4"
+        '
+        'Label9
+        '
+        Me.Label9.AutoSize = True
+        Me.Label9.BackColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label9.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.ForeColor = System.Drawing.Color.White
+        Me.Label9.Location = New System.Drawing.Point(550, 4)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(176, 27)
+        Me.Label9.TabIndex = 35
+        Me.Label9.Text = "Available Cars"
+        '
+        'Dgv
+        '
+        Me.Dgv.BackgroundColor = System.Drawing.Color.White
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(192, Byte), Integer))
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgv.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.Dgv.ColumnHeadersHeight = 40
+        Me.Dgv.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.CarID, Me.Column1, Me.Column2, Me.Column3, Me.Column5, Me.DataGridViewTextBoxColumn5})
+        Me.Dgv.Location = New System.Drawing.Point(548, 34)
+        Me.Dgv.Name = "Dgv"
+        DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle4.ForeColor = System.Drawing.Color.White
+        DataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText
+        DataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.Dgv.RowHeadersDefaultCellStyle = DataGridViewCellStyle4
+        Me.Dgv.RowHeadersVisible = False
+        Me.Dgv.RowHeadersWidth = 51
+        Me.Dgv.RowTemplate.Height = 24
+        Me.Dgv.Size = New System.Drawing.Size(518, 268)
+        Me.Dgv.TabIndex = 88
+        '
+        'CarID
+        '
+        Me.CarID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.CarID.DataPropertyName = "CarID"
+        Me.CarID.HeaderText = "CarID"
+        Me.CarID.MinimumWidth = 6
+        Me.CarID.Name = "CarID"
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column1.HeaderText = "Car Name"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        Me.Column1.Width = 97
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column2.HeaderText = "Model"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        Me.Column2.Width = 79
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column3.HeaderText = "Color"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        Me.Column3.Width = 73
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column5.HeaderText = "RegNO"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        Me.Column5.Width = 87
+        '
+        'DataGridViewTextBoxColumn5
+        '
+        Me.DataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.DataGridViewTextBoxColumn5.HeaderText = "Available"
+        Me.DataGridViewTextBoxColumn5.MinimumWidth = 6
+        Me.DataGridViewTextBoxColumn5.Name = "DataGridViewTextBoxColumn5"
+        '
+        'TxtCheckoutOdometer
+        '
+        Me.TxtCheckoutOdometer.Location = New System.Drawing.Point(198, 451)
+        Me.TxtCheckoutOdometer.Name = "TxtCheckoutOdometer"
+        Me.TxtCheckoutOdometer.Size = New System.Drawing.Size(120, 22)
+        Me.TxtCheckoutOdometer.TabIndex = 86
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.BackColor = System.Drawing.Color.Transparent
+        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label8.Location = New System.Drawing.Point(21, 451)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(165, 22)
+        Me.Label8.TabIndex = 85
+        Me.Label8.Text = "Check Odometer"
+        '
         'Label7
         '
         Me.Label7.AutoSize = True
         Me.Label7.BackColor = System.Drawing.Color.Transparent
         Me.Label7.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label7.Location = New System.Drawing.Point(139, 286)
+        Me.Label7.Location = New System.Drawing.Point(85, 275)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(90, 22)
         Me.Label7.TabIndex = 83
@@ -138,7 +350,7 @@ Partial Class Rent
         Me.Label5.BackColor = System.Drawing.Color.Transparent
         Me.Label5.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label5.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label5.Location = New System.Drawing.Point(139, 396)
+        Me.Label5.Location = New System.Drawing.Point(92, 385)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(85, 22)
         Me.Label5.TabIndex = 82
@@ -150,7 +362,7 @@ Partial Class Rent
         Me.Label11.BackColor = System.Drawing.Color.Transparent
         Me.Label11.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label11.Location = New System.Drawing.Point(110, 233)
+        Me.Label11.Location = New System.Drawing.Point(56, 222)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(119, 22)
         Me.Label11.TabIndex = 81
@@ -162,7 +374,7 @@ Partial Class Rent
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(122, 341)
+        Me.Label6.Location = New System.Drawing.Point(70, 330)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(107, 22)
         Me.Label6.TabIndex = 80
@@ -174,7 +386,7 @@ Partial Class Rent
         Me.Label4.BackColor = System.Drawing.Color.Transparent
         Me.Label4.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label4.Location = New System.Drawing.Point(75, 171)
+        Me.Label4.Location = New System.Drawing.Point(21, 160)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(154, 22)
         Me.Label4.TabIndex = 79
@@ -186,7 +398,7 @@ Partial Class Rent
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label3.Location = New System.Drawing.Point(111, 122)
+        Me.Label3.Location = New System.Drawing.Point(57, 111)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(118, 22)
         Me.Label3.TabIndex = 78
@@ -198,7 +410,7 @@ Partial Class Rent
         Me.Label2.BackColor = System.Drawing.Color.Transparent
         Me.Label2.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label2.Location = New System.Drawing.Point(111, 66)
+        Me.Label2.Location = New System.Drawing.Point(57, 55)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(120, 22)
         Me.Label2.TabIndex = 77
@@ -207,15 +419,15 @@ Partial Class Rent
         'TxtCusid
         '
         Me.TxtCusid.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCusid.Location = New System.Drawing.Point(251, 114)
+        Me.TxtCusid.Location = New System.Drawing.Point(197, 103)
         Me.TxtCusid.Name = "TxtCusid"
-        Me.TxtCusid.Size = New System.Drawing.Size(722, 36)
+        Me.TxtCusid.Size = New System.Drawing.Size(311, 36)
         Me.TxtCusid.TabIndex = 76
         '
         'TxtReturnDate
         '
         Me.TxtReturnDate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtReturnDate.Location = New System.Drawing.Point(252, 341)
+        Me.TxtReturnDate.Location = New System.Drawing.Point(198, 330)
         Me.TxtReturnDate.Name = "TxtReturnDate"
         Me.TxtReturnDate.Size = New System.Drawing.Size(310, 28)
         Me.TxtReturnDate.TabIndex = 75
@@ -223,7 +435,7 @@ Partial Class Rent
         'TxtRentDate
         '
         Me.TxtRentDate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRentDate.Location = New System.Drawing.Point(252, 286)
+        Me.TxtRentDate.Location = New System.Drawing.Point(198, 275)
         Me.TxtRentDate.Name = "TxtRentDate"
         Me.TxtRentDate.Size = New System.Drawing.Size(309, 28)
         Me.TxtRentDate.TabIndex = 74
@@ -232,23 +444,15 @@ Partial Class Rent
         'Txtcusname
         '
         Me.Txtcusname.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Txtcusname.Location = New System.Drawing.Point(252, 163)
+        Me.Txtcusname.Location = New System.Drawing.Point(198, 152)
         Me.Txtcusname.Name = "Txtcusname"
-        Me.Txtcusname.Size = New System.Drawing.Size(722, 36)
+        Me.Txtcusname.Size = New System.Drawing.Size(310, 36)
         Me.Txtcusname.TabIndex = 72
-        '
-        'TxtRegNum
-        '
-        Me.TxtRegNum.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRegNum.Location = New System.Drawing.Point(251, 58)
-        Me.TxtRegNum.Name = "TxtRegNum"
-        Me.TxtRegNum.Size = New System.Drawing.Size(722, 36)
-        Me.TxtRegNum.TabIndex = 71
         '
         'TxtCharges
         '
         Me.TxtCharges.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtCharges.Location = New System.Drawing.Point(252, 388)
+        Me.TxtCharges.Location = New System.Drawing.Point(198, 377)
         Me.TxtCharges.Name = "TxtCharges"
         Me.TxtCharges.Size = New System.Drawing.Size(123, 36)
         Me.TxtCharges.TabIndex = 70
@@ -256,9 +460,9 @@ Partial Class Rent
         'TxtPickupfrom
         '
         Me.TxtPickupfrom.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtPickupfrom.Location = New System.Drawing.Point(251, 225)
+        Me.TxtPickupfrom.Location = New System.Drawing.Point(197, 214)
         Me.TxtPickupfrom.Name = "TxtPickupfrom"
-        Me.TxtPickupfrom.Size = New System.Drawing.Size(722, 36)
+        Me.TxtPickupfrom.Size = New System.Drawing.Size(311, 36)
         Me.TxtPickupfrom.TabIndex = 64
         '
         'BtnRent
@@ -267,7 +471,7 @@ Partial Class Rent
         Me.BtnRent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnRent.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnRent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnRent.Location = New System.Drawing.Point(814, 448)
+        Me.BtnRent.Location = New System.Drawing.Point(196, 498)
         Me.BtnRent.Name = "BtnRent"
         Me.BtnRent.Size = New System.Drawing.Size(160, 80)
         Me.BtnRent.TabIndex = 62
@@ -454,24 +658,13 @@ Partial Class Rent
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Label8
+        'TxtRegNum
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.BackColor = System.Drawing.Color.Transparent
-        Me.Label8.Font = New System.Drawing.Font("Century Gothic", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label8.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label8.Location = New System.Drawing.Point(66, 462)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(165, 22)
-        Me.Label8.TabIndex = 85
-        Me.Label8.Text = "Check Odometer"
-        '
-        'TxtCheckoutOdometer
-        '
-        Me.TxtCheckoutOdometer.Location = New System.Drawing.Point(252, 462)
-        Me.TxtCheckoutOdometer.Name = "TxtCheckoutOdometer"
-        Me.TxtCheckoutOdometer.Size = New System.Drawing.Size(120, 22)
-        Me.TxtCheckoutOdometer.TabIndex = 86
+        Me.TxtRegNum.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtRegNum.Location = New System.Drawing.Point(196, 47)
+        Me.TxtRegNum.Name = "TxtRegNum"
+        Me.TxtRegNum.Size = New System.Drawing.Size(311, 36)
+        Me.TxtRegNum.TabIndex = 92
         '
         'Rent
         '
@@ -504,8 +697,10 @@ Partial Class Rent
         Me.Panel1.PerformLayout()
         Me.Panel8.ResumeLayout(False)
         Me.Panel8.PerformLayout()
-        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Dgv, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TxtCheckoutOdometer, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Fleetease, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -518,7 +713,6 @@ Partial Class Rent
     Friend WithEvents BtnRent As Button
     Friend WithEvents TxtPickupfrom As TextBox
     Friend WithEvents Txtcusname As TextBox
-    Friend WithEvents TxtRegNum As TextBox
     Friend WithEvents TxtCharges As TextBox
     Friend WithEvents TxtRentDate As DateTimePicker
     Friend WithEvents TxtReturnDate As DateTimePicker
@@ -546,4 +740,20 @@ Partial Class Rent
     Friend WithEvents Button1 As Button
     Friend WithEvents Label8 As Label
     Friend WithEvents TxtCheckoutOdometer As NumericUpDown
+    Friend WithEvents Dgv As DataGridView
+    Friend WithEvents Label9 As Label
+    Friend WithEvents Dgv1 As DataGridView
+    Friend WithEvents Label10 As Label
+    Friend WithEvents CarID As DataGridViewTextBoxColumn
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn5 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn1 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn2 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewTextBoxColumn
+    Friend WithEvents DataGridViewTextBoxColumn4 As DataGridViewTextBoxColumn
+    Friend WithEvents TxtRegNum As TextBox
 End Class
