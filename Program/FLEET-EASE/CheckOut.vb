@@ -21,6 +21,22 @@ Public Class CheckOut
         cn.Close()
     End Sub
 
+    Private Sub Dgv_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles Dgv.CellClick
+        If e.RowIndex >= 0 Then
+            Dim selectedRow As DataGridViewRow = Dgv.Rows(e.RowIndex)
+
+            ' Populate the text boxes with data from the selected row
+            TxtRegNum.Text = selectedRow.Cells(1).Value.ToString()  ' Assuming RegNumber is in the second column
+            TxtCusname.Text = selectedRow.Cells(2).Value.ToString() ' Assuming CusName is in the third column
+            TxtRentDate.Value = CDate(selectedRow.Cells(4).Value)   ' Assuming RentDate is in the fifth column
+            TxtrETURNDATE.Value = CDate(selectedRow.Cells(5).Value) ' Assuming ReturnDate is in the sixth column
+            TxtCharges.Text = selectedRow.Cells(6).Value.ToString() ' Assuming Charges is in the seventh column
+
+            ' Load the rental details based on the selected registration number
+            LoadRentalDetails()
+        End If
+    End Sub
+
 
 
     Private rentalID As Integer

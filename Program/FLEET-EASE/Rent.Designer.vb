@@ -30,6 +30,7 @@ Partial Class Rent
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
+        Me.TxtRegNum = New System.Windows.Forms.TextBox()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Dgv1 = New System.Windows.Forms.DataGridView()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -76,7 +77,6 @@ Partial Class Rent
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.TxtRegNum = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.Dgv1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -144,6 +144,14 @@ Partial Class Rent
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(1091, 620)
         Me.Panel8.TabIndex = 0
+        '
+        'TxtRegNum
+        '
+        Me.TxtRegNum.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtRegNum.Location = New System.Drawing.Point(196, 47)
+        Me.TxtRegNum.Name = "TxtRegNum"
+        Me.TxtRegNum.Size = New System.Drawing.Size(311, 36)
+        Me.TxtRegNum.TabIndex = 92
         '
         'Label10
         '
@@ -581,7 +589,7 @@ Partial Class Rent
         Me.BtnCheckout.Name = "BtnCheckout"
         Me.BtnCheckout.Size = New System.Drawing.Size(209, 63)
         Me.BtnCheckout.TabIndex = 149
-        Me.BtnCheckout.Text = "CheckOut"
+        Me.BtnCheckout.Text = "Check In"
         Me.BtnCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnCheckout.UseVisualStyleBackColor = True
         '
@@ -657,14 +665,6 @@ Partial Class Rent
         Me.Button1.Text = "Rent"
         Me.Button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.Button1.UseVisualStyleBackColor = True
-        '
-        'TxtRegNum
-        '
-        Me.TxtRegNum.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtRegNum.Location = New System.Drawing.Point(196, 47)
-        Me.TxtRegNum.Name = "TxtRegNum"
-        Me.TxtRegNum.Size = New System.Drawing.Size(311, 36)
-        Me.TxtRegNum.TabIndex = 92
         '
         'Rent
         '

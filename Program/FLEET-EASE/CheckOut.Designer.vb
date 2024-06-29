@@ -110,9 +110,9 @@ Partial Class CheckOut
         Me.Label4.ForeColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
         Me.Label4.Location = New System.Drawing.Point(17, 17)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(127, 27)
+        Me.Label4.Size = New System.Drawing.Size(113, 27)
         Me.Label4.TabIndex = 1
-        Me.Label4.Text = "CheckOut"
+        Me.Label4.Text = "Check In"
         '
         'Panel8
         '
@@ -287,7 +287,7 @@ Partial Class CheckOut
         Me.BtnCheckout.Name = "BtnCheckout"
         Me.BtnCheckout.Size = New System.Drawing.Size(160, 80)
         Me.BtnCheckout.TabIndex = 99
-        Me.BtnCheckout.Text = "CheckOUT"
+        Me.BtnCheckout.Text = "CheckIN"
         Me.BtnCheckout.UseVisualStyleBackColor = False
         '
         'Label15
@@ -601,7 +601,7 @@ Partial Class CheckOut
         Me.BtnCheckoutt.Name = "BtnCheckoutt"
         Me.BtnCheckoutt.Size = New System.Drawing.Size(209, 63)
         Me.BtnCheckoutt.TabIndex = 149
-        Me.BtnCheckoutt.Text = "CheckOut"
+        Me.BtnCheckoutt.Text = "Check In"
         Me.BtnCheckoutt.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnCheckoutt.UseVisualStyleBackColor = True
         '

@@ -340,7 +340,7 @@ Partial Class Cancel
         Me.BtnCheckout.Name = "BtnCheckout"
         Me.BtnCheckout.Size = New System.Drawing.Size(209, 63)
         Me.BtnCheckout.TabIndex = 154
-        Me.BtnCheckout.Text = "CheckOut"
+        Me.BtnCheckout.Text = "Check In"
         Me.BtnCheckout.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnCheckout.UseVisualStyleBackColor = True
         '
