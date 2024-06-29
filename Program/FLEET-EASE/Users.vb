@@ -2,7 +2,7 @@
 Imports System.Text.RegularExpressions
 
 Public Class Users
-    Private ConnectionString As String = "Data Source=DESKTOP-FE6OBHL\SQLEXPRESS;Initial Catalog=fleetease;Integrated Security=True;"
+    Private ConnectionString As String = "Data Source=LAPTOP-QTEI12BF\SQLEXPRESS;Initial Catalog=fleetease;Integrated Security=True;"
     Private cn As New SqlConnection(ConnectionString)
     Private cm As SqlCommand
     Private dr As SqlDataReader
