@@ -466,6 +466,7 @@ Partial Class Settings
         Me.Controls.Add(Me.LblUsername)
         Me.Controls.Add(Me.Fleetease)
         Me.Controls.Add(Me.Panel1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Settings"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Settings"

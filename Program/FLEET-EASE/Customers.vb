@@ -119,14 +119,18 @@ Public Class Customers
         End If
 
         Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+        Dim CusIdValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+
+        If Not HasChangesFromDatabase(CusIdValue) Then
+            MsgBox("No changes detected. Please update something first.")
+            Return
+        End If
 
         If Not ValidateInputs() Then
             Return
         End If
 
         Try
-            Dim CusIdValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
-
             If IsContactOrLicenseCodeDuplicateForUpdate(CusIdValue) Then
                 MsgBox("This contact number or license code already exists for another customer.")
                 Return
@@ -143,10 +147,14 @@ Public Class Customers
                 .Parameters.AddWithValue("@LicenseID", TxtLicecnseCode.Text)
                 .Parameters.AddWithValue("@Contact", TxtContact.Text)
                 .Parameters.AddWithValue("@Address", TxtAddress.Text)
-                .ExecuteNonQuery()
+                Dim rowsAffected As Integer = .ExecuteNonQuery()
+                If rowsAffected > 0 Then
+                    MsgBox("Customer information updated successfully")
+                    LoadRecord()
+                Else
+                    MsgBox("No changes were made to the database.")
+                End If
             End With
-            MsgBox("Customer information updated successfully")
-            LoadRecord()
         Catch ex As Exception
             MsgBox("An error occurred while updating the customer: " & ex.Message)
         Finally
@@ -202,6 +210,34 @@ Public Class Customers
             TxtLicecnseCode.Text = If(row.Cells(4).Value IsNot Nothing, row.Cells(4).Value.ToString(), "")
         End If
     End Sub
+
+    Private Function HasChangesFromDatabase(cusId As Integer) As Boolean
+        Try
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+
+            cm = New SqlClient.SqlCommand("SELECT CustomerName, Contact, Address, LicenseID FROM tblcustomers WHERE CusID = @CusID", cn)
+            cm.Parameters.AddWithValue("@CusID", cusId)
+
+            Using dr As SqlDataReader = cm.ExecuteReader()
+                If dr.Read() Then
+                    Return txtCustomerName.Text <> dr("CustomerName").ToString() OrElse
+                       TxtContact.Text <> dr("Contact").ToString() OrElse
+                       TxtAddress.Text <> dr("Address").ToString() OrElse
+                       TxtLicecnseCode.Text <> dr("LicenseID").ToString()
+                End If
+            End Using
+
+            Return False ' If no record found, assume changes
+        Catch ex As Exception
+            MsgBox("Error checking for changes: " & ex.Message)
+            Return False ' Assume no changes in case of error
+        Finally
+            If cn.State = ConnectionState.Open Then cn.Close()
+        End Try
+    End Function
+
 
     Private Sub ClearFields()
         TxtLicecnseCode.Clear()

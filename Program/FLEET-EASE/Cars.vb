@@ -169,10 +169,6 @@ Public Class Cars
                 Return
             End If
 
-            If Not ValidateInputs() Then
-                Return
-            End If
-
             Dim selectedRowIndex As Integer = -1
             If Dgv.SelectedCells.Count > 0 Then
                 selectedRowIndex = Dgv.SelectedCells(0).RowIndex
@@ -180,12 +176,29 @@ Public Class Cars
                 selectedRowIndex = Dgv.SelectedRows(0).Index
             End If
 
+
             Debug.WriteLine($"Selected row index: {selectedRowIndex}")
 
             If selectedRowIndex < 0 Or selectedRowIndex >= Dgv.Rows.Count Then
                 MsgBox("Invalid row index.")
                 Return
             End If
+
+
+
+            If Not HasChanges(Dgv.Rows(selectedRowIndex)) Then
+                MsgBox("Please update something first.")
+                Return
+            End If
+
+            If Not ValidateInputs() Then
+                Return
+            End If
+
+
+
+
+
 
             carIdValue = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
 
@@ -305,6 +318,18 @@ Public Class Cars
         TxtInitialKm.Clear()
         TxtLastmaintenancedate.Value = DateTime.Now
     End Sub
+    Private Function HasChanges(selectedRow As DataGridViewRow) As Boolean
+        Return TxtCarname.Text <> GetCellValue(selectedRow, 1) OrElse
+           Txtmodel.Text <> GetCellValue(selectedRow, 2) OrElse
+           TxtColor.Text <> GetCellValue(selectedRow, 3) OrElse
+           TxtRegNum.Text <> GetCellValue(selectedRow, 4) OrElse
+           TxtAvaiable.Text <> GetCellValue(selectedRow, 5) OrElse
+           TxtInitialKm.Text <> GetCellValue(selectedRow, 6) OrElse
+           TxtLastmaintenancedate.Value.Date <> Convert.ToDateTime(GetCellValue(selectedRow, 7)).Date
+    End Function
+
+
+
 
     Private Sub BtnHome_Click_1(sender As Object, e As EventArgs) Handles BtnHome.Click
         Me.Hide()

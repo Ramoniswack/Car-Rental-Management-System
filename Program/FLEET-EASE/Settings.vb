@@ -3,30 +3,19 @@ Imports System.Text.RegularExpressions
 
 Public Class Settings
     ' Define connection string and SQL objects
-    Private ConnectionString As String = "Data Source=LAPTOP-QTEI12BF\SQLEXPRESS;Initial Catalog=fleetease;Integrated Security=True;"
+    Private ConnectionString As String = "Data Source=DESKTOP-FE6OBHL\SQLEXPRESS;Initial Catalog=fleetease;Integrated Security=True;"
     Private cn As New SqlConnection(ConnectionString)
     Private cm As SqlCommand
-
+    Private LoadedContactNumber As String = ""
     Private Sub Settings_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'Try
-        '    Dim loginform As Login = DirectCast(Application.OpenForms("Login"), Login)
-        '    If loginform IsNot Nothing AndAlso Not String.IsNullOrEmpty(loginform.LoggedInUsename) Then
-        '        Login.LoggedInUsename = loginform.LoggedInUsename
-        '        LblUsername.Text = $"{Login.LoggedInUsename}"
-        '    Else
-        '        MessageBox.Show("Unable to retrieve logged-in username.")
-        '        Return
-        '    End If
-        '    LoadUserInfo()
-        'Catch ex As Exception
-        '    MessageBox.Show($"Error in Settings_Load: {ex.Message}")
-        'End Try
         UpdateUsername()
         LoadUserInfo()
     End Sub
+
     Public Sub UpdateUsername()
         LblUsername.Text = Module1.LoggedInUsename
     End Sub
+
     Private Sub LoadUserInfo()
         Try
             cn.Open()
@@ -36,7 +25,8 @@ Public Class Settings
             Using dr As SqlDataReader = cm.ExecuteReader()
                 If dr.Read() Then
                     TxtUsername.Text = dr("username").ToString()
-                    TxtContact.Text = dr("contact").ToString()
+                    LoadedContactNumber = dr("contact").ToString()
+                    TxtContact.Text = LoadedContactNumber
                 End If
             End Using
         Catch ex As Exception
@@ -46,75 +36,111 @@ Public Class Settings
         End Try
     End Sub
 
-    Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
-        If String.IsNullOrEmpty(TxtUsername.Text) OrElse String.IsNullOrEmpty(TxtOldpassword.Text) _
-           OrElse String.IsNullOrEmpty(TxtNewpassword.Text) OrElse String.IsNullOrEmpty(TxtRenewpassword.Text) _
-           OrElse String.IsNullOrEmpty(TxtContact.Text) Then
-            MessageBox.Show("Please fill in all fields.")
-            Return
-        End If
-
-        If Not IsValidPassword(TxtNewpassword.Text) Then
-            MessageBox.Show("New password must be at least 8 characters long, contain at least one capital letter, one number, and one symbol.")
-            Return
-        End If
-
-        If TxtNewpassword.Text <> TxtRenewpassword.Text Then
-            MessageBox.Show("New passwords do not match.")
-            Return
-        End If
-
-        If Not IsValidContact(TxtContact.Text) Then
-            MessageBox.Show("Contact must be exactly 10 digits.")
-            Return
-        End If
-
+    Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
+        ' Check if any changes are attempted
         If TxtUsername.Text <> Module1.LoggedInUsename Then
-            MessageBox.Show("Cannot change other user's information.")
+            MessageBox.Show("Changing username is not allowed.")
+            TxtUsername.Text = Module1.LoggedInUsename ' Reset to original username
             Return
+        End If
+
+        Dim isPasswordChangeAttempted As Boolean = Not String.IsNullOrEmpty(TxtOldpassword.Text) OrElse Not String.IsNullOrEmpty(TxtNewpassword.Text) OrElse Not String.IsNullOrEmpty(TxtRenewpassword.Text)
+        Dim isContactChangeAttempted As Boolean = TxtContact.Text <> "" AndAlso TxtContact.Text <> LoadedContactNumber ' Compare with the loaded contact number
+
+        If Not isPasswordChangeAttempted AndAlso Not isContactChangeAttempted Then
+            MessageBox.Show("No changes detected. Please update either password or contact.")
+            Return
+        End If
+
+        ' Validate contact if change is attempted
+        If isContactChangeAttempted Then
+            If Not IsValidContact(TxtContact.Text) Then
+                MessageBox.Show("Contact must be exactly 10 digits.")
+                Return
+            End If
+        Else
+            TxtContact.Text = LoadedContactNumber ' Display the unchanged contact number
+        End If
+
+        ' Validate password if change is attempted
+        If isPasswordChangeAttempted Then
+            If String.IsNullOrEmpty(TxtOldpassword.Text) OrElse String.IsNullOrEmpty(TxtNewpassword.Text) OrElse String.IsNullOrEmpty(TxtRenewpassword.Text) Then
+                MessageBox.Show("Please fill in all password fields to change the password.")
+                Return
+            End If
+
+            If Not IsValidPassword(TxtNewpassword.Text) Then
+                MessageBox.Show("New password must be at least 8 characters long, contain at least one capital letter, one number, and one symbol.")
+                Return
+            End If
+
+            If TxtNewpassword.Text <> TxtRenewpassword.Text Then
+                MessageBox.Show("New passwords do not match.")
+                Return
+            End If
         End If
 
         Try
             cn.Open()
 
-            ' First, verify the old password
-            cm = New SqlCommand("SELECT password FROM tbllogin WHERE username = @username", cn)
-            cm.Parameters.AddWithValue("@username", Module1.LoggedInUsename)
-            Dim storedPassword As String = CStr(cm.ExecuteScalar())
+            ' Verify the old password if password change is attempted
+            If isPasswordChangeAttempted Then
+                cm = New SqlCommand("SELECT password FROM tbllogin WHERE username = @username", cn)
+                cm.Parameters.AddWithValue("@username", Module1.LoggedInUsename)
+                Dim storedPassword As String = CStr(cm.ExecuteScalar())
 
-            If storedPassword <> TxtOldpassword.Text Then
-                MessageBox.Show("Old password is incorrect.")
-                Return
+                If storedPassword <> TxtOldpassword.Text Then
+                    MessageBox.Show("Old password is incorrect.")
+                    Return
+                End If
+
+                ' Check if the new password is the same as the old password
+                If TxtNewpassword.Text = TxtOldpassword.Text Then
+                    MessageBox.Show("New password cannot be the same as the old password. Please choose a different password.")
+                    Return
+                End If
             End If
 
-            ' Check if the new password is the same as the old password
-            If TxtNewpassword.Text = TxtOldpassword.Text Then
-                MessageBox.Show("New password cannot be the same as the old password.")
-                Return
+            ' Prepare the UPDATE statement
+            Dim updateQuery As String = "UPDATE tbllogin SET "
+            Dim updateParams As New List(Of String)
+
+            If isPasswordChangeAttempted Then
+                updateParams.Add("password = @newPassword")
             End If
 
-            ' If old password is correct and new password is different, proceed with update
-            cm = New SqlCommand("UPDATE tbllogin SET username = @newUsername, password = @newPassword, contact = @newContact WHERE username = @currentUsername", cn)
-            cm.Parameters.AddWithValue("@newUsername", TxtUsername.Text)
-            cm.Parameters.AddWithValue("@newPassword", TxtNewpassword.Text)
-            cm.Parameters.AddWithValue("@newContact", TxtContact.Text)
-            cm.Parameters.AddWithValue("@currentUsername", Login.LoggedInUsename)
+            If isContactChangeAttempted Then
+                updateParams.Add("contact = @newContact")
+            End If
+
+            updateQuery &= String.Join(", ", updateParams)
+            updateQuery &= " WHERE username = @currentUsername"
+
+            cm = New SqlCommand(updateQuery, cn)
+
+            If isPasswordChangeAttempted Then
+                cm.Parameters.AddWithValue("@newPassword", TxtNewpassword.Text)
+            End If
+
+            If isContactChangeAttempted Then
+                cm.Parameters.AddWithValue("@newContact", TxtContact.Text)
+            End If
+
+            cm.Parameters.AddWithValue("@currentUsername", Module1.LoggedInUsename)
 
             Dim rowsAffected As Integer = cm.ExecuteNonQuery()
 
             If rowsAffected > 0 Then
                 MessageBox.Show("Information updated successfully.")
-                Login.LoggedInUsename = TxtUsername.Text  ' Update the logged-in username if it was changed
-                LblUsername.Text = Login.LoggedInUsename  ' Update the label
+                LoadUserInfo() ' Reload user info to reflect changes
             Else
-                MessageBox.Show("Failed to update information.")
+                MessageBox.Show("No changes were made to the database.")
             End If
         Catch ex As Exception
             MessageBox.Show("Error updating information: " & ex.Message)
         Finally
             cn.Close()
         End Try
-        clear()
     End Sub
 
     Private Function IsValidPassword(password As String) As Boolean

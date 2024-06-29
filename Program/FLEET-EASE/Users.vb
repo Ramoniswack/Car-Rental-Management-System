@@ -2,7 +2,7 @@
 Imports System.Text.RegularExpressions
 
 Public Class Users
-    Private ConnectionString As String = "Data Source=LAPTOP-QTEI12BF\SQLEXPRESS;Initial Catalog=fleetease;Integrated Security=True;"
+    Private ConnectionString As String = "Data Source=DESKTOP-FE6OBHL\SQLEXPRESS;Initial Catalog=fleetease;Integrated Security=True;"
     Private cn As New SqlConnection(ConnectionString)
     Private cm As SqlCommand
     Private dr As SqlDataReader
@@ -134,13 +134,19 @@ Public Class Users
         End If
 
         Dim selectedRowIndex As Integer = Dgv.SelectedCells(0).RowIndex
+        Dim UidValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
+
+        If Not HasChangesFromDatabase(UidValue) Then
+            MsgBox("No changes detected. Please update something first.")
+            Return
+        End If
+
 
         If Not ValidateInputs() Then
             Return
         End If
 
         Try
-            Dim UidValue As Integer = Convert.ToInt32(Dgv.Rows(selectedRowIndex).Cells(0).Value)
 
             If IsUsernameOrContactDuplicateForUpdate(UidValue) Then
                 MsgBox("This username or contact number already exists for another user.")
@@ -219,6 +225,36 @@ Public Class Users
             TxtContact.Text = If(row.Cells(4).Value IsNot Nothing, row.Cells(4).Value.ToString(), "")
         End If
     End Sub
+
+    Private Function HasChangesFromDatabase(uid As Integer) As Boolean
+        Try
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
+
+            cm = New SqlClient.SqlCommand("SELECT Username, Password, Usertype, Contact FROM tbllogin WHERE Uid = @Uid", cn)
+            cm.Parameters.AddWithValue("@Uid", uid)
+
+            Using dr As SqlDataReader = cm.ExecuteReader()
+                If dr.Read() Then
+                    Return TxtUsername.Text <> dr("Username").ToString() OrElse
+                       TxtPasswword.Text <> dr("Password").ToString() OrElse
+                       TxtUsertype.SelectedItem.ToString() <> dr("Usertype").ToString() OrElse
+                       TxtContact.Text <> dr("Contact").ToString()
+                End If
+            End Using
+
+            Return False ' If no record found, assume changes
+        Catch ex As Exception
+            MsgBox("Error checking for changes: " & ex.Message)
+            Return False ' Assume no changes in case of error
+        Finally
+            If cn.State = ConnectionState.Open Then cn.Close()
+        End Try
+    End Function
+
+
+
 
     Private Sub ClearFields()
         TxtContact.Clear()
