@@ -106,8 +106,8 @@ Public Class Rent
             Dim selectedRow As DataGridViewRow = Dgv1.Rows(e.RowIndex)
 
             ' Adjust these indices based on the debug output
-            TxtCusid.Text = selectedRow.Cells(1).Value.ToString()  ' Assuming CusID is the second column
-            Txtcusname.Text = selectedRow.Cells(2).Value.ToString()  ' Assuming CustomerName is the third column
+            TxtCusid.Text = selectedRow.Cells(0).Value.ToString()
+            Txtcusname.Text = selectedRow.Cells(1).Value.ToString()
 
             Console.WriteLine($"Selected CusID: {TxtCusid.Text}")
             Console.WriteLine($"Selected CustomerName: {Txtcusname.Text}")
