@@ -31,13 +31,17 @@ Public Class Users
     End Sub
 
     Private Sub BtnAddUser_Click(sender As Object, e As EventArgs) Handles BtnAddUser.Click
-        If ValidateInputs() Then
-            If Not IsUsernameOrContactDuplicate() Then
-                InsertUser()
-                ClearFields()
-                LoadRecord()
-            Else
-                MsgBox("This username or contact number already exists in the database.")
+        If TxtContact.Text = "" And TxtPasswword.Text = "" And TxtUsername.Text = "" And TxtUsertype.Text = "" Then
+            MsgBox("Please fulfill all the requirements first.")
+        Else
+            If ValidateInputs() Then
+                If Not IsUsernameOrContactDuplicate() Then
+                    InsertUser()
+                    ClearFields()
+                    LoadRecord()
+                Else
+                    MsgBox("This username or contact number already exists in the database.")
+                End If
             End If
         End If
     End Sub

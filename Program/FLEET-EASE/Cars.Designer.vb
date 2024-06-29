@@ -31,12 +31,23 @@ Partial Class Cars
         Me.TxtAvaiable = New System.Windows.Forms.ComboBox()
         Me.TxtLastmaintenancedate = New System.Windows.Forms.DateTimePicker()
         Me.Label7 = New System.Windows.Forms.Label()
+        Me.TxtInitialKm = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
         Me.TxtRegNum = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.BtnUpdate = New System.Windows.Forms.Button()
         Me.LblColor = New System.Windows.Forms.Label()
         Me.Dgv = New System.Windows.Forms.DataGridView()
-        Me.BtnAddCustomer = New System.Windows.Forms.Button()
+        Me.CarID = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.BtnAddCar = New System.Windows.Forms.Button()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.TxtColor = New System.Windows.Forms.TextBox()
         Me.Txtmodel = New System.Windows.Forms.TextBox()
@@ -57,20 +68,9 @@ Partial Class Cars
         Me.BtnStats = New System.Windows.Forms.Button()
         Me.BtnCustomers = New System.Windows.Forms.Button()
         Me.BtnUsers = New System.Windows.Forms.Button()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.TxtInitialKm = New System.Windows.Forms.TextBox()
         Me.FleeteaseDataSet = New FLEET_EASE.fleeteaseDataSet()
         Me.TblcarsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblcarsTableAdapter = New FLEET_EASE.fleeteaseDataSetTableAdapters.tblcarsTableAdapter()
-        Me.CarID = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -113,7 +113,7 @@ Partial Class Cars
         Me.Panel9.Controls.Add(Me.BtnUpdate)
         Me.Panel9.Controls.Add(Me.LblColor)
         Me.Panel9.Controls.Add(Me.Dgv)
-        Me.Panel9.Controls.Add(Me.BtnAddCustomer)
+        Me.Panel9.Controls.Add(Me.BtnAddCar)
         Me.Panel9.Controls.Add(Me.Label5)
         Me.Panel9.Controls.Add(Me.TxtColor)
         Me.Panel9.Controls.Add(Me.Txtmodel)
@@ -155,6 +155,26 @@ Partial Class Cars
         Me.Label7.Size = New System.Drawing.Size(270, 27)
         Me.Label7.TabIndex = 68
         Me.Label7.Text = "Last Maintenance Date"
+        '
+        'TxtInitialKm
+        '
+        Me.TxtInitialKm.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TxtInitialKm.Location = New System.Drawing.Point(220, 295)
+        Me.TxtInitialKm.Name = "TxtInitialKm"
+        Me.TxtInitialKm.Size = New System.Drawing.Size(146, 36)
+        Me.TxtInitialKm.TabIndex = 67
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.BackColor = System.Drawing.Color.Transparent
+        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Label6.Location = New System.Drawing.Point(85, 304)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(119, 27)
+        Me.Label6.TabIndex = 66
+        Me.Label6.Text = "Initial K.M"
         '
         'TxtRegNum
         '
@@ -230,18 +250,87 @@ Partial Class Cars
         Me.Dgv.Size = New System.Drawing.Size(1042, 250)
         Me.Dgv.TabIndex = 60
         '
-        'BtnAddCustomer
+        'CarID
         '
-        Me.BtnAddCustomer.BackColor = System.Drawing.Color.Transparent
-        Me.BtnAddCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.BtnAddCustomer.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnAddCustomer.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnAddCustomer.Location = New System.Drawing.Point(640, 233)
-        Me.BtnAddCustomer.Name = "BtnAddCustomer"
-        Me.BtnAddCustomer.Size = New System.Drawing.Size(160, 127)
-        Me.BtnAddCustomer.TabIndex = 58
-        Me.BtnAddCustomer.Text = "ADD CAR"
-        Me.BtnAddCustomer.UseVisualStyleBackColor = False
+        Me.CarID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.CarID.DataPropertyName = "CarID"
+        Me.CarID.HeaderText = "CarID"
+        Me.CarID.MinimumWidth = 6
+        Me.CarID.Name = "CarID"
+        Me.CarID.ReadOnly = True
+        Me.CarID.Width = 75
+        '
+        'Column1
+        '
+        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column1.HeaderText = "Car Name"
+        Me.Column1.MinimumWidth = 6
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column2.HeaderText = "Model"
+        Me.Column2.MinimumWidth = 6
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column3.HeaderText = "Color"
+        Me.Column3.MinimumWidth = 6
+        Me.Column3.Name = "Column3"
+        '
+        'Column5
+        '
+        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column5.HeaderText = "RegNO"
+        Me.Column5.MinimumWidth = 6
+        Me.Column5.Name = "Column5"
+        '
+        'Column4
+        '
+        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column4.HeaderText = "Available"
+        Me.Column4.MinimumWidth = 6
+        Me.Column4.Name = "Column4"
+        Me.Column4.Width = 102
+        '
+        'Column6
+        '
+        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
+        Me.Column6.HeaderText = "TotalKm"
+        Me.Column6.MinimumWidth = 6
+        Me.Column6.Name = "Column6"
+        '
+        'Column7
+        '
+        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column7.HeaderText = "LastMaintenanceDate"
+        Me.Column7.MinimumWidth = 6
+        Me.Column7.Name = "Column7"
+        Me.Column7.Width = 186
+        '
+        'Column8
+        '
+        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
+        Me.Column8.HeaderText = "LastMaintenanceKilometer"
+        Me.Column8.MinimumWidth = 6
+        Me.Column8.Name = "Column8"
+        Me.Column8.Width = 218
+        '
+        'BtnAddCar
+        '
+        Me.BtnAddCar.BackColor = System.Drawing.Color.Transparent
+        Me.BtnAddCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnAddCar.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnAddCar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.BtnAddCar.Location = New System.Drawing.Point(640, 233)
+        Me.BtnAddCar.Name = "BtnAddCar"
+        Me.BtnAddCar.Size = New System.Drawing.Size(160, 127)
+        Me.BtnAddCar.TabIndex = 58
+        Me.BtnAddCar.Text = "ADD CAR"
+        Me.BtnAddCar.UseVisualStyleBackColor = False
         '
         'Label5
         '
@@ -468,26 +557,6 @@ Partial Class Cars
         Me.BtnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnUsers.UseVisualStyleBackColor = True
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.BackColor = System.Drawing.Color.Transparent
-        Me.Label6.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.Label6.Location = New System.Drawing.Point(85, 304)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(119, 27)
-        Me.Label6.TabIndex = 66
-        Me.Label6.Text = "Initial K.M"
-        '
-        'TxtInitialKm
-        '
-        Me.TxtInitialKm.Font = New System.Drawing.Font("Century Gothic", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TxtInitialKm.Location = New System.Drawing.Point(220, 295)
-        Me.TxtInitialKm.Name = "TxtInitialKm"
-        Me.TxtInitialKm.Size = New System.Drawing.Size(146, 36)
-        Me.TxtInitialKm.TabIndex = 67
-        '
         'FleeteaseDataSet
         '
         Me.FleeteaseDataSet.DataSetName = "fleeteaseDataSet"
@@ -501,75 +570,6 @@ Partial Class Cars
         'TblcarsTableAdapter
         '
         Me.TblcarsTableAdapter.ClearBeforeFill = True
-        '
-        'CarID
-        '
-        Me.CarID.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.CarID.DataPropertyName = "CarID"
-        Me.CarID.HeaderText = "CarID"
-        Me.CarID.MinimumWidth = 6
-        Me.CarID.Name = "CarID"
-        Me.CarID.ReadOnly = True
-        Me.CarID.Width = 75
-        '
-        'Column1
-        '
-        Me.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column1.HeaderText = "Car Name"
-        Me.Column1.MinimumWidth = 6
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column2.HeaderText = "Model"
-        Me.Column2.MinimumWidth = 6
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column3.HeaderText = "Color"
-        Me.Column3.MinimumWidth = 6
-        Me.Column3.Name = "Column3"
-        '
-        'Column5
-        '
-        Me.Column5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column5.HeaderText = "RegNO"
-        Me.Column5.MinimumWidth = 6
-        Me.Column5.Name = "Column5"
-        '
-        'Column4
-        '
-        Me.Column4.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Column4.HeaderText = "Available"
-        Me.Column4.MinimumWidth = 6
-        Me.Column4.Name = "Column4"
-        Me.Column4.Width = 102
-        '
-        'Column6
-        '
-        Me.Column6.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill
-        Me.Column6.HeaderText = "TotalKm"
-        Me.Column6.MinimumWidth = 6
-        Me.Column6.Name = "Column6"
-        '
-        'Column7
-        '
-        Me.Column7.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Column7.HeaderText = "LastMaintenanceDate"
-        Me.Column7.MinimumWidth = 6
-        Me.Column7.Name = "Column7"
-        Me.Column7.Width = 186
-        '
-        'Column8
-        '
-        Me.Column8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells
-        Me.Column8.HeaderText = "LastMaintenanceKilometer"
-        Me.Column8.MinimumWidth = 6
-        Me.Column8.Name = "Column8"
-        Me.Column8.Width = 218
         '
         'Cars
         '
@@ -611,7 +611,7 @@ Partial Class Cars
     Friend WithEvents Panel1 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Dgv As DataGridView
-    Friend WithEvents BtnAddCustomer As Button
+    Friend WithEvents BtnAddCar As Button
     Friend WithEvents Label5 As Label
     Friend WithEvents TxtColor As TextBox
     Friend WithEvents Txtmodel As TextBox

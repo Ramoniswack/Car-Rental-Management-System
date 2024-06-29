@@ -98,10 +98,26 @@ Public Class Cars
         End Try
     End Function
 
-    Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
-        If Not ValidateInputs() Then
+    Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCar.Click
+        'If TxtCarname.Text = "" And TxtColor.Text = "" And TxtAvaiable.Text = "" And TxtInitialKm.Text = "" And TxtLastmaintenancedate.Text = "" And Txtmodel.Text = "" And TxtRegNum.Text = "" Then
+        '    MsgBox("Please fulfill all the requirements first.")
+
+        'End If
+        If String.IsNullOrWhiteSpace(TxtCarname.Text) OrElse
+       String.IsNullOrWhiteSpace(TxtColor.Text) OrElse
+       String.IsNullOrWhiteSpace(TxtAvaiable.Text) OrElse
+       String.IsNullOrWhiteSpace(TxtInitialKm.Text) OrElse
+       String.IsNullOrWhiteSpace(TxtLastmaintenancedate.Text) OrElse
+       String.IsNullOrWhiteSpace(Txtmodel.Text) OrElse
+       String.IsNullOrWhiteSpace(TxtRegNum.Text) Then
+            MsgBox("Please fulfill all the requirements first.")
             Return
         End If
+
+        If Not ValidateInputs() Then
+
+                Return
+            End If
 
         If IsRegNumberDuplicate(TxtRegNum.Text, -1) Then
             MsgBox("This registration number already exists in Records.")

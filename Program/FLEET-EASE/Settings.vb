@@ -31,7 +31,7 @@ Public Class Settings
         Try
             cn.Open()
             cm = New SqlCommand("SELECT username, contact FROM tbllogin WHERE username = @username", cn)
-            cm.Parameters.AddWithValue("@username", Login.LoggedInUsename)
+            cm.Parameters.AddWithValue("@username", Module1.LoggedInUsename)
 
             Using dr As SqlDataReader = cm.ExecuteReader()
                 If dr.Read() Then
@@ -69,7 +69,7 @@ Public Class Settings
             Return
         End If
 
-        If TxtUsername.Text <> Login.LoggedInUsename Then
+        If TxtUsername.Text <> Module1.LoggedInUsename Then
             MessageBox.Show("Cannot change other user's information.")
             Return
         End If
@@ -79,7 +79,7 @@ Public Class Settings
 
             ' First, verify the old password
             cm = New SqlCommand("SELECT password FROM tbllogin WHERE username = @username", cn)
-            cm.Parameters.AddWithValue("@username", Login.LoggedInUsename)
+            cm.Parameters.AddWithValue("@username", Module1.LoggedInUsename)
             Dim storedPassword As String = CStr(cm.ExecuteScalar())
 
             If storedPassword <> TxtOldpassword.Text Then

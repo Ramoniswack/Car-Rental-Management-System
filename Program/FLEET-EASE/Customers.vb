@@ -25,16 +25,20 @@ Public Class Customers
     End Sub
 
     Private Sub BtnAddCustomer_Click(sender As Object, e As EventArgs) Handles BtnAddCustomer.Click
-        If ValidateInputs() Then
-            If Not IsContactOrLicenseCodeDuplicate() Then
-                InsertCustomer()
-                ClearFields()
-                LoadRecord()
-            Else
-                MsgBox("This contact number or license code already exists in the database.")
-            End If
-        Else
+        If txtCustomerName.Text = "" And TxtAddress.Text = "" And TxtContact.Text = "" And TxtLicecnseCode.Text = "" Then
             MsgBox("Please fulfill all the requirements first.")
+        Else
+            If ValidateInputs() Then
+                If Not IsContactOrLicenseCodeDuplicate() Then
+                    InsertCustomer()
+                    ClearFields()
+                    LoadRecord()
+                Else
+                    MsgBox("This contact number or license code already exists in the database.")
+                End If
+            Else
+                MsgBox("Please fulfill all the requirements first.")
+            End If
         End If
         ClearFields()
     End Sub
