@@ -18,7 +18,7 @@ Public Class Login
         Else
             Try
                 cn.Open()
-                Dim query As String = "SELECT * FROM tbllogin WHERE username = @username COLLATE Latin1_General_CS_AS AND password = @password COLLATE Latin1_General_CS_AS"
+                Dim query As String = "SELECT * FROM tbllogin where username = @username COLLATE Latin1_General_CS_AS AND password = @password COLLATE Latin1_General_CS_AS AND active = 1"
                 cm = New SqlClient.SqlCommand(query, cn)
                 cm.Parameters.AddWithValue("@username", TxtUsername.Text)
                 cm.Parameters.AddWithValue("@password", TxtPassword.Text)
@@ -28,7 +28,7 @@ Public Class Login
                 If dt.Rows.Count > 0 Then
                     LoggedInUsename = dt.Rows(0)("Username").ToString()
                     Module1.LoggedInUsename = LoggedInUsename  ' Update the global variable
-                    MessageBox.Show("Logged in as: " & dt.Rows(0)("Usertype"))
+                    '  MessageBox.Show("Logged in as: " & dt.Rows(0)("Usertype"))
                     ' Update LastLoginDate and increment LoginCount
                     Dim updateQuery As String = "UPDATE tbllogin SET LastLoginDate = @lastLoginDate, LoginCount = ISNULL(LoginCount, 0) + 1 WHERE Username = @username COLLATE Latin1_General_CS_AS"
                     Dim updateCmd As New SqlClient.SqlCommand(updateQuery, cn)

@@ -8,7 +8,7 @@
             Dgv.Rows.Clear()
             Dim i As Integer
 
-            cm = New SqlClient.SqlCommand("select * from tblcars", cn)
+            cm = New SqlClient.SqlCommand("select * from tblcars where active = 1", cn)
             dr = cm.ExecuteReader
             While dr.Read
                 i = i + 1
@@ -28,9 +28,9 @@
         Dim i As Integer
 
         cm = New SqlClient.SqlCommand("SELECT cr.* FROM tblcarrentals3 cr " &
-                                  "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
-                                  "WHERE (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
-                                  "AND c.Available = 'NO'", cn)
+                                      "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
+                                      "WHERE (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
+                                      "AND c.Available = 'NO' AND c.Active = 1", cn)
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1

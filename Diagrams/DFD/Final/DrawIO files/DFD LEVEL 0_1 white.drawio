@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2024-06-28T02:25:51.506Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.6.1 Chrome/124.0.6367.207 Electron/30.0.6 Safari/537.36" etag="e1SxT7B_BSODSXyaGXJj" version="24.6.1" type="device">
+<mxfile host="Electron" modified="2024-06-30T14:28:27.498Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.2.5 Chrome/120.0.6099.109 Electron/28.1.0 Safari/537.36" etag="wsm2QcLgwTioZK4xghId" version="24.2.5" type="device">
   <diagram name="Page-1" id="1sUirBI9B5Q_mOUVWr8-">
-    <mxGraphModel dx="1036" dy="654" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1050" dy="638" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -28,21 +28,22 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="B0CBj3l1OAyqEAr3n8iD-22" value="Manage Transaction" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="B0CBj3l1OAyqEAr3n8iD-13" vertex="1" connectable="0">
+        <mxCell id="B0CBj3l1OAyqEAr3n8iD-22" value="Cancellation Info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="B0CBj3l1OAyqEAr3n8iD-13" vertex="1" connectable="0">
           <mxGeometry x="-0.2022" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="dMOsjY0Juy1-TdHD8-RV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="B0CBj3l1OAyqEAr3n8iD-2" target="B0CBj3l1OAyqEAr3n8iD-4" edge="1">
+        <mxCell id="dMOsjY0Juy1-TdHD8-RV-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.409;exitY=0.965;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.006;entryY=0.905;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="B0CBj3l1OAyqEAr3n8iD-4" target="B0CBj3l1OAyqEAr3n8iD-2" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="80" y="370" as="targetPoint" />
+            <mxPoint x="322" y="427" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="365" y="375" />
-              <mxPoint x="85" y="375" />
+              <mxPoint x="73" y="375" />
+              <mxPoint x="315" y="375" />
+              <mxPoint x="315" y="329" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="70fid_EDBqLkP0UaDSBR-2" value="Text" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dMOsjY0Juy1-TdHD8-RV-13" vertex="1" connectable="0">
+        <mxCell id="70fid_EDBqLkP0UaDSBR-2" value="Manage Transaction" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="dMOsjY0Juy1-TdHD8-RV-13" vertex="1" connectable="0">
           <mxGeometry x="0.052" y="2" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>
@@ -80,7 +81,7 @@
             <Array as="points" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="B0CBj3l1OAyqEAr3n8iD-18" value="Retail Info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="B0CBj3l1OAyqEAr3n8iD-6" vertex="1" connectable="0">
+        <mxCell id="B0CBj3l1OAyqEAr3n8iD-18" value="Rental Info" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="B0CBj3l1OAyqEAr3n8iD-6" vertex="1" connectable="0">
           <mxGeometry x="0.3534" y="-1" relative="1" as="geometry">
             <mxPoint as="offset" />
           </mxGeometry>

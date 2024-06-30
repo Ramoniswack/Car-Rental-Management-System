@@ -71,6 +71,7 @@ Partial Class Cars
         Me.FleeteaseDataSet = New FLEET_EASE.fleeteaseDataSet()
         Me.TblcarsBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.TblcarsTableAdapter = New FLEET_EASE.fleeteaseDataSetTableAdapters.tblcarsTableAdapter()
+        Me.Btndelete = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -103,6 +104,7 @@ Partial Class Cars
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.Btndelete)
         Me.Panel9.Controls.Add(Me.TxtAvaiable)
         Me.Panel9.Controls.Add(Me.TxtLastmaintenancedate)
         Me.Panel9.Controls.Add(Me.Label7)
@@ -202,9 +204,9 @@ Partial Class Cars
         Me.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnUpdate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnUpdate.Location = New System.Drawing.Point(818, 233)
+        Me.BtnUpdate.Location = New System.Drawing.Point(760, 254)
         Me.BtnUpdate.Name = "BtnUpdate"
-        Me.BtnUpdate.Size = New System.Drawing.Size(160, 127)
+        Me.BtnUpdate.Size = New System.Drawing.Size(150, 106)
         Me.BtnUpdate.TabIndex = 63
         Me.BtnUpdate.Text = "UPDATE"
         Me.BtnUpdate.UseVisualStyleBackColor = False
@@ -325,9 +327,9 @@ Partial Class Cars
         Me.BtnAddCar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAddCar.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAddCar.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnAddCar.Location = New System.Drawing.Point(640, 233)
+        Me.BtnAddCar.Location = New System.Drawing.Point(604, 254)
         Me.BtnAddCar.Name = "BtnAddCar"
-        Me.BtnAddCar.Size = New System.Drawing.Size(160, 127)
+        Me.BtnAddCar.Size = New System.Drawing.Size(137, 106)
         Me.BtnAddCar.TabIndex = 58
         Me.BtnAddCar.Text = "ADD CAR"
         Me.BtnAddCar.UseVisualStyleBackColor = False
@@ -571,6 +573,19 @@ Partial Class Cars
         '
         Me.TblcarsTableAdapter.ClearBeforeFill = True
         '
+        'Btndelete
+        '
+        Me.Btndelete.BackColor = System.Drawing.Color.Transparent
+        Me.Btndelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Btndelete.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Btndelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.Btndelete.Location = New System.Drawing.Point(928, 254)
+        Me.Btndelete.Name = "Btndelete"
+        Me.Btndelete.Size = New System.Drawing.Size(136, 106)
+        Me.Btndelete.TabIndex = 71
+        Me.Btndelete.Text = "DELETE"
+        Me.Btndelete.UseVisualStyleBackColor = False
+        '
         'Cars
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -654,4 +669,5 @@ Partial Class Cars
     Friend WithEvents Column6 As DataGridViewTextBoxColumn
     Friend WithEvents Column7 As DataGridViewTextBoxColumn
     Friend WithEvents Column8 As DataGridViewTextBoxColumn
+    Friend WithEvents Btndelete As Button
 End Class

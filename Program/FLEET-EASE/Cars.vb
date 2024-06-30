@@ -11,7 +11,7 @@ Public Class Cars
             Dgv.Rows.Clear()
             Dim i As Integer
 
-            cm = New SqlClient.SqlCommand("SELECT * FROM tblcars", cn)
+            cm = New SqlClient.SqlCommand("SELECT * FROM tblcars where active = 1 ", cn)
             dr = cm.ExecuteReader
             While dr.Read
                 i = i + 1
@@ -73,6 +73,7 @@ Public Class Cars
             MsgBox("Last maintenance date must be a valid date.")
             Return False
         End If
+
 
         Return True
     End Function
@@ -362,5 +363,53 @@ Public Class Cars
         Me.Hide()
         Dim obj As New Users
         obj.Show()
+    End Sub
+
+    Private Sub Btndelete_Click(sender As Object, e As EventArgs) Handles Btndelete.Click
+        Try
+            If Dgv.SelectedRows.Count = 0 Then
+                MsgBox("Please select a car to disable.")
+                Return
+            End If
+
+            Dim selectedRow As DataGridViewRow = Dgv.SelectedRows(0)
+
+            ' Check if the CarID column exists and get its value
+            Dim carId As Integer
+            If Dgv.Columns.Contains("CarID") Then
+                carId = Convert.ToInt32(selectedRow.Cells("CarID").Value)
+            ElseIf selectedRow.Cells.Count > 0 Then
+                ' Assume CarID is the first column if the column name doesn't match
+                carId = Convert.ToInt32(selectedRow.Cells(0).Value)
+            Else
+                MsgBox("Unable to determine the Car ID.")
+                Return
+            End If
+
+            ' Get the car name (adjust the index if necessary)
+            Dim carName As String = selectedRow.Cells(1).Value.ToString()
+
+            Dim result As DialogResult = MessageBox.Show($"Are you sure you want to disable the car: {carName}?", "Confirm Disable", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                If cn.State = ConnectionState.Closed Then
+                    cn.Open()
+                End If
+
+                cm = New SqlClient.SqlCommand("UPDATE tblcars SET Active = 0 WHERE CarID = @CarID", cn)
+                cm.Parameters.AddWithValue("@CarID", carId)
+                cm.ExecuteNonQuery()
+
+                MsgBox($"Car '{carName}' has been disabled successfully.")
+                LoadRecord()
+                clear()
+            End If
+        Catch ex As Exception
+            MsgBox("An error occurred while disabling the car: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
     End Sub
 End Class

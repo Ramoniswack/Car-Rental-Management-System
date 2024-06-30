@@ -4,9 +4,11 @@ Uid int primary key identity (1,1),
 username nvarchar(50),
 password nvarchar(50),
 )
-insert into tbllogin(username,password) values ('admin','admin1')
+insert into tbllogin(username,password,usertype,Contact) values ('ADMIN','ADMIN','ADMIN','9800000000');
 insert into tbllogin(username,password,usertype,contact) values ('ad','ad2','Admin','999')
 
+alter table tbllogin
+delete from tbllogin where uid =2
 
 select *From tbllogin
 
@@ -20,7 +22,14 @@ ADD Contact nvarchar(50)
 ALTER TABLE tbllogin ADD LastLoginDate DATETIME
 alter table tbllogin add LoginCount Int Default 0
 
+alter table tbllogin add active int default 1;
 
+
+update tbllogin
+set active = 1
+where active is NULL
+
+select *from tbllogin
 
 
 create table tblcustomers
@@ -127,6 +136,15 @@ ADD LastMaintenanceDate DATE,
     TotalKilometers INT DEFAULT 0,
     LastMaintenanceKilometers INT DEFAULT 0;
 
+Alter table tblcars
+
+Drop column active
+
+
+update tblcars
+set active = 1
+where active is NULL
+
 truncate table tblcars
 
 
@@ -150,23 +168,7 @@ CREATE TABLE tblCarRentals (
 
 select *from tblCarRentals
 
-create table tblcarrentals1
-(
- RentalID INT IDENTITY(1,1) PRIMARY KEY,
-    CusID INT FOREIGN KEY REFERENCES tblcustomers(CusID),
-	CustomerName nvarchar(50),
-    CarID INT FOREIGN KEY REFERENCES tblcars(CarID),
-	CarName nvarchar(50),
-    PickupLocation NVARCHAR(200) NOT NULL,
-    RentDate DATE NOT NULL,
-    ReturnDate DATE NOT NULL,
-    Charges DECIMAL(10, 2) NOT NULL
-);
-select *from tblcarrentals1
 
-truncate table tblcarrentals1
-
-delete from tblcarrentals1
 
 
 
@@ -174,20 +176,6 @@ delete from tblcarrentals1
 
 <<<<<<< HEAD
 
-
-create table tblcarrentals2
-(
- RentalID INT IDENTITY(1,1) PRIMARY KEY,
-    CusID INT FOREIGN KEY REFERENCES tblcustomers(CusID),
-	CustomerName nvarchar(50),
-    CarID INT FOREIGN KEY REFERENCES tblcars(CariD),
-	CarName nvarchar(50),
-    PickupLocation NVARCHAR(200) NOT NULL,
-    RentDate DATE NOT NULL,
-    ReturnDate DATE NOT NULL,
-    Charges DECIMAL(10, 2) NOT NULL
-);
-select *from tblcarrentals2
 
 
 
@@ -292,6 +280,13 @@ select *from tblcars
 
 
 
+EXEC sp_MSforeachtable "ALTER TABLE ? NOCHECK CONSTRAINT ALL"
+
+EXEC sp_MSforeachtable "DELETE FROM ?"
+
+
+EXEC sp_MSforeachtable "IF OBJECTPROPERTY(OBJECT_ID('?'), 'TableHasIdentity') = 1 DBCC CHECKIDENT ('?', RESEED, 0)"
+EXEC sp_MSforeachtable "ALTER TABLE ? WITH CHECK CHECK CONSTRAINT ALL"
 =======
 0000000.00
 >>>>>>> 34a9dec18eb717259f191a27cdb9ce2653e796b0

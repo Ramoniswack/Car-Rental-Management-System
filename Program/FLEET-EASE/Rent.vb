@@ -12,7 +12,7 @@ Public Class Rent
             cn.Open()
             Dgv.Rows.Clear()
             Dim i As Integer = 0
-            cm = New SqlClient.SqlCommand("SELECT * FROM tblcars", cn)
+            cm = New SqlClient.SqlCommand("SELECT * FROM tblcars ", cn)
             Using dr As SqlDataReader = cm.ExecuteReader()
                 While dr.Read()
                     i += 1

@@ -59,6 +59,7 @@ Partial Class Users
         Me.BtnStats = New System.Windows.Forms.Button()
         Me.BtnCustomers = New System.Windows.Forms.Button()
         Me.BtnUsers = New System.Windows.Forms.Button()
+        Me.BtnDelete = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel9.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -89,6 +90,7 @@ Partial Class Users
         'Panel9
         '
         Me.Panel9.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel9.Controls.Add(Me.BtnDelete)
         Me.Panel9.Controls.Add(Me.TxtUsertype)
         Me.Panel9.Controls.Add(Me.CheckBox1)
         Me.Panel9.Controls.Add(Me.BtnUpdate)
@@ -134,9 +136,9 @@ Partial Class Users
         Me.BtnUpdate.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnUpdate.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnUpdate.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnUpdate.Location = New System.Drawing.Point(766, 244)
+        Me.BtnUpdate.Location = New System.Drawing.Point(687, 267)
         Me.BtnUpdate.Name = "BtnUpdate"
-        Me.BtnUpdate.Size = New System.Drawing.Size(176, 130)
+        Me.BtnUpdate.Size = New System.Drawing.Size(139, 107)
         Me.BtnUpdate.TabIndex = 66
         Me.BtnUpdate.Text = "UPDATE"
         Me.BtnUpdate.UseVisualStyleBackColor = False
@@ -265,9 +267,9 @@ Partial Class Users
         Me.BtnAddUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.BtnAddUser.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.BtnAddUser.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
-        Me.BtnAddUser.Location = New System.Drawing.Point(584, 244)
+        Me.BtnAddUser.Location = New System.Drawing.Point(534, 267)
         Me.BtnAddUser.Name = "BtnAddUser"
-        Me.BtnAddUser.Size = New System.Drawing.Size(176, 130)
+        Me.BtnAddUser.Size = New System.Drawing.Size(147, 107)
         Me.BtnAddUser.TabIndex = 58
         Me.BtnAddUser.Text = "ADD USER"
         Me.BtnAddUser.UseVisualStyleBackColor = False
@@ -469,6 +471,19 @@ Partial Class Users
         Me.BtnUsers.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnUsers.UseVisualStyleBackColor = True
         '
+        'BtnDelete
+        '
+        Me.BtnDelete.BackColor = System.Drawing.Color.Transparent
+        Me.BtnDelete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.BtnDelete.Font = New System.Drawing.Font("Century Gothic", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnDelete.ForeColor = System.Drawing.Color.FromArgb(CType(CType(87, Byte), Integer), CType(CType(81, Byte), Integer), CType(CType(81, Byte), Integer))
+        Me.BtnDelete.Location = New System.Drawing.Point(832, 267)
+        Me.BtnDelete.Name = "BtnDelete"
+        Me.BtnDelete.Size = New System.Drawing.Size(139, 107)
+        Me.BtnDelete.TabIndex = 69
+        Me.BtnDelete.Text = "DELETE"
+        Me.BtnDelete.UseVisualStyleBackColor = False
+        '
         'Users
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -539,4 +554,5 @@ Partial Class Users
     Friend WithEvents BtnCustomers As Button
     Friend WithEvents BtnUsers As Button
     Friend WithEvents TxtUsertype As ComboBox
+    Friend WithEvents BtnDelete As Button
 End Class

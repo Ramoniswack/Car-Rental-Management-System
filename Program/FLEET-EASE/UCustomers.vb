@@ -64,7 +64,6 @@
                 End If
             End If
         End If
-        ClearInputs()
     End Sub
 
     Private Function ValidateInputs() As Boolean
@@ -181,5 +180,9 @@
         Me.Hide()
         Dim oBJ As New Login
         oBJ.Show()
+    End Sub
+
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+        ClearInputs()
     End Sub
 End Class

@@ -1,4 +1,5 @@
 ﻿Imports System.Data.SqlClient
+Imports System.IO
 Imports System.Text.RegularExpressions
 
 Public Class Users
@@ -6,6 +7,7 @@ Public Class Users
     Private cn As New SqlConnection(ConnectionString)
     Private cm As SqlCommand
     Private dr As SqlDataReader
+    Private currentuid As Integer = -1
 
     Sub LoadRecord()
         Try
@@ -15,12 +17,15 @@ Public Class Users
             Dgv.Rows.Clear()
             Dim i As Integer
 
-            cm = New SqlClient.SqlCommand("select * from tbllogin", cn)
+            cm = New SqlClient.SqlCommand("SELECT * FROM tbllogin WHERE active = 1", cn)
             dr = cm.ExecuteReader
             While dr.Read
-                i = i + 1
-                Dgv.Rows.Add(i, dr.Item("Username"), dr.Item("Password"), dr.Item("Usertype"), dr.Item("Contact"))
+                i += 1
+                Dgv.Rows.Add(dr.Item("Uid"), dr.Item("Username"), dr.Item("Password"), dr.Item("Usertype"), dr.Item("Contact"))
             End While
+
+            ' Debugging
+            Console.WriteLine($"Loaded {i} records")
         Catch ex As Exception
             MsgBox("An error occurred while loading records: " & ex.Message)
         Finally
@@ -29,6 +34,7 @@ Public Class Users
             End If
         End Try
     End Sub
+
 
     Private Sub BtnAddUser_Click(sender As Object, e As EventArgs) Handles BtnAddUser.Click
         If TxtContact.Text = "" And TxtPasswword.Text = "" And TxtUsername.Text = "" And TxtUsertype.Text = "" Then
@@ -141,13 +147,11 @@ Public Class Users
             Return
         End If
 
-
         If Not ValidateInputs() Then
             Return
         End If
 
         Try
-
             If IsUsernameOrContactDuplicateForUpdate(UidValue) Then
                 MsgBox("This username or contact number already exists for another user.")
                 Return
@@ -156,6 +160,7 @@ Public Class Users
             If cn.State = ConnectionState.Closed Then
                 cn.Open()
             End If
+
             cm = New SqlClient.SqlCommand("UPDATE tbllogin SET username = @username, password = @password, usertype = @usertype, contact = @contact WHERE Uid = @Uid", cn)
             With cm
                 .Parameters.AddWithValue("@Uid", UidValue)
@@ -163,10 +168,14 @@ Public Class Users
                 .Parameters.AddWithValue("@password", TxtPasswword.Text)
                 .Parameters.AddWithValue("@usertype", TxtUsertype.SelectedItem.ToString())
                 .Parameters.AddWithValue("@contact", TxtContact.Text)
-                .ExecuteNonQuery()
+                Dim rowsAffected As Integer = .ExecuteNonQuery()
+                If rowsAffected > 0 Then
+                    MsgBox("User information updated successfully")
+                    LoadRecord()
+                Else
+                    MsgBox("No changes were made to the database.")
+                End If
             End With
-            MsgBox("User updated successfully")
-            LoadRecord()
         Catch ex As Exception
             MsgBox("An error occurred while updating the user: " & ex.Message)
         Finally
@@ -176,18 +185,24 @@ Public Class Users
         End Try
         ClearFields()
     End Sub
-
     Private Function IsUsernameOrContactDuplicateForUpdate(uid As Integer) As Boolean
         Try
             If cn.State = ConnectionState.Closed Then
                 cn.Open()
             End If
-            Dim query As String = "SELECT COUNT(*) FROM tbllogin WHERE (Username = @Username OR Contact = @Contact) AND Uid <> @Uid"
+
+            ' Check for duplicates, excluding the current user
+            Dim query As String = "SELECT COUNT(*) FROM tbllogin WHERE (Username = @Username OR Contact = @Contact) AND Uid <> @Uid AND active = 1"
             cm = New SqlClient.SqlCommand(query, cn)
             cm.Parameters.AddWithValue("@Username", TxtUsername.Text)
             cm.Parameters.AddWithValue("@Contact", TxtContact.Text)
             cm.Parameters.AddWithValue("@Uid", uid)
+
             Dim count As Integer = CInt(cm.ExecuteScalar())
+
+            ' Debugging
+            Console.WriteLine($"Duplicate check: Username={TxtUsername.Text}, Contact={TxtContact.Text}, Uid={uid}, Count={count}")
+
             Return count > 0
         Catch ex As Exception
             MsgBox("Error checking for duplicates: " & ex.Message)
@@ -219,13 +234,19 @@ Public Class Users
         If e.RowIndex >= 0 Then
             Dgv.Rows(e.RowIndex).Selected = True
             Dim row As DataGridViewRow = Dgv.Rows(e.RowIndex)
+
+            ' Use column indices instead of names
+            ' Adjust these indices based on the actual order of your columns
+            currentuid = Convert.ToInt32(row.Cells(0).Value)  ' Assuming Uid is in the first column
             TxtUsername.Text = If(row.Cells(1).Value IsNot Nothing, row.Cells(1).Value.ToString(), "")
             TxtPasswword.Text = If(row.Cells(2).Value IsNot Nothing, row.Cells(2).Value.ToString(), "")
-            TxtUsertype.SelectedItem = If(row.Cells(3).Value IsNot Nothing, row.Cells(3).Value.ToString(), "")
+            TxtUsertype.Text = If(row.Cells(3).Value IsNot Nothing, row.Cells(3).Value.ToString(), "")
             TxtContact.Text = If(row.Cells(4).Value IsNot Nothing, row.Cells(4).Value.ToString(), "")
+
+            ' Debugging
+            Console.WriteLine($"Selected User: Uid={currentuid}, Username={TxtUsername.Text}, Contact={TxtContact.Text}")
         End If
     End Sub
-
     Private Function HasChangesFromDatabase(uid As Integer) As Boolean
         Try
             If cn.State = ConnectionState.Closed Then
@@ -244,7 +265,7 @@ Public Class Users
                 End If
             End Using
 
-            Return False ' If no record found, assume changes
+            Return False ' If no record found, assume no changes
         Catch ex As Exception
             MsgBox("Error checking for changes: " & ex.Message)
             Return False ' Assume no changes in case of error
@@ -304,5 +325,45 @@ Public Class Users
     Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
         TxtPasswword.UseSystemPasswordChar = Not CheckBox1.Checked
 
+    End Sub
+
+    Private Sub BtnDelete_Click(sender As Object, e As EventArgs) Handles BtnDelete.Click
+        Try
+            If Dgv.SelectedRows.Count = 0 Then
+                MsgBox("Please select a user to disable.")
+                Return
+            End If
+
+            Dim selectedRow As DataGridViewRow = Dgv.SelectedRows(0)
+
+            ' Get the Uid (assuming it's in the first column)
+            Dim uid As Integer = Convert.ToInt32(selectedRow.Cells(0).Value)
+
+            ' Get the username (assuming it's in the second column)
+            Dim username As String = selectedRow.Cells(1).Value.ToString()
+
+            Dim result As DialogResult = MessageBox.Show($"Are you sure you want to disable the user: {username}?", "Confirm Disable", MessageBoxButtons.YesNo, MessageBoxIcon.Question)
+
+            If result = DialogResult.Yes Then
+                If cn.State = ConnectionState.Closed Then
+                    cn.Open()
+                End If
+
+                ' Update the SQL command to set IsActive to 0
+                cm = New SqlClient.SqlCommand("UPDATE tbllogin SET active = 0 WHERE Uid = @Uid", cn)
+                cm.Parameters.AddWithValue("@Uid", uid)
+                cm.ExecuteNonQuery()
+
+                MsgBox($"User '{username}' has been disabled successfully.")
+                LoadRecord()
+                ClearFields()
+            End If
+        Catch ex As Exception
+            MsgBox("An error occurred while disabling the user: " & ex.Message)
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
     End Sub
 End Class

@@ -60,6 +60,7 @@ Partial Class UCustomers
         Me.Panel6 = New System.Windows.Forms.Panel()
         Me.Panel7 = New System.Windows.Forms.Panel()
         Me.BtnRent = New System.Windows.Forms.Button()
+        Me.BtnClear = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel8.SuspendLayout()
         CType(Me.Dgv, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -100,6 +101,7 @@ Partial Class UCustomers
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(231, Byte), Integer), CType(CType(179, Byte), Integer), CType(CType(179, Byte), Integer))
+        Me.Panel8.Controls.Add(Me.BtnClear)
         Me.Panel8.Controls.Add(Me.Label5)
         Me.Panel8.Controls.Add(Me.Label4)
         Me.Panel8.Controls.Add(Me.Label8)
@@ -476,6 +478,15 @@ Partial Class UCustomers
         Me.BtnRent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText
         Me.BtnRent.UseVisualStyleBackColor = True
         '
+        'BtnClear
+        '
+        Me.BtnClear.Location = New System.Drawing.Point(266, 255)
+        Me.BtnClear.Name = "BtnClear"
+        Me.BtnClear.Size = New System.Drawing.Size(75, 23)
+        Me.BtnClear.TabIndex = 81
+        Me.BtnClear.Text = "Clear"
+        Me.BtnClear.UseVisualStyleBackColor = True
+        '
         'UCustomers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -549,4 +560,5 @@ Partial Class UCustomers
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewTextBoxColumn
     Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents BtnClear As Button
 End Class

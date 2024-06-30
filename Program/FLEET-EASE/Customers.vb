@@ -40,7 +40,7 @@ Public Class Customers
                 MsgBox("Please fulfill all the requirements first.")
             End If
         End If
-        ClearFields()
+
     End Sub
 
     Private Function ValidateInputs() As Boolean
@@ -279,5 +279,9 @@ Public Class Customers
 
     Private Sub BtnCustomers_Click(sender As Object, e As EventArgs) Handles BtnCustomers.Click
         ' This button is already on the Customers form, so we don't need to do anything here
+    End Sub
+
+    Private Sub BtnClear_Click(sender As Object, e As EventArgs) Handles BtnClear.Click
+        ClearFields()
     End Sub
 End Class

@@ -12,7 +12,7 @@ Public Class CheckOut
         cm = New SqlClient.SqlCommand("SELECT cr.* FROM tblcarrentals3 cr " &
                                   "INNER JOIN tblcars c ON cr.CarID = c.CarID " &
                                   "WHERE (cr.iscancelled = 0 OR cr.iscancelled IS NULL) " &
-                                  "AND c.Available = 'NO'", cn)
+                                  "AND c.Available = 'NO' AND c.active = 1", cn)
         dr = cm.ExecuteReader
         While dr.Read
             i = i + 1
