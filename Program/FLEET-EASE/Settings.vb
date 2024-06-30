@@ -18,7 +18,9 @@ Public Class Settings
 
     Private Sub LoadUserInfo()
         Try
-            cn.Open()
+            If cn.State = ConnectionState.Closed Then
+                cn.Open()
+            End If
             cm = New SqlCommand("SELECT username, contact FROM tbllogin WHERE username = @username", cn)
             cm.Parameters.AddWithValue("@username", Module1.LoggedInUsename)
 
@@ -32,9 +34,13 @@ Public Class Settings
         Catch ex As Exception
             MessageBox.Show("Error loading user info: " & ex.Message)
         Finally
-            cn.Close()
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+
+            End If
         End Try
     End Sub
+
 
     Private Sub BtnUpdate_Click(sender As Object, e As EventArgs) Handles BtnUpdate.Click
         ' Check if any changes are attempted
