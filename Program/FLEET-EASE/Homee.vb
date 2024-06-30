@@ -69,6 +69,7 @@
     Public Sub UpdateUsername()
         LblUsername.Text = Module1.LoggedInUsename
     End Sub
+
     Private Sub BtnUsers_Click(sender As Object, e As EventArgs) Handles BtnUsers.Click
         Me.Hide()
         Dim obj As New Users

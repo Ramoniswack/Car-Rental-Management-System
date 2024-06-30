@@ -32,6 +32,9 @@ Public Class Cars
 
     Private Function ValidateInputs() As Boolean
         ' Validate Car Name
+        ' if txtcarname.text = "" and txtcarname.text <> isupper(txtcarname.text()) then
+        ' msgbod(car name must start with capital letter)
+
         If String.IsNullOrWhiteSpace(TxtCarname.Text) OrElse Not Char.IsUpper(TxtCarname.Text(0)) Then
             MsgBox("Car name must start with a capital letter.")
             Return False
