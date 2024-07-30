@@ -3,47 +3,59 @@
   "WorkspaceRootPath": "E:\\HIDDEN-REPOS\\Program\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\customers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\users.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\homee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\uhomee.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\ucustomers.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\statistics.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\statistics.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\statistics.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
@@ -55,19 +67,15 @@
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\settings.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\rent.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\checkout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\checkout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\checkout.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
@@ -79,28 +87,20 @@
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\cars.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\cancel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\cancel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\cancel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\cancel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\cancel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\cancel.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\login.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|e:\\hidden-repos\\program\\fleet-ease\\splash.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\splash.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form",
       "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\splash.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|E:\\HIDDEN-REPOS\\Program\\fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
-      "RelativeMoniker": "D:0:0:{AC036E2B-19B3-42C8-8D22-C38AA58E0702}|FLEET-EASE\\FLEET-EASE.vbproj|solutionrelative:fleet-ease\\module1.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|FLEET-EASE||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
@@ -113,7 +113,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 312,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -126,19 +126,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "UHomee.vb",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb",
-              "RelativeToolTip": "FLEET-EASE\\UHomee.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T17:58:34.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Homee.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Homee.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Homee.vb",
@@ -150,45 +137,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Homee.vb",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Homee.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Homee.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Homee.vb",
-              "RelativeToolTip": "FLEET-EASE\\Homee.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABRAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T10:21:51.74Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Users.vb [Design]",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Users.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb [Design]",
-              "RelativeToolTip": "FLEET-EASE\\Users.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T18:37:07.675Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Users.vb",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Users.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb",
-              "RelativeToolTip": "FLEET-EASE\\Users.vb",
-              "ViewState": "AQIAAJoAAAAAAAAAAAAqwLoAAAALAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T19:09:44.674Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "UCustomers.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UCustomers.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\UCustomers.vb",
@@ -200,44 +149,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Customers.vb [Design]",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Customers.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb [Design]",
-              "RelativeToolTip": "FLEET-EASE\\Customers.vb [Design]",
+              "DocumentIndex": 0,
+              "Title": "Users.vb",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Users.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb",
+              "RelativeToolTip": "FLEET-EASE\\Users.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAHAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T17:22:14.506Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Customers.vb",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Customers.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb",
-              "RelativeToolTip": "FLEET-EASE\\Customers.vb",
-              "ViewState": "AQIAAAMBAAAAAAAAAAAIwB4BAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T17:26:38.618Z",
+              "WhenOpened": "2024-06-30T19:09:44.674Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "UHomee.vb [Design]",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb [Design]",
-              "RelativeToolTip": "FLEET-EASE\\UHomee.vb [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T17:58:33.017Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 4,
               "Title": "Login.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Login.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Login.vb",
@@ -249,7 +174,103 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Homee.vb",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Homee.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Homee.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Homee.vb",
+              "RelativeToolTip": "FLEET-EASE\\Homee.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABRAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T10:21:51.74Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Login.vb",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Login.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Login.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Login.vb",
+              "RelativeToolTip": "FLEET-EASE\\Login.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T10:09:53.015Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Users.vb [Design]",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Users.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Users.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\Users.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T18:37:07.675Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Module1.vb",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Module1.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Module1.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Module1.vb",
+              "RelativeToolTip": "FLEET-EASE\\Module1.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T10:32:07.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Customers.vb",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Customers.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb",
+              "RelativeToolTip": "FLEET-EASE\\Customers.vb",
+              "ViewState": "AQIAAAMBAAAAAAAAAAAIwB4BAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T17:26:38.618Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "Customers.vb [Design]",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\Customers.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Customers.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\Customers.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T17:22:14.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "UHomee.vb",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb",
+              "RelativeToolTip": "FLEET-EASE\\UHomee.vb",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAABQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T17:58:34.585Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UHomee.vb [Design]",
+              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb",
+              "RelativeDocumentMoniker": "FLEET-EASE\\UHomee.vb",
+              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UHomee.vb [Design]",
+              "RelativeToolTip": "FLEET-EASE\\UHomee.vb [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
+              "WhenOpened": "2024-06-30T17:58:33.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "UCustomers.vb",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\UCustomers.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\UCustomers.vb",
@@ -262,19 +283,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 13,
               "Title": "Statistics.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Statistics.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Statistics.vb",
               "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Statistics.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\Statistics.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T19:08:44.193Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T19:08:44.193Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 14,
               "Title": "Settings.vb",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Settings.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Settings.vb",
@@ -282,24 +302,22 @@
               "RelativeToolTip": "FLEET-EASE\\Settings.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T13:27:42.988Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T13:27:42.988Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 15,
               "Title": "Settings.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Settings.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Settings.vb",
               "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Settings.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\Settings.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T13:27:41.397Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T13:27:41.397Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 16,
               "Title": "Rent.vb",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Rent.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Rent.vb",
@@ -307,24 +325,22 @@
               "RelativeToolTip": "FLEET-EASE\\Rent.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABABAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T17:58:59.653Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T17:58:59.653Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 17,
               "Title": "Rent.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Rent.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Rent.vb",
               "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Rent.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\Rent.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T10:56:54.2Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T10:56:54.2Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 18,
               "Title": "CheckOut.vb",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\CheckOut.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\CheckOut.vb",
@@ -332,24 +348,22 @@
               "RelativeToolTip": "FLEET-EASE\\CheckOut.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAPgAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T19:05:56.078Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T19:05:56.078Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 19,
               "Title": "CheckOut.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\CheckOut.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\CheckOut.vb",
               "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\CheckOut.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\CheckOut.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T10:57:23.359Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T10:57:23.359Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 20,
               "Title": "Cars.vb",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Cars.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Cars.vb",
@@ -357,24 +371,22 @@
               "RelativeToolTip": "FLEET-EASE\\Cars.vb",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAPcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T10:39:34.194Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T10:39:34.194Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 21,
               "Title": "Cars.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Cars.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Cars.vb",
               "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Cars.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\Cars.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T19:05:30.121Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T19:05:30.121Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 22,
               "Title": "Cancel.vb",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Cancel.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Cancel.vb",
@@ -382,57 +394,29 @@
               "RelativeToolTip": "FLEET-EASE\\Cancel.vb",
               "ViewState": "AQIAABAAAAAAAAAAAAAQwAcAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T19:04:48.7Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-30T19:04:48.7Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 23,
               "Title": "Cancel.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Cancel.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Cancel.vb",
               "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Cancel.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\Cancel.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T17:58:51.543Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-06-30T17:58:51.543Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
-              "Title": "Login.vb",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Login.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Login.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Login.vb",
-              "RelativeToolTip": "FLEET-EASE\\Login.vb",
-              "ViewState": "AQIAABoAAAAAAAAAAAAUwEAAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T10:09:53.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "Splash.vb [Design]",
               "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Splash.vb",
               "RelativeDocumentMoniker": "FLEET-EASE\\Splash.vb",
               "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Splash.vb [Design]",
               "RelativeToolTip": "FLEET-EASE\\Splash.vb [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T19:08:42.908Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 24,
-              "Title": "Module1.vb",
-              "DocumentMoniker": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Module1.vb",
-              "RelativeDocumentMoniker": "FLEET-EASE\\Module1.vb",
-              "ToolTip": "E:\\HIDDEN-REPOS\\Program\\FLEET-EASE\\Module1.vb",
-              "RelativeToolTip": "FLEET-EASE\\Module1.vb",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
-              "WhenOpened": "2024-06-30T10:32:07.012Z"
+              "WhenOpened": "2024-06-30T19:08:42.908Z"
             },
             {
               "$type": "Document",
